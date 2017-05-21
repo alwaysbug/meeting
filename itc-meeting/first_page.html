@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="Pragma" content="no-cache">
+		<meta http-equiv="Cache-Control" content="no-cache">
+		<meta http-equiv="Expires" content="0">
+		<meta name="Description" content="芮廷科技，会议管理"/>
+		<meta name="Keywords" content="芮廷科技，会议管理系统，会议管理，MiniCC"/>
+		<title>首页</title>
+		<link rel="icon" href="img/logo5.ico" type="image/x-icon"/>
+		<link rel="stylesheet" type="text/css" href="css/first_page.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/nav.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/calendar.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+		<!--[if lt IE 9]>
+		<script src="http://cdn.bootcss.com/html5shiv/r29/html5.min.js"></script>
+		<script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+		<nav>
+			<div class="container">
+				<div class="header">
+					<img src="img/logo.png"/>
+				</div>
+				<ul class="content">
+					<li class="active"><a href="first_page.html">首页</a></li>
+					<li><a href="user_manage.html">用户管理</a></li>
+					<li><a href="add_manage.html">地点管理</a></li>
+					<li><a href="asset.html">资产管理</a></li>
+					<li><a href="business.html">统计分析</a></li>
+					<li><a href="commerce.html">商务</a></li>
+				</ul>
+				<div class="c_right">
+					<div class="right_top">
+						<p><span>公司：</span><span class="company"></span></p>
+						<div class="right_top_tips">
+							<div class="down_arrow"></div>
+							<ul class="companys">
+								<!--<li>浙江芮廷信息科技有限公司</li>-->
+								<!--<li>浙江芮廷信息科技有限公司</li>-->
+							</ul>
+						</div>
+					</div>
+					<div class="right_bottom">
+						<p><span>用户：</span><span class="user"></span></p>
+						<div class="right_bottom_tips">
+							<div class="user_loginOut_icon"></div>
+							<div class="user_news_icon"></div>
+							<div class="user_set_icon"></div>
+						</div>
+					</div>
+					<div class="tips person_tips">
+						<p>您还没有通知</p>
+					</div>
+					<div class="tips person_sets">
+						<li style="text-align: start;"><h4>重新设置密码：</h4></li>
+						<li>原密码：<input type="text"  onfocus="this.type='password'" class="oldpassword"/></li>
+						<li>新密码：<input type="text" onfocus="this.type='password'" class="newpassword"/></li>
+						<li><button class="sureChange">确定更改</button></li>
+					</div>
+					
+				</div>
+			</div>
+		</nav>
+		
+		
+		<div class="wrapper" style="display: none;">
+			<div class="_panel_container">
+				<div class="_panel tips_panel">
+					<ul class="ul_tips">
+						<li>
+							<h1 id="ing_num">0</h1>
+							<p>预约会议数</p>
+						</li>
+						<li>
+							<h1 id="free_num">0</h1>
+							<p>取消会议数</p>
+						</li>
+						<li>
+							<h1 id="today_num">0</h1>
+							<p>参会人数</p>
+						</li>
+						<li>
+							<h1 id="total_num">0</h1>
+							<p>空闲会议室</p>
+						</li>
+					</ul>
+				</div>
+				
+				<div class="_panel today_meeting">
+					<div class="title">
+						<p>丨今日会议</p>
+					</div>
+					<div id="precent" style="width: 235px;height: 290px;margin: 0 auto;"></div>
+					<div class="back_img"></div>
+				</div>
+				<div class="_panel pic_table">
+					<div class="_table_title">
+						<li class="use_precent">会议使用率</li><!--
+                        <li class="use_time">平均会议时长</li>-->
+					</div>
+					<div id="bar_table" style="width: 650px;height: 355px;"></div>
+				</div>
+				
+				
+				<div class="_panel now_time">
+					<div class="title">
+						<p>丨当前时间</p>
+					</div>
+					<div class="now_time_content"><span id="hour_time">00</span>:<span id="minute_time">00</span></div>
+				</div>
+				
+				<div class="_panel calendar_wrapper">
+					<div id="ca"></div>
+				</div>
+				<div class="_panel deal">
+					<div class="title">
+						<p>丨今日会议</p>
+					</div>
+					<table class="_table" cellspacing="0" cellpadding="0">
+						<thead>
+							<tr>
+								<td>丨会议</td>
+								<td>丨人数</td>
+								<td>丨地点</td>
+								<td>丨时间</td>
+								<td>丨备注</td>
+							</tr>
+						</thead>
+					</table>
+					<div class="tale_mask" style="width: 100%;height: 138px;overflow-y: auto;">
+						<table class="_table" cellspacing="0" cellpadding="0">
+							<tbody class="tbody">
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="modal fade no_groups" id="no_groups" tabindex="-1" role="dialog">
+			<div class="modal-dialog modal-sm" style="margin-top: 160px;">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title" id="myModalLabel">提示</h4>
+					</div>
+					<div class="modal-body" style="text-align: center;">
+						<h4 class="tips_text"></h4>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="modal fade login_out" id="login_out" tabindex="-1" role="dialog">
+		  <div class="modal-dialog modal-sm" style="margin-top: 160px;">
+		    <div class="modal-content">
+		     	<div class="modal-header">
+		     		<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		     		  <h4 class="modal-title" id="myModalLabel">警告</h4>
+		     	</div>
+		     	<div class="modal-body" style="text-align: center;">
+		     		<h4 class="tips_text_delete_groups">确定退出登录？</h4>
+		     	</div>
+		     	<div class="modal-footer">
+			        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+			        <button type="button" class="btn btn-danger login_out_btn">确定</button>
+			    </div>
+		    </div>
+		  </div>
+		</div>
+
+
+	<!--加载动画-->
+		<div class="spinner">
+			<div class="spinner-container container1">
+				<div class="circle1"></div>
+				<div class="circle2"></div>
+				<div class="circle3"></div>
+				<div class="circle4"></div>
+			</div>
+			<div class="spinner-container container2">
+				<div class="circle1"></div>
+				<div class="circle2"></div>
+				<div class="circle3"></div>
+				<div class="circle4"></div>
+			</div>
+			<div class="spinner-container container3">
+				<div class="circle1"></div>
+				<div class="circle2"></div>
+				<div class="circle3"></div>
+				<div class="circle4"></div>
+			</div>
+		</div>
+	</body>
+	<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+	<script src="http://cdn.bootcss.com/echarts/3.4.0/echarts.js"></script>
+	<script src="js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/countUp.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/calendar.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/api.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/first_page.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+	$(function  () {
+        $(".spinner").hide();
+        $(".wrapper").show();
+	});
+
+	</script>
+</html>

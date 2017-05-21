@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>芮廷科技</title>
+
+    <link rel="shortcut icon" type="image/ico" href="images/logo.ico" />
+
+    <!-- Vendor styles -->
+    <link rel="stylesheet" href="vendor/fontawesome/css/font-awesome.css"  />
+    <link rel="stylesheet" href="vendor/metisMenu/dist/metisMenu.css"  />
+    <link rel="stylesheet" href="vendor/animate.css/animate.css"  />
+    <link rel="stylesheet" href="vendor/bootstrap/dist/css/bootstrap.css"  />
+    <link rel="stylesheet" href="vendor/sweetalert/lib/sweet-alert.css">
+    <link rel="stylesheet" href="vendor/toastr/build/toastr.min.css">
+    <!-- App styles -->
+    <link rel="stylesheet" href="fonts/pe-icon-7-stroke/css/pe-icon-7-stroke.css"  />
+    <link rel="stylesheet" href="fonts/pe-icon-7-stroke/css/helper.css"  />
+    <link rel="stylesheet" href="styles/style.css" >
+
+    <!-- Add styles -->
+    <link rel="stylesheet" href="styles/user_manage.css" >
+    <link rel="stylesheet" href="styles/zTreeStyle.css">
+    <!--[if lt IE 9]>
+    <script src="http://cdn.bootcss.com/html5shiv/r29/html5.min.js"></script>
+    <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body class="fixed-navbar sidebar-scroll">
+
+<!-- Simple splash screen-->
+<div class="splash" style="display: block;">
+    <div class="color-line"></div>
+    <div class="splash-title"><h1>芮廷云会务</h1><p>The Best Meeting Butler </p> <div class="spinner"> <div class="rect1"></div> <div class="rect2"></div> <div class="rect3"></div> <div class="rect4"></div> <div class="rect5"></div> </div> </div> </div>
+<!-- Header -->
+<div id="header">
+    <div class="color-line">
+    </div>
+    <div id="logo" class="light-version">
+        <span>
+            芮廷科技
+        </span>
+    </div>
+    <nav role="navigation">
+        <!--<div class="header-link hide-menu"><i class="fa fa-bars"></i></div>-->
+        <div class="small-logo">
+            <span class="text-primary">芮廷科技</span>
+        </div>
+        <!--<form role="search" class="navbar-form-custom" method="post" action="#">-->
+            <!--<div class="form-group">-->
+                <!--<input type="text" style="padding-left: 10px" placeholder="在此输入文字搜索内容" class="form-control" name="search">-->
+            <!--</div>-->
+        <!--</form>-->
+        <div class="mobile-menu">
+            <button type="button" class="navbar-toggle mobile-menu-toggle" data-toggle="collapse" data-target="#mobile-collapse">
+                <i class="fa fa-chevron-down"></i>
+            </button>
+            <div class="collapse mobile-navbar" id="mobile-collapse">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a class="" href="register.html?login" >登出</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="navbar-right">
+            <ul class="nav navbar-nav no-borders">
+                <li class="dropdown">
+                    <a id="company_name" class="dropdown-toggle label-menu-corner" href="#" data-toggle="dropdown" style="font-size: 13px;">
+                    </a>
+                </li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle label-menu-corner" href="#" data-toggle="dropdown">
+                        <i class="pe-7s-speaker"></i>
+                    </a>
+                    <ul class="dropdown-menu hdropdown notification animated flipInX">
+                        <li>
+                            <a>
+                                <span class="label label-success">NEW</span> 芮廷会务新版上线
+                            </a>
+                        </li>
+                        <li class="summary"><a href="javascript:;">查询全部消息</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="javascript:;" id="login_out_btn" >
+                        <i class="pe-7s-upload pe-rotate-90"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</div>
+
+<!-- Navigation -->
+<aside id="menu">
+    <div id="navigation">
+        <div class="profile-picture">
+            <a href="user_index.html" >
+                <img id="avtar" style="width: 76px;height: 76px;" src="images/logo.png"  class="img-circle m-b" alt="logo">
+            </a>
+
+            <div class="stats-label text-color">
+                <span id="nick_name" class="font-extra-bold font-uppercase">
+                </span>
+            </div>
+        </div>
+
+        <ul class="nav" id="side-menu">
+            <li>
+                <a href="first_page.html"><span class="nav-label">首页</span></a>
+            </li>
+            <li>
+                <a href="javascript:;"><span class="nav-label">管理中心</span><span class="fa arrow"></span> </a>
+                <ul class="nav nav-second-level">
+                    <li><a href="user_manage.html" >用户管理</a></li>
+                    <li><a href="asset.html" >资产管理</a></li>
+                    <li><a href="add_manage.html" >地点管理</a></li>
+                    <li><a href="device.html" >设备管理</a></li>
+                    <li><a href="scenes_panel.html" >场景/面板管理</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#"><span class="nav-label">账户中心</span><span class="fa arrow"></span> </a>
+                <ul class="nav nav-second-level">
+                    <li><a href="order_managerment.html" >订单管理</a></li>
+                    <li><a href="account.html" >账户管理</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#"><span class="nav-label">其他</span><span class="fa arrow"></span> </a>
+                <ul class="nav nav-second-level">
+                    <li><a href="commerce.html">商务选择</a></li>
+                    <li><a href="work_order.html" >工单管理</a></li>
+                    <li><a href="business.html" >统计分析</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</aside>
+
+<!-- Main Wrapper -->
+<div id="wrapper">
+    <div class="normalheader transition animated fadeIn">
+        <div class="hpanel">
+            <div class="panel-body">
+                <a class="small-header-action" href="">
+                    <div class="clip-header">
+                        <i class="fa fa-arrow-up"></i>
+                    </div>
+                </a>
+
+                <h2 class="font-light m-b-xs">
+                    用户中心
+                </h2>
+                <small>修改用户的常用设置</small>
+            </div>
+        </div>
+    </div>
+    <div class="content animate-panel">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="hpanel hgreen">
+
+                    <div class="panel-body">
+                        <h3><a href="javascript:;" id="user_index_nickname"></a></h3>
+                        <div class="text-muted font-bold m-b-xs">套餐类型:</div>
+                        <p>
+                            您订购的是芮廷云会务999套餐，将在3个月后过期
+                        </p>
+                        <div class="progress m-t-xs full progress-small">
+                            <div style="width: 100%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="71" role="progressbar" class=" progress-bar progress-bar-success">
+                                <span class="sr-only">100%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="panel-footer contact-footer">
+                        <div class="row">
+                            <div class="col-md-6 border-right">
+                                <div class="contact-stat">
+                                    <a href="#" data-target="#myModal" data-toggle="modal">
+                                    <strong>修改密码</strong>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="contact-stat">
+                                    <a href="javascript:;" data-target="#myModal2" data-toggle="modal">
+                                        <strong>修改邮箱</strong>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!--修改密码-->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-hidden="true" style="display: none;">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="color-line"></div>
+                    <div class="modal-header text-center">
+                        <h4 class="modal-title">修改密码</h4>
+                        <small class="font-bold">密码不少于6位</small>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-horizontal">
+                            <div class="form-group"><label class="col-sm-2 control-label">原密码：</label>
+
+                                <div class="col-sm-10"><input type="text" class="form-control oldpassword" onfocus="this.type='password'"></div>
+                            </div>
+                            <div class="hr-line-dashed"></div>
+                            <div class="form-group"><label class="col-sm-2 control-label">新密码：</label>
+
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control newpassword" onfocus="this.type='password'"></div>
+                            </div>
+                            <div class="hr-line-dashed"></div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                        <button type="button" class="btn btn-primary edit_password" data-dismiss="modal">更新</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Vendor scripts -->
+<script src="vendor/jquery/dist/jquery.min.js" ></script>
+<script src="vendor/jquery-ui/jquery-ui.min.js" ></script>
+<script src="vendor/slimScroll/jquery.slimscroll.min.js" ></script>
+<script src="vendor/bootstrap/dist/js/bootstrap.min.js" ></script>
+<script src="vendor/metisMenu/dist/metisMenu.min.js" ></script>
+<script src="vendor/iCheck/icheck.min.js" ></script>
+<script src="vendor/sweetalert/lib/sweet-alert.min.js"></script>
+<script src="vendor/toastr/build/toastr.min.js"></script>
+<!-- App scripts -->
+<script src="scripts/homer.js" ></script>
+
+<!-- Add scripts -->
+<script src="scripts/api.js" ></script>
+<script src="scripts/jquery.ztree.all.js"></script>
+<script src="scripts/jquery.form.js"></script>
+<script src="scripts/commen.js"></script>
+<script src="scripts/user_index.js" ></script>
+
+</body>
+</html>

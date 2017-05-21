@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="Pragma" content="no-cache">
+		<meta http-equiv="Cache-Control" content="no-cache">
+		<meta http-equiv="Expires" content="0">
+		<title>资产管理</title>
+		<link rel="icon" href="img/logo5.ico" type="image/x-icon"/>
+		<link rel="stylesheet" type="text/css" href="css/user_manage.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/nav.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+		<link rel="stylesheet" href="css/zTreeStyle.css">
+		<style type="text/css">
+			.persons tr:nth-child(2){
+				background-color: #f5f5f5;
+				border-radius: 5px;
+			}
+		</style>
+		<!--[if lt IE 9]>
+		<script src="http://cdn.bootcss.com/html5shiv/r29/html5.min.js"></script>
+		<script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+	</head>
+	<body style="overflow-x: hidden">
+		<nav>
+			<div class="container">
+				<div class="header">
+					<img src="img/logo.png"/>
+				</div>
+				<ul class="content">
+					<li><a href="first_page.html">首页</a></li>
+					<li><a href="user_manage.html">用户管理</a></li>
+					<li><a href="add_manage.html">地点管理</a></li>
+					<li class="active"><a href="asset.html">资产管理</a></li>
+					<li><a href="business.html">统计分析</a></li>
+					<li><a href="commerce.html">商务</a></li>
+				</ul>
+				<div class="c_right">
+					<div class="right_top">
+						<p><span>公司：</span><span class="company"></span></p>
+						<div class="right_top_tips">
+							<div class="down_arrow"></div>
+							<ul class="companys">
+								<li>浙江芮廷信息科技有限公司</li>
+								<li>浙江芮廷信息科技有限公司</li>
+							</ul>
+						</div>
+					</div>
+					<div class="right_bottom">
+						<p><span>用户：</span><span class="user"></span></p>
+						<div class="right_bottom_tips">
+							<div class="user_loginOut_icon"></div>
+							<div class="user_news_icon"></div>
+							<div class="user_set_icon"></div>
+						</div>
+					</div>
+					
+					<div class="tips person_tips">
+						<p>您还没有通知</p>
+					</div>
+					<div class="tips person_sets">
+						<li style="text-align: start;"><h4>重新设置密码：</h4></li>
+						<li>原密码：<input type="text"  onfocus="this.type='password'" class="oldpassword"/></li>
+						<li>新密码：<input type="text" onfocus="this.type='password'" class="newpassword"/></li>
+						<li><button class="sureChange">确定更改</button></li>
+					</div>
+				</div>
+			</div>
+		</nav>
+		<!--<div class="testIng" style="width: 100vw;height: 100vh;background-color: rgba(0,0,0,0.6);text-align: center;position: absolute;top: 70px;left: 0;z-index: 100000">-->
+			<!--<h1 style="padding-top: 10%">正在内测...</h1>-->
+		<!--</div>-->
+	<div class="wrap" style="width: 100%;height: 100%;border: 1px solid transparent;margin-top: 70px;display: none;">
+		<div class="wrapper">
+			<div class="left-wrapper">
+				<div style="position: relative;">
+					<input type="text" class="search" placeholder="请输入要查找内容的字段信息"/>
+					<span class="glyphicon glyphicon-search" style="margin-left: -30px" aria-hidden="true"></span>
+					<div class="clear_val"><span class="glyphicon glyphicon-remove"></span></div>
+				</div>
+				<div id="zTree" class="ztree"></div>
+			</div>
+			<div class="right-wrapper">
+				<h2 id="company_title"></h2>
+				
+				<table class="table_list persons" cellspacing="0" cellpadding="0">
+					<tbody>
+						<tr></tr>
+						<tr>
+							<td colspan="6">
+								<button class="btn_c add add_equip_btn" style="display: none;">添加设备</button>
+								<button class="btn_c add add_equip_groups_btn">添加分类</button>
+								<button class="btn_c add edit_equip_groups_btn" style="display: none;">编辑分类</button>
+								<button class="btn_c edit edit_depart_name upload_equips_btn">批量导入</button>
+								<button class="delete delete_more">批量删除</button>
+							</td>
+						</tr>
+						<tr class="tr_list">
+							<td><input type="checkbox" class="checkAll" /></td>
+							<td>丨品牌</td>
+							<td>丨型号</td>
+							<td>丨位置</td>
+							<td>丨状态</td>
+							<td>丨备注</td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" class="check"/></td>
+							<td>索尼</td>
+							<td>PT-X361C</td>
+							<td>研发部会议室</td>
+							<td>正常</td>
+							<td>无</td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" class="check"/></td>
+							<td>惠普</td>
+							<td>MML8069</td>
+							<td>生产部会议室</td>
+							<td>维修中</td>
+							<td>需换灯泡</td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" class="check"/></td>
+							<td>DELL</td>
+							<td>RD-806</td>
+							<td>小会议室</td>
+							<td>故障</td>
+							<td>急需维修</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>	
+		<div class="slide-mask"></div>
+			<div class="sidebar add_equipment">
+				<h2>新增设备</h2>
+				<div class="msg"><p>设备信息</p></div>
+				<ul class="slide_left_ul">
+					<li>名称：</li>
+					<li>型号：</li>
+					<li>序列号：</li>
+					<li>位置：</li>
+					<li>状态：</li>
+					<li>备注：</li>
+				</ul>
+				<ul class="slide_right_ul">
+					<li><input type="text" class="name" /></li>
+					<li><input type="text" class="model" /></li>
+					<li><input type="text" class="series_number" /></li>
+					<li><input type="text" class="location" /></li>
+					<li class="state">
+						<label><input name="state" type="radio"/>正常</label>
+						<label><input name="state" type="radio"/>故障</label>
+						<label><input name="state" type="radio"/>维修中</label>
+					</li>
+					<li><input type="text" class="remark" /></li>
+				</ul>
+				<div style="clear: both;"></div>
+				<div class="sidebar_footer">
+					<button class="save">保存 </button><button class="delete add_eq_cancel">取消</button>
+				</div>
+			</div>
+
+			<div class="sidebar upload_equipments">
+				<h2>批量导入</h2>
+				<div class="msg"><p>新建通讯录导入步骤</p></div>
+				<ul class="upload_build">
+					<li>第一步：下载员工通讯录模板，批量填写员工信息</li>
+					<li>第二步：上传填写好的员工信息表</li>
+				</ul>
+				<div class="msg"><p>修改/导出通讯录导入步骤</p></div>
+				<ul class="upload_build">
+					<li>第一步：下载员工通讯录模板，批量填写员工信息</li>
+					<li>第二步：上传填写好的员工信息表</li>
+				</ul>
+				<div style="clear: both;"></div>
+				<div class="sidebar_footer upload_btns">
+					<button class="download_mould">下载模板 </button>
+					<button class="export">导出 </button>
+					<a href="javascript:;" class="upload_it">
+						<input type="hidden" id="hiddenIn" name="group_id">
+						<input id="fileToUpload" type="file" name="file" onchange="upLoad()"  value="选择文件">
+						上传
+					</a>
+				</div>
+			</div>
+
+			<div class="sidebar add_equips_groups">
+				<h2>新增设备分类</h2>
+				<div class="msg"><p>分类信息</p></div>
+				<ul class="slide_left_ul">
+					<li>分类名称：</li>
+				</ul>
+				<ul class="slide_right_ul">
+					<li><input type="text" class="eq_group_name" /></li>
+				</ul>
+				<div style="clear: both;"></div>
+				<div class="sidebar_footer">
+					<button class="save sava_eq_group">保存 </button><button class="delete delete_group_cancel">取消</button>
+				</div>
+			</div>
+
+			<div class="sidebar edit_equips_groups">
+				<h2>修改设备分类</h2>
+				<div class="msg"><p>分类信息</p></div>
+				<ul class="slide_left_ul">
+					<li>修改名称：</li>
+				</ul>
+				<ul class="slide_right_ul">
+					<li><input type="text" class="edit_eq_group_name" /></li>
+				</ul>
+				<div style="clear: both;"></div>
+				<div class="sidebar_footer">
+					<button class="save sava_edit_eq_group">保存 </button><button class="delete delete_edit_eq_group">取消</button>
+				</div>
+			</div>
+
+		<div class="modal fade notice" id="notice" tabindex="-1" role="dialog">
+			<div class="modal-dialog modal-sm" style="margin-top: 160px;">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title" id="myModalLabel">提示</h4>
+					</div>
+					<div class="modal-body" style="text-align: center;">
+						<h4 class="notice_text"></h4>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="modal fade delete_device_checked" id="delete_device_checked" tabindex="-1" role="dialog">
+			<div class="modal-dialog modal-sm" style="margin-top: 160px;">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title" id="myModalLabel">警告</h4>
+					</div>
+					<div class="modal-body" style="text-align: center;">
+						<h4 class="tips_text_delete_groups">确定删除设备吗？</h4>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+						<button type="button" class="btn btn-danger delete_this_device">确定</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="modal fade login_out" id="login_out" tabindex="-1" role="dialog">
+			  <div class="modal-dialog modal-sm" style="margin-top: 160px;">
+			    <div class="modal-content">
+			     	<div class="modal-header">
+			     		<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			     		  <h4 class="modal-title" id="myModalLabel">警告</h4>
+			     	</div>
+			     	<div class="modal-body" style="text-align: center;">
+			     		<h4 class="tips_text_delete_groups">确定退出登录？</h4>
+			     	</div>
+			     	<div class="modal-footer">
+				        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+				        <button type="button" class="btn btn-danger login_out_btn">确定</button>
+				    </div>
+			    </div>
+			  </div>
+			</div>
+
+
+		<!--加载动画-->
+		<div class="spinner">
+			<div class="spinner-container container1">
+				<div class="circle1"></div>
+				<div class="circle2"></div>
+				<div class="circle3"></div>
+				<div class="circle4"></div>
+			</div>
+			<div class="spinner-container container2">
+				<div class="circle1"></div>
+				<div class="circle2"></div>
+				<div class="circle3"></div>
+				<div class="circle4"></div>
+			</div>
+			<div class="spinner-container container3">
+				<div class="circle1"></div>
+				<div class="circle2"></div>
+				<div class="circle3"></div>
+				<div class="circle4"></div>
+			</div>
+		</div>
+	</body>
+	<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/api.min.js" type="text/javascript"></script>
+	<script src="js/jquery.ztree.all.js"></script>
+	<script src="js/asset.min.js"></script>
+	<script type="text/javascript">
+		$(function () {
+            $(".spinner").hide();
+            $(".wrap").show();
+        })
+	</script>
+</html>

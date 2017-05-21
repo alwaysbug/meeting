@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Page title -->
+    <title>统计分析</title>
+
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <link rel="shortcut icon" type="image/ico" href="images/logo.ico" />
+
+    <!-- Vendor styles -->
+    <link rel="stylesheet" href="vendor/fontawesome/css/font-awesome.css" />
+    <link rel="stylesheet" href="vendor/metisMenu/dist/metisMenu.css"  />
+    <link rel="stylesheet" href="vendor/animate.css/animate.css"  />
+    <link rel="stylesheet" href="vendor/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="vendor/bootstrap-datepicker-master/dist/css/bootstrap-datepicker3.min.css">
+    <!-- App styles -->
+    <link rel="stylesheet" href="fonts/pe-icon-7-stroke/css/pe-icon-7-stroke.css" />
+    <link rel="stylesheet" href="fonts/pe-icon-7-stroke/css/helper.css" />
+    <link rel="stylesheet" href="styles/style.css" />
+    <!--[if lt IE 9]>
+    <script src="http://cdn.bootcss.com/html5shiv/r29/html5.min.js"></script>
+    <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body class="fixed-navbar sidebar-scroll">
+
+<!-- Simple splash screen-->
+<div class="splash"> <div class="color-line"></div><div class="splash-title"><h1>Homer - Responsive Admin Theme</h1><p>Special Admin Theme for small and medium webapp with very clean and aesthetic style and feel. </p><div class="spinner"> <div class="rect1"></div> <div class="rect2"></div> <div class="rect3"></div> <div class="rect4"></div> <div class="rect5"></div> </div> </div> </div>
+<div id="header">
+    <div class="color-line">
+    </div>
+    <div id="logo" class="light-version">
+        <span>
+            芮廷科技
+        </span>
+    </div>
+    <nav role="navigation">
+        <!--<div class="header-link hide-menu"><i class="fa fa-bars"></i></div>-->
+        <div class="small-logo">
+            <span class="text-primary">芮廷科技</span>
+        </div>
+        <form role="search" class="navbar-form-custom" method="post" action="#">
+            <div class="form-group">
+                <!--<input type="text" placeholder="在此输入文字搜索内容" class="form-control" name="search">-->
+            </div>
+        </form>
+        <div class="mobile-menu">
+            <button type="button" class="navbar-toggle mobile-menu-toggle" data-toggle="collapse" data-target="#mobile-collapse">
+                <i class="fa fa-chevron-down"></i>
+            </button>
+            <div class="collapse mobile-navbar" id="mobile-collapse">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a class="" href="register.html?login" >登出</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="navbar-right">
+            <ul class="nav navbar-nav no-borders">
+                <li class="dropdown">
+                    <a id="company_name" class="dropdown-toggle label-menu-corner" href="#" data-toggle="dropdown" style="font-size: 13px;">
+                    </a>
+                </li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle label-menu-corner" href="#" data-toggle="dropdown">
+                        <i class="pe-7s-speaker"></i>
+                    </a>
+                    <ul class="dropdown-menu hdropdown notification animated flipInX">
+                        <li>
+                            <a>
+                                <span class="label label-success">NEW</span> 芮廷会务新版上线啦
+                            </a>
+                        </li>
+                        <li class="summary"><a href="javascript:;">查询全部消息</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="javascript:;" id="login_out_btn" >
+                        <i class="pe-7s-upload pe-rotate-90"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</div>
+
+<!-- Navigation -->
+<aside id="menu">
+    <div id="navigation">
+        <div class="profile-picture">
+            <a href="user_index.html" >
+                <img id="avtar" style="width: 76px;height: 76px;"  src="images/logo.png"  class="img-circle m-b" alt="logo">
+            </a>
+
+            <div class="stats-label text-color">
+                <span id="nick_name" class="font-extra-bold font-uppercase">
+                </span>
+            </div>
+        </div>
+
+        <ul class="nav" id="side-menu">
+            <li>
+                <a href="first_page.html"><span class="nav-label">首页</span></a>
+            </li>
+            <li>
+                <a href="javascript:;"><span class="nav-label">管理中心</span><span class="fa arrow"></span> </a>
+                <ul class="nav nav-second-level">
+                    <li><a href="user_manage.html" >用户管理</a></li>
+                    <li><a href="asset.html" >资产管理</a></li>
+                    <li><a href="add_manage.html" >地点管理</a></li>
+                    <li><a href="device.html" >设备管理</a></li>
+                    <li><a href="scenes_panel.html" >场景/面板管理</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#"><span class="nav-label">账户中心</span><span class="fa arrow"></span> </a>
+                <ul class="nav nav-second-level">
+                    <li><a href="commerce.html">商务选择</a></li>
+                    <li><a href="order_managerment.html" >订单管理</a></li>
+                    <li><a href="account.html" >账户管理</a></li>
+                </ul>
+            </li>
+            <li class="active">
+                <a href="#"><span class="nav-label">其他</span><span class="fa arrow"></span> </a>
+                <ul class="nav nav-second-level">
+                    <li><a href="work_order.html" >工单管理</a></li>
+                    <li class="active"><a href="business.html" >统计分析</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</aside>
+
+<!-- 主要内容部分 -->
+<div id="wrapper">
+<div class="p-lg">
+<div class="animate-panel" data-child="hpanel" data-effect="fadeInDown">
+    <div class="leftDiv1" style="width: 200px;">
+    	
+    	
+        <div class="hpanel stats horange">
+            <div class="panel-body">
+                <div class="stats-title">
+                	<p>当前月份</p>
+                </div>
+                <input size="16" type="text" value="2017-04" style="text-align: center" class="form_datetime form-control">
+            </div>
+        </div>
+        <div class="hpanel stats hgreen">
+            <div class="panel-body">
+                <div class="stats-title">
+                    <p>会议时长</p>
+                </div>
+                <h2 class="leftSpan2 text-center" style="line-height: 74px;"></h2>
+            </div>
+        </div>
+
+        <div class="hpanel stats hred">
+            <div class="panel-body">
+                <div class="stats-title">
+                    <p>参会人次</p>
+                </div>
+                <h2 class="leftSpan3 text-center" style="line-height: 74px;"></h2>
+            </div>
+        </div>
+        <div class="hpanel stats hyellow">
+            <div class="panel-body">
+                <div class="stats-title">
+                    <p>预定会议数</p>
+                </div>
+                <h2 class="leftSpan4 text-center" style="line-height: 74px;"></h2>
+            </div>
+        </div>
+
+        <div class="hpanel stats hblue">
+            <div class="panel-body">
+                <div class="stats-title">
+                    <p>会议取消</p>
+                </div>
+                <h2 class="leftSpan5 text-center" style="line-height: 74px;"></h2>
+            </div>
+        </div>
+    </div>
+    
+      <div style="width: 75%;position: absolute;left:22%;top:30px">
+       <div class="hpanel hviolet">
+            <div class="panel-body">
+                <div style="height: 345px;">
+                	<div class="topRight" style="text-align: center;">
+						<p class="topRightP" style="font-size: 18px;margin-top: 10px;">会议室预定频率</p>
+						<div id="bar_table" style="width:100%;height: 320px;padding-bottom: 20px;"></div>
+					</div>
+                </div>
+            </div>
+        </div>
+      </div>
+      
+      <div style="width: 75%;position: absolute;left:22%;top:452px">
+       <div class="hpanel hviolet">
+            <div class="panel-body">
+                <div style="height: 345px;">
+                	<div class="botomRight">
+					    <p class="topRightP" style="font-size: 18px;margin-top: 10px;">会议室预定走势图</p>
+						<div id="roundTable" style="width: 100%;height:330px;position: absolute;bottom: 10px;"></div>
+					</div>
+                </div>
+            </div>
+        </div>
+      </div>
+</div>
+
+
+
+
+</div>
+</div>
+
+
+
+
+
+<!-- Vendor scripts -->
+<script src="vendor/jquery/dist/jquery.min.js" ></script>
+<script src="vendor/jquery-ui/jquery-ui.min.js" ></script>
+<script src="vendor/slimScroll/jquery.slimscroll.min.js" ></script>
+<script src="vendor/bootstrap/dist/js/bootstrap.min.js" ></script>
+<script src="vendor/metisMenu/dist/metisMenu.min.js" ></script>
+<script src="vendor/bootstrap-datepicker-master/dist/js/bootstrap-datepicker.min.js"></script>
+<!-- App scripts -->
+<script src="scripts/homer.js" ></script>
+<script src="http://cdn.bootcss.com/echarts/3.4.0/echarts.js"></script>
+<script src="scripts/api.js" ></script>
+<script src="scripts/business.js" ></script>
+<script src="scripts/commen.js"></script>
+</body>
+</html>
+

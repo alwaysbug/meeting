@@ -1,0 +1,36 @@
+.export,.upload_it{
+    background-color: #FFFFFF;
+    color: #3498db;
+    border:1px solid #3498db !important;
+}
+.upload_it{
+    width: 54px;
+    height: 34px;
+    font-size: 14px;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    position: relative;
+    top:14px;
+    cursor: pointer;
+    overflow: hidden;
+    display: inline-block;
+    line-height: 32px;
+    text-decoration: none !important;
+}
+.upload_it input[type=file]{
+    position: absolute;
+    right: 0;
+    top: 0;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    cursor: pointer
+}
+.upload_it:hover{
+    color: #FFFFFF;
+    text-decoration: none;
+    background-color: #3498db;
+    transition:all 0.5s;
+}
+.ifChange{
+    cursor: pointer;
+}

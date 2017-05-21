@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>统计分析</title>
+		<link rel="icon" href="img/logo5.ico" type="image/x-icon"/>
+		<link rel="stylesheet" type="text/css" href="css/nav.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/commerce.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/calendar.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+	</head>
+	<body>
+		<nav>
+			<div class="container">
+				<div class="header">
+					<img src="img/logo.png"/>
+				</div>
+				<ul class="content">
+					<li><a href="first_page.html">首页</a></li>
+					<li><a href="user_manage.html">用户管理</a></li>
+					<li><a href="add_manage.html">地点管理</a></li>
+					<li><a href="asset.html">资产管理</a></li>
+					<li><a href="business.html">统计分析</a></li>
+					<li class="active"><a href="commerce.html">商务</a></li>
+				</ul>
+				<div class="c_right">
+					<div class="right_top">
+						<p><span>公司：</span><span class="company"></span></p>
+						<div class="right_top_tips">
+							<div class="down_arrow"></div>
+							<ul class="companys">
+								<!--<li>浙江芮廷信息科技有限公司</li>-->
+								<!--<li>浙江芮廷信息科技有限公司</li>-->
+							</ul>
+						</div>
+					</div>
+					<div class="right_bottom">
+						<p><span>用户：</span><span class="user"></span></p>
+						<div class="right_bottom_tips">
+							<div class="user_loginOut_icon"></div>
+							<div class="user_news_icon"></div>
+							<div class="user_set_icon"></div>
+						</div>
+					</div>
+					<div class="tips person_tips">
+						<p>您还没有通知</p>
+					</div>
+					<div class="tips person_sets">
+						<li style="text-align: start;"><h4>重新设置密码：</h4></li>
+						<li>原密码：<input type="password" class="oldpassword"/></li>
+						<li>新密码：<input type="password" class="newpassword"/></li>
+						<li><button class="sureChange">确定更改</button></li>
+					</div>
+					
+				</div>
+			</div>
+		</nav>
+		
+		<div class="wrapper" style="display: none;">
+		<!--页面布局-->
+		<div class="wrap">
+			<!--上部分-->
+			<div class="top">
+				<!--上部分-->
+				<div class="tTop">
+					<!--左边-->
+					<div class="tTleft">
+						<span style="font-size: 20px;color: rgb(85,131,232);">选择套餐</span>
+						<img style="margin-bottom: 4px;" src="img/left.png"/>
+					</div>
+					<!--右边-->
+					<div class="tTright">
+						<div class="tTrightDiv tTrightDiv1"><span>基础版</span><img class="imgs img1" src="img/small.png"/></div>
+						<div class="tTrightDiv tTrightDiv2"><span>专业版</span><img class="imgs img2" src="img/small.png"/></div>
+						<div class="tTrightDiv tTrightDiv3"><span>企业版</span><img class="imgs img3" src="img/small.png"/></div>
+					</div>
+				</div>
+				<!--下部分-->
+				<div class="Tbottom">
+					<!--左边-->
+					<div class="tBleft">
+						<ul>
+							<li>会务功能：</li>
+							<li>无线流量：</li>
+							<li>云盘储存空间：</li>
+							<li>Mini CC服务：</li>
+						</ul>
+					</div>
+					<!--右边-->
+					<div class="tBright">
+						<ul>
+							<li><span class="tBright1">基础</span>会务功能</li>
+							<li><span>300</span>MB</li>
+							<li><span>10</span>GB</li>
+							<li>购Mini CC<span>送每间一年服务</span></li>
+							<li><span>套餐详情 ></span></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!--中间部分-->
+			<div class="center">
+				<!--左边-->
+				<div class="cleft">
+					<ul>
+						<li>购买时长:</li>
+						<li>购买间数:</li>
+						<li>购Mini CC数量:</li>
+					</ul>
+				</div>
+				<!--右边-->
+				<div class="cright">
+					<div class="cright1">
+						<span class="cright1Span" style="color: white;">1年</span>
+						<span class="cright1Span">2年</span>
+						<span class="cright1Span">3年</span>
+						<span class="cright1Span">4年</span>
+						<span class="cright1Span">5年</span>
+					</div>
+					<div class="cright1Small"></div>
+					<div class="cright2" style="overflow: hidden;">
+						<span class="cright2down">-</span>
+						<div contenteditable="true" class="cright2num" style="display:inline-block;width:55px;outline:none;">1</div>
+						<span class="cright2up">+</span>
+					</div>
+					<div class="cright3" style="overflow: hidden;">
+						<span class="cright3down">-</span>
+						<div contenteditable="true" class="cright3num" style="display:inline-block;width:55px;outline:none;">1</div>
+						<span class="cright3up">+</span>
+					</div>
+				</div>
+			</div>
+			<!--下部分-->
+			<div class="bottom">
+				<span>已选择：</span>
+				<span class="bottom1">芮廷云会务·<span class="bSpan bspan1">基础版</span>/<span class="bSpan bspan2">1</span>年/<span class="bSpan bspan3">1</span>间，购Mini CC数量<span class="bSpan bspan4">1</span>台</span>
+				<span class="bottom2">价格：</span>
+				<span class="bottom3">¥<span class="bSpan bspan5" style="font-size: 20px;">199</span></span>
+			    <button class="button">下一步</button>
+			</div>
+		</div>
+		
+		<!--点击下一步页面-->
+		<div class="wrap2">
+		  <div class="bottom bottomT">
+		    <span class="span1T">已选择：</span>
+			<span class="bottom1 bottom1T">芮廷云会务·<span class="bSpan bspan1">基础版</span>/<span class="bSpan bspan2">1</span>年/<span class="bSpan bspan3">1</span>间，购Mini CC数量<span class="bSpan bspan4">1</span>台</span>
+            <span class="span2T">重新选择</span>
+		  </div>
+		  <div class="tTopT">
+			<!--左边-->
+			<div class="tTleftT">
+				<span style="font-size: 20px;color: rgb(85,131,232);">支付方式</span>
+				<img style="margin-bottom: 4px;" src="img/left.png"/>
+			</div>
+			<!--右边-->
+			<div class="tTrightT">
+				<div class="tTrightDivT tTrightDiv1T"><span>支付宝支付</span><img class="imgs img1" src="img/small.png"/></div>
+				<div class="tTrightDivT tTrightDiv2T"><span>网银支付</span><img class="imgs img2" src="img/small.png"/></div>
+				<div class="tTrightDivT tTrightDiv3T"><span>微信支付</span><img class="imgs img3" src="img/small.png"/></div>
+			</div>				
+		  </div>
+		  <div class="T">
+		  	 <span class="bottom2">价格：</span>
+		     <span class="bottom3">¥<span class="bSpan bspan5" style="font-size: 20px;">199</span></span>
+		     <button class="buttonT">立即支付</button>
+		  </div>
+		</div>
+		</div>
+		
+		
+		<div class="modal fade login_out" id="login_out" tabindex="-1" role="dialog">
+		  <div class="modal-dialog modal-sm" style="margin-top: 160px;">
+		    <div class="modal-content">
+		     	<div class="modal-header">
+		     		<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		     		  <h4 class="modal-title" id="myModalLabel">警告</h4>
+		     	</div>
+		     	<div class="modal-body" style="text-align: center;">
+		     		<h4 class="tips_text_delete_groups">确定退出登录？</h4>
+		     	</div>
+		     	<div class="modal-footer">
+			        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+			        <button type="button" class="btn btn-danger login_out_btn">确定</button>
+			    </div>
+		    </div>
+		  </div>
+		</div>
+		<!--加载动画-->
+		<div class="spinner">
+			<div class="spinner-container container1">
+				<div class="circle1"></div>
+				<div class="circle2"></div>
+				<div class="circle3"></div>
+				<div class="circle4"></div>
+			</div>
+			<div class="spinner-container container2">
+				<div class="circle1"></div>
+				<div class="circle2"></div>
+				<div class="circle3"></div>
+				<div class="circle4"></div>
+			</div>
+			<div class="spinner-container container3">
+				<div class="circle1"></div>
+				<div class="circle2"></div>
+				<div class="circle3"></div>
+				<div class="circle4"></div>
+			</div>
+		</div>
+	</body>
+	<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/countUp.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/api.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/commerce.min.js"></script>
+	<script type="text/javascript">
+		$(function () {
+            $(".spinner").hide();
+            $(".wrapper").show();
+        })
+	</script>
+</html>

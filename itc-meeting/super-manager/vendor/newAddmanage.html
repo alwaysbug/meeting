@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Page title -->
+    <title>123</title>
+
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!--<link rel="shortcut icon" type="image/ico" href="favicon.ico" />-->
+
+    <!-- Vendor styles -->
+    <link rel="stylesheet" href="vendor/fontawesome/css/font-awesome.css" tppabs="http://webapplayers.com/homer_admin-v2.0/vendor/fontawesome/css/font-awesome.css" />
+    <link rel="stylesheet" href="vendor/metisMenu/dist/metisMenu.css" tppabs="http://webapplayers.com/homer_admin-v2.0/vendor/metisMenu/dist/metisMenu.css" />
+    <link rel="stylesheet" href="vendor/animate.css/animate.css" tppabs="http://webapplayers.com/homer_admin-v2.0/vendor/animate.css/animate.css" />
+    <link rel="stylesheet" href="vendor/bootstrap/dist/css/bootstrap.css" tppabs="http://webapplayers.com/homer_admin-v2.0/vendor/bootstrap/dist/css/bootstrap.css" />
+
+    <!-- App styles -->
+    <link rel="stylesheet" href="fonts/pe-icon-7-stroke/css/pe-icon-7-stroke.css" tppabs="http://webapplayers.com/homer_admin-v2.0/fonts/pe-icon-7-stroke/css/pe-icon-7-stroke.css" />
+    <link rel="stylesheet" href="fonts/pe-icon-7-stroke/css/helper.css" tppabs="http://webapplayers.com/homer_admin-v2.0/fonts/pe-icon-7-stroke/css/helper.css" />
+    <link rel="stylesheet" href="styles/style.css" tppabs="http://webapplayers.com/homer_admin-v2.0/styles/style.css">
+    
+    <link rel="icon" href="img/logo5.ico" type="image/x-icon"/>
+		<link rel="stylesheet" href="css/nav.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/user_manage.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+		<link rel="stylesheet" href="css/zTreeStyle.css">
+		<style type="text/css">
+/*			姓名*/
+			.pt_titleL td:nth-child(1){
+				width: 30px !important;
+			}
+			.pt_titleL td:nth-child(2){
+				width: 120px;
+			}
+			.pt_titleL td:nth-child(3){
+				width: 120px;
+			}
+			.pt_titleL td:nth-child(4){
+				width: 120px;
+			}
+			.pt_titleL td:nth-child(5){
+				width: 120px;
+			}
+			.person_list tr:nth-child(2) td{
+				background-color: white;
+			}
+			.person_list tr:nth-child(3) td{
+				font-size: 14px;
+				font-weight: 100;
+				padding-left: 16px;
+			}
+			.person_list tr:nth-child(3) td:nth-child(1){
+				margin-left: 0px;
+			}
+			.person_list tr td:nth-child(1){
+				width: 20px;
+			}
+			.person_list tr td{
+				width: 100px;
+
+			}
+			#searchImg{
+				margin-left: -30px;
+				position: absolute;
+				top: 33px;
+				z-index: 5;
+			}
+			.upload_it{
+				position: relative;
+				top: 11px;
+			}
+		</style>
+</head>
+<body class="fixed-navbar sidebar-scroll">
+
+<!-- Simple splash screen-->
+<div class="splash"> <div class="color-line"></div><div class="splash-title"><h1>Homer - Responsive Admin Theme</h1><p>Special Admin Theme for small and medium webapp with very clean and aesthetic style and feel. </p><div class="spinner"> <div class="rect1"></div> <div class="rect2"></div> <div class="rect3"></div> <div class="rect4"></div> <div class="rect5"></div> </div> </div> </div>
+<div id="header">
+    <div class="color-line">
+    </div>
+    <div id="logo" class="light-version">
+    	<!--公司图标-->
+        <span>
+            浙江芮廷信息科技
+        </span>
+    </div>
+    <nav role="navigation">
+    	<!--隐藏导航条-->
+        <div class="header-link hide-menu"><i class="fa fa-bars"></i></div>
+        <div class="small-logo">
+            <span class="text-primary">HOMER APP</span>
+        </div>
+<!--        搜索框-->
+        <!--<form role="search" class="navbar-form-custom" method="post" action="#">
+            <div class="form-group">
+                <input type="text" placeholder="请输入搜索信息字段" class="form-control" name="search">
+            </div>
+        </form>-->
+        <!--后台传入公司名-->
+        <span style="border: 1px solid black;display:inline-block;width:100px;">公司：</span><span class="company"></span>
+        <div class="navbar-right">
+            <ul class="nav navbar-nav no-borders">
+                <!--设置 修改密码-->
+                <li class="dropdown">
+                    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+                        <i class="pe-7s-keypad"></i>
+                    </a>
+
+                    <div class="dropdown-menu hdropdown bigmenu animated flipInX">
+                        
+                    </div>
+                </li>
+                <!--消息通知-->
+                <li class="dropdown">
+                    <a class="dropdown-toggle label-menu-corner" href="#" data-toggle="dropdown">
+                        <i class="pe-7s-mail"></i>
+                        <span class="label label-success">4</span>
+                    </a>
+                    <ul class="dropdown-menu hdropdown animated flipInX">
+                        <div class="title">
+                                                        你有四条新消息
+                        </div>
+                        
+                    </ul>
+                </li>
+                <!--退出-->
+                <li class="dropdown">
+                    <a href="login.html" tppabs="http://webapplayers.com/homer_admin-v2.0/login.html">
+                        <i class="pe-7s-upload pe-rotate-90"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</div>
+
+<!-- Navigation -->
+<aside id="menu">
+    <div id="navigation">
+        <div class="profile-picture">
+            <a href="index.html" tppabs="http://webapplayers.com/homer_admin-v2.0/index.html">
+                <img src="images/profile.jpg" tppabs="http://webapplayers.com/homer_admin-v2.0/images/profile.jpg" class="img-circle m-b" alt="logo">
+            </a>
+
+            <div class="stats-label text-color">
+                <span class="font-extra-bold font-uppercase">用户名</span>
+            </div>
+        </div>
+
+        <ul class="nav" id="side-menu">
+            <!--<li><a href="#" tppabs=""></a></li>-->
+            <li>
+                <a href="#"><span class="nav-label">管理中心</span><span class="fa arrow"></span></a>
+                <ul class="nav nav-second-level">
+                    <li><a href="#" tppabs="">用户管理</a></li>
+                    <li><a href="#" tppabs="">资产管理</a></li>
+                    <li><a href="#" tppabs="">地点管理</a></li>
+                    <li><a href="#" tppabs="">设备管理</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#"><span class="nav-label">账户中心</span><span class="fa arrow"></span></a>
+                <ul class="nav nav-second-level">
+                    <li><a href="#" tppabs="">订单管理</a></li>
+                    <li><a href="#" tppabs="">账户管理</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#"><span class="nav-label">会务管理</span><span class="fa arrow"></span></a>
+                <ul class="nav nav-second-level">
+                    <li><a href="#" tppabs="">预约会议</a></li>
+                    <li><a href="#" tppabs="">会议审核</a></li>
+                    <li><a href="#" tppabs="">会议投票</a></li>
+                    <li><a href="#" tppabs="">会议签到</a></li>
+                    <li><a href="#" tppabs="">会议统计</a></li>
+                    <li><a href="#" tppabs="">会议议程</a></li>
+                    <li><a href="#" tppabs="">后期服务</a></li>
+                    <li><a href="#" tppabs="">文档管理</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#"><span class="nav-label">其他</span><span class="fa arrow"></span></a>
+                <ul class="nav nav-second-level">
+                    <li><a href="#" tppabs="">工单管理</a></li>
+                    <li><a href="#" tppabs="">统计分析</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</aside>
+
+<!-- 主要内容部分 -->
+<div id="wrapper">
+  <div class="animate-panel" data-child="hpanel">
+    <div class="hpanel" >
+      <div class="panel-body" >
+        <div class="show">
+           <!--<div class="w" style="width:10px;height:1000px;background-color: red;"></div>-->
+           <div class="wrap" style="width: 100%;height: 100%;border: 1px solid transparent;margin-top: 70px;">
+		<div class="wrapper" style="display: none;">
+			<div class="left-wrapper" style="overflow-x: hidden;">
+				<div style="position: relative;">
+					<input type="text" class="search" id="searchs" value="" placeholder="请输入要查找会议室的字段信息"/>
+					<span class="glyphicon glyphicon-search" id="searchImg" aria-hidden="true"></span>
+					<div class="clear_val"><span class="glyphicon glyphicon-remove"></span></div>
+				    <div class="whiteBox"></div>
+				</div>
+				<div style="">
+					<div id="zTree" class="ztree"></div>
+				</div>
+				
+			</div>
+			<div class="right-wrapper">
+				<h2 id="company_title"></h2>
+				<table class="table_list department" cellspacing="0" cellpadding="0">
+					<tbody class="depart_lists">
+						<tr><td colspan="2"><h2>下级地点</h2></td></tr>
+						<tr class="btn_lists">
+							<td colspan="2">
+								<button class="btn_c add add_depart_child">添加子地点</button>
+								<button class="btn_c edit edit_depart_name">编辑名称</button>
+								<button class="delete delete_more_depart">批量删除</button>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				<div class="table_mask" style="width: 100%;max-height:150px;overflow-y: auto;">
+					<table class="table_list add_lists" style="margin-top: 0;" cellspacing="0" cellpadding="0">
+						<tbody class="depart_lists_add">
+						</tbody>
+					</table>
+				</div>
+				<table class="table_list persons" cellspacing="0" cellpadding="0">
+					<tbody class="person_lists">
+						<tr><td colspan="6"><h2>会议室</h2></td></tr>
+						<tr>
+							<td colspan="6">
+								<button class="btn_c add add_usr_child">添加会议室</button>
+								<button class="btn_c edit uoload_user_btn">批量导入</button>
+								<button class="btn_c edit edit_depart_add">编辑名称</button>
+								<button class="delete delete_more_users">批量删除</button>
+							</td>
+						</tr>
+						<tr class="pt_titleL">
+							<td><input type="checkbox" name="" class="checkAll"/></td>
+							<td>丨名称</td>
+							<td>丨可容纳人数</td>
+							<td>丨园区</td>
+							<td>丨备注</td>
+						</tr>
+					</tbody>
+				</table>
+				<div class="table_mask" style="width: 100%;max-height: 150px;overflow-y: auto;">
+					<table class="table_list persons" style="margin-top: 0;" cellspacing="0" cellpadding="0">
+						<tbody class="person_list">
+							
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+		<div class="slide-mask"></div>
+		<div class="sidebar add_usr_silde">
+				<h2>新增会议室</h2>
+				<div class="msg"><p>详细信息</p></div>
+				<ul class="slide_left_ul">
+					<li>名称：</li>
+					<li>可容纳人数：</li>
+					<li>备注：</li>
+				</ul>
+				<ul class="slide_right_ul">
+					<li><input type="text" class="name clear" placeholder="必填项"/></li>
+					<li><input type="number" min="1" step="1" class="sex" placeholder="必填项"/></li>
+					<li><input type="text" class="job" placeholder="选填项"/></li>
+				</ul>
+				<div style="clear: both;"></div>
+				<div class="sidebar_footer">
+					<button class="save user_create">保存 </button><button class="delete user_delete">取消 </button>
+			</div>
+		</div>
+		<!--新增-->
+		<div class="sidebar add_departs_silde">
+				<h2>新增园区</h2>
+				<div class="msg"><p>地点信息</p></div>
+				<ul class="slide_left_ul">
+					<li>园区名称：</li>
+					<li>楼号：</li>
+					<li>楼层：</li>
+				</ul>
+				<ul class="slide_right_ul">
+					<li><input type="text" class="depart_name depart_name0" placeholder="必填项"/></li>
+					<li><input type="text" class="description description0" placeholder="选填项"/></li>
+					<li><input type="text" class="power power0" placeholder="选填项"/></li>
+				</ul>
+				<div style="clear: both;"></div>
+				<div class="sidebar_footer">
+					<button class="save add_departs_save">保存 </button><button class="delete add_departs_delete">取消 </button>
+			</div>
+		</div>
+		<div class="sidebar add_dalou_silde">
+				<h2>新增大楼</h2>
+				<div class="msg"><p>楼号信息</p></div>
+				<ul class="slide_left_ul">
+					<li>楼号：</li>
+					<li>楼层：</li>
+				</ul>
+				<ul class="slide_right_ul">
+					<li><input type="text" class="depart_name depart_name1" placeholder="必填项"/></li>
+					<li><input type="text" class="description description1" placeholder="选填项"/></li>
+				</ul>
+				<div style="clear: both;"></div>
+				<div class="sidebar_footer">
+					<button class="save add_departs_save">保存 </button><button class="delete add_departs_delete">取消 </button>
+			</div>
+		</div>
+		<div class="sidebar add_louceng_silde">
+				<h2>新增楼层</h2>
+				<div class="msg"><p>楼层信息</p></div>
+				<ul class="slide_left_ul">
+					<li>楼层：</li>
+				</ul>
+				<ul class="slide_right_ul">
+					<li><input type="text" class="depart_name depart_name2" placeholder="必填项"/></li>
+				</ul>
+				<div style="clear: both;"></div>
+				<div class="sidebar_footer">
+					<button class="save add_departs_save">保存 </button><button class="delete add_departs_delete">取消 </button>
+			</div>
+		</div>
+		<!--修改-->
+		<div class="sidebar change_departs_silde">
+				<h2>修改园区</h2>
+				<div class="msg"><p>地点信息</p></div>
+				<ul class="slide_left_ul">
+					<li>园区名：</li>
+					<!--<li>楼号：</li>
+					<li>楼层：</li>-->
+				</ul>
+				<ul class="slide_right_ul">
+					<li><input type="text" class="depart_change_name depart_change_name3" /></li>
+					<!--<li><input type="text" class="description_change description_change3" /></li>
+					<li><input type="text" class="powers powers3" /></li>-->
+				</ul>
+				<div style="clear: both;"></div>
+				<div class="sidebar_footer">
+					<button class="save change_departs_save">保存 </button><button class="delete change_departs_delete">取消 </button>
+			</div>
+		</div>
+		<div class="sidebar change_dalou_silde">
+				<h2>修改大楼</h2>
+				<div class="msg"><p>地点信息</p></div>
+				<ul class="slide_left_ul">
+					<li>楼号：</li>
+					<!--<li>楼层：</li>-->
+				</ul>
+				<ul class="slide_right_ul">
+					<li><input type="text" class="depart_change_name depart_change_name4" /></li>
+					<!--<li><input type="text" class="description_change description_change4" /></li>-->
+				</ul>
+				<div style="clear: both;"></div>
+				<div class="sidebar_footer">
+					<button class="save change_departs_save">保存 </button><button class="delete change_departs_delete">取消 </button>
+			</div>
+		</div>
+		<div class="sidebar change_louceng_silde">
+				<h2>修改楼层</h2>
+				<div class="msg"><p>地点信息</p></div>
+				<ul class="slide_left_ul">
+					<li>楼层：</li>
+				</ul>
+				<ul class="slide_right_ul">
+					<li><input type="text" class="depart_change_name depart_change_name5" /></li>
+				</ul>
+				<div style="clear: both;"></div>
+				<div class="sidebar_footer">
+					<button class="save change_departs_save">保存 </button><button class="delete change_departs_delete">取消 </button>
+			</div>
+		</div>
+		<!--修改会议室-->
+		<div class="sidebar change_meeting_silde">
+				<h2>修改会议室</h2>
+				<div class="msg"><p>会议室信息</p></div>
+				<ul class="slide_left_ul">
+					<li>会议室名称：</li>
+					<li>可容纳人数：</li>
+					<li>备注：</li>
+				</ul>
+				<ul class="slide_right_ul">
+					<li><input type="text" class="name0 clear"/></li>
+					<li><input type="number" min="1" step="1" class="sex0"/></li>
+					<li><input type="text" class="job0"/></li>
+				</ul>
+				<div style="clear: both;"></div>
+				<div class="sidebar_footer">
+					<button class="save change_departs_save0">保存 </button><button class="delete change_departs_delete">取消 </button>
+			</div>
+		</div>
+		<!--批量导入-->
+		<form id="myForm" enctype="multipart/form-data" method="post">
+			<div class="sidebar upload_users">
+				<h2>批量导入</h2>
+				<div class="msg"><p>新建会议室导入步骤</p></div>
+				<ul class="upload_build">
+					<li>第一步：下载会议室文档模板，批量填写会议室信息</li>
+					<li>第二步：上传填写好的会议室信息表</li>
+				</ul>
+				<div class="msg"><p>修改/导出会议室导入步骤</p></div>
+				<ul class="upload_build">
+					<li>第一步：下载会议室文档模板，批量填写会议室信息</li>
+					<li>第二步：上传填写好的会议室信息表</li>
+				</ul>
+				<div style="clear: both;"></div>
+				<div class="sidebar_footer upload_btns">
+					<button class="download_mould"  disabled="true">下载模板 </button>
+					<button class="export"  disabled="true">导出 </button>
+						<a href="javascript:;" class="upload_it">
+							<input id="fileToUpload" type="file" name="file" onchange="upLoad()"  value="选择文件">
+							上传
+						</a>
+				</div>
+			</div>
+		</form>
+		
+		
+		
+		
+		
+		<div class="modal fade no_groups" id="no_groups" tabindex="-1" role="dialog">
+			  <div class="modal-dialog modal-sm" style="margin-top: 160px;">
+			    <div class="modal-content">
+			     	<div class="modal-header">
+			     		<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			     		  <h4 class="modal-title" id="myModalLabel">提示</h4>
+			     	</div>
+			     	<div class="modal-body" style="text-align: center;">
+			     		<h4 class="tips_text"></h4>
+			     	</div>
+			    </div>
+			  </div>
+		</div>
+			
+			<div class="modal fade delete_groups_checked" id="delete_groups_checked" tabindex="-1" role="dialog">
+			  <div class="modal-dialog modal-sm" style="margin-top: 160px;">
+			    <div class="modal-content">
+			     	<div class="modal-header">
+			     		<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			     		  <h4 class="modal-title" id="myModalLabel">警告</h4>
+			     	</div>
+			     	<div class="modal-body" style="text-align: center;">
+			     		<h4 class="tips_text_delete_groups">确定删除地点吗？</h4>
+			     	</div>
+			     	<div class="modal-footer">
+				        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+				        <button type="button" class="btn btn-danger delete_these_group">确定</button>
+				    </div>
+			    </div>
+			  </div>
+			</div>
+			
+			<div class="modal fade delete_users_checked" id="delete_users_checked" tabindex="-1" role="dialog">
+			  <div class="modal-dialog modal-sm" style="margin-top: 160px;">
+			    <div class="modal-content">
+			     	<div class="modal-header">
+			     		<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			     		  <h4 class="modal-title" id="myModalLabel">警告</h4>
+			     	</div>
+			     	<div class="modal-body" style="text-align: center;">
+			     		<h4 class="tips_text_delete_groups">确定删除会议室吗？</h4>
+			     	</div>
+			     	<div class="modal-footer">
+				        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+				        <button type="button" class="btn btn-danger delete_these_users">确定</button>
+				    </div>
+			    </div>
+			  </div>
+			</div>
+			
+			<div class="modal fade login_out" id="login_out" tabindex="-1" role="dialog">
+			  <div class="modal-dialog modal-sm" style="margin-top: 160px;">
+			    <div class="modal-content">
+			     	<div class="modal-header">
+			     		<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			     		  <h4 class="modal-title" id="myModalLabel">警告</h4>
+			     	</div>
+			     	<div class="modal-body" style="text-align: center;">
+			     		<h4 class="tips_text_delete_groups">确定退出登录？</h4>
+			     	</div>
+			     	<div class="modal-footer">
+				        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+				        <button type="button" class="btn btn-danger login_out_btn">确定</button>
+				    </div>
+			    </div>
+			  </div>
+			</div>
+			<!--加载动画-->
+		<div class="spinner">
+			<div class="spinner-container container1">
+				<div class="circle1"></div>
+				<div class="circle2"></div>
+				<div class="circle3"></div>
+				<div class="circle4"></div>
+			</div>
+			<div class="spinner-container container2">
+				<div class="circle1"></div>
+				<div class="circle2"></div>
+				<div class="circle3"></div>
+				<div class="circle4"></div>
+			</div>
+			<div class="spinner-container container3">
+				<div class="circle1"></div>
+				<div class="circle2"></div>
+				<div class="circle3"></div>
+				<div class="circle4"></div>
+			</div>
+		</div>
+           
+           
+           
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<!-- Vendor scripts -->
+<script src="vendor/jquery/dist/jquery.min.js" tppabs="http://webapplayers.com/homer_admin-v2.0/vendor/jquery/dist/jquery.min.js"></script>
+<script src="vendor/jquery-ui/jquery-ui.min.js" tppabs="http://webapplayers.com/homer_admin-v2.0/vendor/jquery-ui/jquery-ui.min.js"></script>
+<script src="vendor/slimScroll/jquery.slimscroll.min.js" tppabs="http://webapplayers.com/homer_admin-v2.0/vendor/slimScroll/jquery.slimscroll.min.js"></script>
+<script src="vendor/bootstrap/dist/js/bootstrap.min.js" tppabs="http://webapplayers.com/homer_admin-v2.0/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="vendor/metisMenu/dist/metisMenu.min.js" tppabs="http://webapplayers.com/homer_admin-v2.0/vendor/metisMenu/dist/metisMenu.min.js"></script>
+<script src="vendor/iCheck/icheck.min.js" tppabs="http://webapplayers.com/homer_admin-v2.0/vendor/iCheck/icheck.min.js"></script>
+<script src="vendor/sparkline/index.js" tppabs="http://webapplayers.com/homer_admin-v2.0/vendor/sparkline/index.js"></script>
+
+<!-- App scripts -->
+<script src="scripts/homer.js" tppabs="http://webapplayers.com/homer_admin-v2.0/scripts/homer.js"></script>
+
+
+
+<script src="http://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js" charset="utf-8"></script>
+	<script src="js/api.min.js" charset="utf-8"></script>
+	<script src="js/jquery.ztree.all.js"></script>
+	<script src="js/jquery.form.js"></script>
+	<script src="js/add_manage.min.js"></script>
+	<script type="text/javascript">
+		$(function () {
+            $(".spinner").hide();
+            $(".wrapper").show();
+        })
+		
+	</script>
+</body>
+</html>
+

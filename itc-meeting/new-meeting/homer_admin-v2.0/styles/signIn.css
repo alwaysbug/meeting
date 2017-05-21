@@ -1,0 +1,270 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	background-color: #FFFFFF;
+}
+ul,li{
+	list-style: none;
+}
+p,a{
+	color: #acacac;
+}
+h1{
+	font-size: 36px;
+	font-weight: 500;
+}
+h3{
+	font-size: 20px;
+	font-weight: 300;
+	color: #999999;
+}
+.Validform_checktip,.Validform_right,.Validform_title,.Validform_info{
+	display: none;
+}
+.registerOrsignIn{
+	width: 844px;
+	height: 486px;
+	border-radius: 2px;
+	margin: 100px auto;
+	background-color:#f0f0f0;
+	position: relative;
+}
+.signIn_back{
+	width: 100%;
+	height: 100%;
+}
+.support{
+	width: 334px;
+	height: 100%;
+	text-align: center;
+	position: absolute;
+	top: 0;
+	right: 0;
+	border-radius: 2px;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	-moz-user-select: none;
+}
+.support h3{
+	margin-top: 90px;
+}
+.logos{
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-left: -119px;
+	margin-top: -114px;
+}
+.support>p{
+	position: absolute;
+	bottom: 26px;
+	font-size: 15px;
+	left: 50%;
+	margin-left: -67.5px;
+}
+.support .intro{
+	margin-top: 70px;
+	text-align: right;
+	line-height: 30px;
+	font-size: 15px;
+	padding-right: 30px;
+}
+
+.signIn_content{
+	width: 450px;
+	height: 890px;
+	background-color: #FFFFFF;
+	position: absolute;
+	left: 60px;
+	top: -40px;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	box-shadow:  0 0 4px 4px rgba(0,0,0,0.2);
+	behavior:url(../../../new-meeting/homer_admin-v2.0/styles/pie.htc);
+}
+input[type=checkbox]{
+	padding: 0 !important;
+	width: 15px !important;
+	height: 15px !important;
+}
+.signIn_content input{
+	position: relative;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+}
+.signIn_content .h1{
+	font-size: 30px;
+	letter-spacing: 1px;
+}
+/*.signIn_content .h2{
+	width: 187px;
+	height: 30px;
+	background: url(../img/signIn.png) no-repeat;
+	background-size: 100% 100%;
+}
+.signIn_content .h3{
+	width: 183px;
+	height: 28px;
+	background: url(../img/forget_pw.png) no-repeat;
+	background-size: 100% 100%;
+}*/
+.signIn_center{
+	margin-left: 68px;
+	margin-top: 48px;
+}
+.signIn_content .options{
+	width: 314px;
+	margin-top: 25px;
+	border-bottom: 1px solid #e5e5e5;
+	text-align: center;
+}
+.signIn_content .options>div{
+	width: 47%;
+	display: inline-block;
+	text-align: center;
+}
+.signIn_content .options .option{
+	display: inline-block;
+	font-size: 15px;
+	width: 70%;
+	border-bottom: 2.5px solid #F49860;
+	padding-bottom: 10px;
+	text-align: center;
+	color: #999999;
+}
+.signIn_content .options .person,.signIn_content .options .scan{
+	border: none;
+}
+.signIn_content ul{
+	margin-top: 44px;
+}
+.signIn_content ul h4{
+	font-size: 15px;
+	margin-top: 16px;
+	margin-bottom: 10px;
+	font-weight: 600;
+	letter-spacing: 1px;
+}
+.signIn_content ul input{
+	width: 299px;
+	height: 38px;
+	line-height:38px;
+	border: 1px solid #e5e5e5;
+	border-radius: 3px;
+	font-size: 14px;
+	padding-left: 15px;
+	letter-spacing: 1px;
+}
+.signIn_content ul .register_phone_input,.signIn_content ul  .forget_phone_input{
+	width: 212px;
+	position: relative;
+	border-radius: 3px 0 0 3px;
+}
+.uls{
+	border: 1px solid transparent;
+}
+.signIn_content ul .idfy_code,.signIn_content ul .forget_idfy_code,.register_btn,.login_btn,.forget_pw_btn,.new_password_btn{
+	width: 87px;
+	height: 40px;
+	color: #FFFFFF;
+	background-color: #E6501E;
+	border:none;
+	font-size: 13px;
+	position: relative;
+	border-radius: 0 5px 5px 0;
+}
+.register_btn,.login_btn,.forget_pw_btn,.new_password_btn{
+	width: 315px;
+	height: 40px;
+	font-size: 17px;
+	letter-spacing: 10px;
+	border-radius: 5px;
+	margin-top: 30px;
+}
+.login_control{
+	margin-top: 20px;
+	margin-left: 100px;
+	font-size: 13px;
+	margin-bottom: 60px;
+}
+.forget_pw{
+	text-decoration: none;
+	font-size: 13px;
+	font-weight: 100;
+	margin-left: 210px;
+	color: #dbdbdb;
+}
+.agree_protocol{
+	font-size: 13px;
+	margin-left: 35px;
+	margin-top: 8px;
+}
+.third_party{
+	width: 314px;
+	border-top: 1px solid #e5e5e5;
+	margin-top: 20px;
+	padding-top: 18px;
+	font-size: 15px;
+	text-align: center;
+}
+.third_party a{
+	text-decoration: none;
+}
+.signIn_content .uls .register_phone_num .again_send{
+	background-color: #D2D2D2 !important;
+}
+.warn{
+	width: 321px;
+	height: 241px;
+	background-color: #4c4c4c;
+	border-radius: 5px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -120px;
+	margin-left: -160px;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	-moz-user-select: none;
+	display: none;
+}
+.warn .warn_tips{
+	color: #FFFFFF;
+	width: 100%;
+	text-align: center;
+	margin-top: 20px;
+	font-size: 20px;
+}
+.warn .warn_img{
+	margin-top: 50px;
+	margin-left: 105px;
+}
+
+@media only screen and (min-width: 100px) and (max-width: 770px) {
+	body{
+		background-color: #ebeff2 !important;
+	}
+	.wrapPC{
+		display: none !important;
+	}
+	.wrapMobile{
+		display: block !important;
+		padding: 20px;
+	}
+	#register_mobile{
+		background-color: #E6501E;
+		width: 100%;
+		height: 30px;
+		color: #FFFFFF;
+	}
+	#phone_mobile{
+		border-right: none;
+	}
+	#get_verify_mobile{
+		background-color: #E6501E;
+		color: #FFFFFF;
+		border: 1px solid #E6501E;
+	}
+}

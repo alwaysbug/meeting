@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Page title -->
+    <title>地点管理</title>
+
+    <link rel="shortcut icon" type="image/ico" href="images/logo.ico" />
+
+    <!-- Vendor styles -->
+    <link rel="stylesheet" href="vendor/fontawesome/css/font-awesome.css"  />
+    <link rel="stylesheet" href="vendor/metisMenu/dist/metisMenu.css"  />
+    <link rel="stylesheet" href="vendor/animate.css/animate.css"  />
+    <link rel="stylesheet" href="vendor/bootstrap/dist/css/bootstrap.css"  />
+    <link rel="stylesheet" href="vendor/fooTable/css/footable.core.min.css">
+    <link rel="stylesheet" href="vendor/sweetalert/lib/sweet-alert.css">
+    <link rel="stylesheet" href="vendor/toastr/build/toastr.min.css">
+    <link rel="stylesheet" href="vendor/bootstrap-datepicker-master/dist/css/bootstrap-datepicker3.min.css"/>
+    <link rel="stylesheet" href="vendor/clockpicker/dist/bootstrap-clockpicker.min.css" />
+    <link rel="stylesheet" href="vendor/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css" />
+    <!-- App styles -->
+    <link rel="stylesheet" href="fonts/pe-icon-7-stroke/css/pe-icon-7-stroke.css"  />
+    <link rel="stylesheet" href="fonts/pe-icon-7-stroke/css/helper.css"  />
+    <link rel="stylesheet" href="styles/style.css" >
+    
+		<link rel="stylesheet" href="styles/add_manage.css" >
+        <link rel="stylesheet" href="styles/zTreeStyle.css">
+		<style type="text/css">
+			.upload_it{
+				position: relative;
+				top: 14px;
+				left: -20px;
+			}
+			.gongsi{
+				font-size: 13px;
+				position: absolute;
+				right: 200px;
+				top: 25px;
+			}
+			#moveShow{
+				position: absolute;
+				right: 6px;
+				top: 128px;
+			}
+		</style>
+</head>
+<body class="fixed-navbar sidebar-scroll">
+
+
+<!-- Simple splash screen-->
+<div class="splash" style="display: block;">
+    <div class="color-line"></div>
+    <div class="splash-title"><h1>芮廷云会务</h1><p>The Best Meeting Butler </p> <div class="spinner"> <div class="rect1"></div> <div class="rect2"></div> <div class="rect3"></div> <div class="rect4"></div> <div class="rect5"></div> </div> </div> </div>
+<div id="header">
+    <div class="color-line">
+    </div>
+    <div id="logo" class="light-version">
+        <span>
+            芮廷科技
+        </span>
+    </div>
+    <nav role="navigation">
+        <!--<div class="header-link hide-menu"><i class="fa fa-bars"></i></div>-->
+        <div class="small-logo">
+            <span class="text-primary">芮廷科技</span>
+        </div>
+        <form role="search" class="navbar-form-custom" method="post" action="#">
+            <div class="form-group">
+                <!--<input type="text" placeholder="在此输入文字搜索内容" class="form-control" name="search">-->
+            </div>
+        </form>
+        <div class="mobile-menu">
+            <button type="button" class="navbar-toggle mobile-menu-toggle" data-toggle="collapse" data-target="#mobile-collapse">
+                <i class="fa fa-chevron-down"></i>
+            </button>
+            <div class="collapse mobile-navbar" id="mobile-collapse">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a class="" href="register.html?login" >登出</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="navbar-right">
+            <ul class="nav navbar-nav no-borders">
+                <li class="dropdown">
+                    <a id="company_name" class="dropdown-toggle label-menu-corner" href="#" data-toggle="dropdown" style="font-size: 13px;">
+                    </a>
+                </li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle label-menu-corner" href="#" data-toggle="dropdown">
+                        <i class="pe-7s-speaker"></i>
+                    </a>
+                    <ul class="dropdown-menu hdropdown notification animated flipInX">
+                        <li>
+                            <a>
+                                <span class="label label-success">NEW</span> 芮廷会务新版上线啦
+                            </a>
+                        </li>
+                        <li class="summary"><a href="javascript:;">查询全部消息</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="javascript:;" id="login_out_btn" >
+                        <i class="pe-7s-upload pe-rotate-90"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</div>
+
+<!-- Navigation -->
+<aside id="menu">
+    <div id="navigation">
+        <div class="profile-picture">
+            <a href="user_index.html" >
+                <img id="avtar" style="width: 76px;height: 76px;" src="images/logo.png"  class="img-circle m-b" alt="logo">
+            </a>
+
+            <div class="stats-label text-color">
+                <span id="nick_name" class="font-extra-bold font-uppercase">
+                </span>
+            </div>
+        </div>
+
+        <ul class="nav" id="side-menu">
+            <li>
+                <a href="first_page.html"><span class="nav-label">首页</span></a>
+            </li>
+            <li class="active">
+                <a href="javascript:;"><span class="nav-label">管理中心</span><span class="fa arrow"></span> </a>
+                <ul class="nav nav-second-level">
+                    <li><a href="user_manage.html" >用户管理</a></li>
+                    <li><a href="asset.html" >资产管理</a></li>
+                    <li class="active"><a href="add_manage.html" >地点管理</a></li>
+                    <li><a href="device.html" >设备管理</a></li>
+                    <li><a href="scenes_panel.html" >场景/面板管理</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#"><span class="nav-label">账户中心</span><span class="fa arrow"></span> </a>
+                <ul class="nav nav-second-level">
+                    <li><a href="commerce.html">商务选择</a></li>
+                    <li><a href="order_managerment.html" >订单管理</a></li>
+                    <li><a href="account.html" >账户管理</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#"><span class="nav-label">其他</span><span class="fa arrow"></span> </a>
+                <ul class="nav nav-second-level">
+                    <li><a href="work_order.html" >工单管理</a></li>
+                    <li><a href="business.html" >统计分析</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</aside>
+
+<!-- 主要内容部分 -->
+<div id="wrapper">
+<!--最上部头部部分-->	
+<div class="normalheader ">
+    <div class="hpanel">
+        <div class="panel-body">
+            <a class="small-header-action" href="">
+                <div class="clip-header">
+                    <i class="fa fa-arrow-up"></i>
+                </div>
+            </a>
+            <h2 class="font-light m-b-xs">地点管理</h2>
+            <small>地点及会议室管理</small>
+        </div>
+    </div>
+</div>
+<!--下部分内容-->
+<div class="content animate-panel" data-child="hpanel">
+<div class="row">
+	<!--左边树状图部分-->
+    <div class="col-lg-4" >
+        <div class="hpanel">
+            <div class="panel-body">
+            	<div class="input-group">
+                    <input type="text" class="form-control searchIt" placeholder="搜索会议室">
+                    <span class="input-group-btn">
+						<button class="btn btn-default" type="submit">
+                            <span class="fa fa-search"></span>
+                        </button>
+				    </span>
+                </div>
+				<div style="">
+					<div id="zTree" class="ztree"></div>
+				</div>
+            </div>
+        </div>
+    </div>
+    <!--会议室部分-->
+    <div class="col-lg-8 moveShow" id=""><!--moveShow-->
+    	<div class="hpanel">
+                    <div class="panel-body">
+                    	<h2 class="font-light m-b-xs">
+                                                    会议室 
+                        </h2>
+                        <p>
+                            <button type="button" class="btn btn-info btn-infor marginRightBtn" data-target="#myModal8" data-toggle="modal">
+                                <i class="fa fa-paste"></i>
+                                                          添加会议室
+                            </button>
+
+
+                            <button type="button" class="btn btn-info btn-outline marginRightBtn" data-target="#myModal" data-toggle="modal" >
+                                <i class="fa fa-upload"></i>
+                                                          批量导入
+                            </button>
+                            <button type="button" class="btn btn-outline btn-danger marginRightBtn" id="deleteMembers">
+                                <i class="fa fa-trash-o"></i>
+                                                          批量删除
+                            </button>
+                        </p>
+                        <table id="group_table" class="footable table table-bordered toggle-arrow-tiny" data-page-size="8" data-filter=#filter>
+                            <thead>
+                            <tr>
+                                <th><input type="checkbox" class="checkAll"></th>
+                                <th>名称</th>
+                                <th>可容纳人数</th>
+                                <th>园区</th>
+                                <th>开放时间</th>
+                                <th>使用权</th>
+                                <th>备注</th>
+                                <th>操作</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
+                        <ul class="pagination pull-right"></ul>
+                    </div>
+                </div>
+    </div>
+</div>
+</div>
+<!--弹出部分-->
+<!--添加会议室-->
+    <div class="modal fade hmodal-info" id="myModal8" tabindex="-1" role="dialog" aria-hidden="true" style="display: none;">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="color-line"></div>
+                <div class="modal-header">
+                    <h4 class="modal-title">新增会议室</h4>
+                    <!--<small class="font-bold">新成员接受邀请后将添加至此分组</small>-->
+                </div>
+                <div class="modal-body">
+                    <div id="addPerson" class="form-horizontal">
+                    	<!--会议室名-->
+                        <div class="form-group"><label class="col-sm-2 control-label">会议室</label>
+                            <div class="col-sm-10"><input type="text" class="form-control name" placeholder="必填项"></div>
+                        </div>
+                        <div class="hr-line-dashed"></div>
+                        <!--可容纳人数-->
+                        <div class="form-group"><label class="col-sm-2 control-label">可容纳人数</label>
+                            <div class="col-sm-10"><input type="text" class="form-control sex" placeholder="必填项"></div>
+                        </div>
+                        <div class="hr-line-dashed"></div>
+                        <!--开放时间-->
+                        <div class="form-group"><label class="col-sm-2 control-label">开放时间</label>
+                            <div class="col-sm-10">
+                            	<div class="col-sm-10">
+                                    <div class="radio">
+                                        <label class="col-sm-4">
+                                    	   <input type="radio" checked="" value="option1" id="optionsRadios1" name="optionsRadios">全天可用
+                                        </label>
+                                    	<label class="col-sm-4">
+                                    		<input type="radio" value="option2" id="optionsRadios2" name="optionsRadios">禁止使用
+                                        </label>
+                                        <label class="col-sm-4">
+                                    		<input type="radio" value="option3" id="optionsRadios3" name="optionsRadios">设置时间
+                                        </label>
+                                    </div>
+                                    <div class="input-daterange input-group" id="datepicker" style="position:absolute;right:68px;">
+                                        <input id="datapicker01" type="text" class="input-sm form-control" name="start" placeholder="请选择起始日期"/>
+                                        <span class="input-group-addon">至</span>
+                                        <input id="datapicker02" type="text" class="input-sm form-control" name="end" placeholder="请选择截止日期"/>
+            		                </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="hr-line-dashed"></div>
+                        <!--使用权-->
+                        <div class="form-group"><label class="col-sm-2 control-label">使用权</label>
+                            <div class="col-sm-10">
+                            	
+                            </div>
+                        </div>
+                        <div class="hr-line-dashed"></div>
+                        <!--备注-->
+                        <div class="form-group"><label class="col-sm-2 control-label">备注</label>
+                            <div class="col-sm-10"><input type="text" class="form-control serial_no" placeholder="选填项"></div>
+                        </div>
+                        <div class="hr-line-dashed"></div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default cancel_person_btn" data-dismiss="modal">取消</button>
+                    <button type="button" class="btn btn-primary add_person_btn" data-dismiss="modal">确定</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--批量导入-->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-hidden="true" style="display: none;">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="color-line"></div>
+                <div class="modal-header text-center">
+                    <h4 class="modal-title">批量导入</h4>
+                    <!--<small class="font-bold">未填写部门的成员将分配至默认部门</small>-->
+                </div>
+                <div class="modal-body">
+                    <div class="text-center m-b-md">
+                        <h3>新建会议室信息导入步骤</h3>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a href="javascript:;">
+                                    第一步：下载会议室模板，批量填写会议室信息
+                                </a>
+                            </h4>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a href="javascript:;">
+                                    第二步：上传填写好的会议室信息表
+                                </a>
+                            </h4>
+                        </div>
+                    </div>
+
+                    <div class="text-center m-b-md">
+                        <h3>修改/导出会议室信息导入步骤</h3>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a href="javascript:;">
+                                    第一步：下载会议室模板，批量填写会议室信息
+                                </a>
+                            </h4>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a href="javascript:;">
+                                    第二步：上传填写好的会议室信息表
+                                </a>
+                            </h4>
+                        </div>
+                    </div>
+                    <form id="myForm" enctype="multipart/form-data" method="post">
+                    <div class="text-center m-b-md">
+                        <a href="http://www.unitsyscloud.com/downloads/adds.xls"><button type="button" class="btn w-xs btn-primary" disabled="true">下载模板</button></a>
+                        <button type="button" class="btn btn-outline btn-info" disabled="true" style="color: white;">导出</button>
+                        <a href="javascript:;" class="upload_it">
+                            <input type="hidden" id="hiddenIn" name="group_id" value="">
+                            <input id="fileToUpload" type="file" name="file" value="选择文件">
+                                                   上传
+                        </a>
+                    </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                    <button type="button" class="btn btn-primary export_file" data-dismiss="modal">导入</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--修改会议室-->
+    <div class="modal fade hmodal-info" id="myModalEdit" tabindex="-1" role="dialog" aria-hidden="true" style="display: none;">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="color-line"></div>
+                <div class="modal-header">
+                    <h4 class="modal-title">编辑会议室</h4>
+                    <!--<small class="font-bold">在这里修改成员的一些信息</small>-->
+                </div>
+                <div class="modal-body">
+                    <div id="editMembers" class="form-horizontal">
+                        <div class="form-group"><label class="col-sm-2 control-label">会议室</label>
+
+                            <div class="col-sm-10"><input type="text" class="form-control e_name"></div>
+                        </div>
+                        <div class="hr-line-dashed"></div>
+                        <div class="form-group"><label class="col-sm-2 control-label">可容纳人数</label>
+
+                            <div class="col-sm-10"><input type="text" class="form-control e_sex"></div>
+                        </div>
+                        <div class="hr-line-dashed"></div>
+                        <div class="form-group"><label class="col-sm-2 control-label">备注</label>
+
+                            <div class="col-sm-10"><input type="text" class="form-control e_phone"></div>
+                        </div>
+                        <div class="hr-line-dashed"></div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                    <button type="button" class="btn btn-primary edit_person_btn" data-dismiss="modal">确定</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+
+
+<!-- Vendor scripts -->
+<script src="vendor/jquery/dist/jquery.min.js" ></script>
+<script src="vendor/jquery-ui/jquery-ui.min.js" ></script>
+<script src="vendor/slimScroll/jquery.slimscroll.min.js" ></script>
+<script src="vendor/bootstrap/dist/js/bootstrap.min.js" ></script>
+<script src="vendor/metisMenu/dist/metisMenu.min.js" ></script>
+<script src="vendor/fooTable/dist/footable.min.js"></script>
+<script src="vendor/fooTable/dist/footable.paginate.min.js"></script>
+<script src="vendor/sweetalert/lib/sweet-alert.min.js"></script>
+ <script src="vendor/toastr/build/toastr.min.js"></script>
+ <script src="vendor/bootstrap-datepicker-master/dist/js/bootstrap-datepicker.min.js"></script>
+ <!-- App scripts -->
+<script src="scripts/homer.js" ></script>
+
+
+<script src="scripts/api.js" ></script>
+<script type="text/javascript" src="scripts/jquery.ztree.all.js"></script>
+<script src="scripts/jquery.form.js"></script>
+<script src="scripts/commen.js"></script>
+<script src="scripts/add_manage.js"></script>
+</body>
+</html>
+

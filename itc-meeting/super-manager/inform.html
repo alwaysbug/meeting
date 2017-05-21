@@ -1,0 +1,469 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Page title -->
+    <title>芮廷超管系统</title>
+
+    <link rel="shortcut icon" type="image/ico" href="images/logo.ico" />
+
+    <!-- Vendor styles -->
+    <link rel="stylesheet" href="vendor/fontawesome/css/font-awesome.css" />
+    <link rel="stylesheet" href="vendor/metisMenu/dist/metisMenu.css" />
+    <link rel="stylesheet" href="vendor/animate.css/animate.css" />
+    <link rel="stylesheet" href="vendor/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="vendor/sweetalert/lib/sweet-alert.css">
+    <link rel="stylesheet" href="vendor/toastr/build/toastr.min.css">
+    <link rel="stylesheet" href="vendor/fooTable/css/footable.core.min.css"/>
+    <link rel="stylesheet" href="vendor/bootstrap-datepicker-master/dist/css/bootstrap-datepicker3.min.css"/>
+    <link rel="stylesheet" href="vendor/clockpicker/dist/bootstrap-clockpicker.min.css" />
+    <link rel="stylesheet" href="vendor/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css" />
+
+
+    <!-- App styles -->
+    <link rel="stylesheet" href="fonts/pe-icon-7-stroke/css/pe-icon-7-stroke.css" />
+    <link rel="stylesheet" href="fonts/pe-icon-7-stroke/css/helper.css" />
+    <link rel="stylesheet" href="styles/style.css">
+    <style type="text/css">
+    	.chossType{
+    		position: absolute;
+    		right: 10px;
+    		top: 14px;
+    	}
+    	.chossType span{
+    		margin-left: 13px;
+    		font-size: 15px;
+    		cursor: pointer;
+    		padding-bottom: 10px;
+    	}
+    	.monthType{
+    		border-bottom: 2px solid #5b8eff;
+    	}
+    	#datapicker1{
+    		display: block;
+    	}
+    	#datapicker2{
+    		display: none;
+    	}
+    	#datapicker3{
+    		display: none;
+    	}
+    	/*弹出框*/
+    	#wraps{
+    		width:800px;
+    		height:780px;
+    		border:2px solid #5b8eff;
+    		border-top:25px solid #5b8eff;
+    		background-color:white;
+    		position: absolute;
+    		left:300px;
+    		top:100px;
+    		z-index: 20;
+    		display: none;
+    	}
+    	#closeShowBtn{
+    		font-size: 20px;
+    		position: absolute;
+    		right: 5px;
+    		top: -23px;
+    		cursor: pointer;
+    	}
+    	#showNames{
+    		position: absolute;
+    		left: 5px;
+    		top: -20px;
+    		color: white;
+    	}
+    </style>
+    
+    
+
+</head>
+<body class="fixed-navbar fixed-sidebar">
+
+<!-- Simple splash screen-->
+<div class="splash">
+    <div class="color-line"></div>
+    <div class="splash-title">
+        <h1>浙江芮廷信息科技有限公司</h1>
+        <p>这里是一条标语</p>
+        <div class="spinner">
+            <div class="rect1">
+
+            </div>
+            <div class="rect2"></div>
+            <div class="rect3"></div>
+            <div class="rect4"></div>
+            <div class="rect5"></div>
+        </div>
+    </div>
+</div>
+
+<!-- Header -->
+<div id="header">
+    <div class="color-line">
+    </div>
+    <div id="logo" class="light-version">
+        <span>
+            芮廷超管系统
+        </span>
+    </div>
+    <nav role="navigation">
+        <div class="header-link hide-menu"><i class="fa fa-bars"></i></div>
+        <div class="small-logo">
+            <span class="text-primary">芮廷超管系统</span>
+        </div>
+        <form role="search" class="navbar-form-custom" method="post" action="#">
+            <div class="form-group">
+                <input type="text" placeholder="Search something special" class="form-control" name="search">
+            </div>
+        </form>
+        <div class="mobile-menu">
+            <button type="button" class="navbar-toggle mobile-menu-toggle" data-toggle="collapse" data-target="#mobile-collapse">
+                <i class="fa fa-chevron-down"></i>
+            </button>
+            <div class="collapse mobile-navbar" id="mobile-collapse">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a class="" href="login.html">退出</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="navbar-right">
+            <ul class="nav navbar-nav no-borders">
+                <li class="dropdown">
+                    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+                        <i class="pe-7s-speaker"></i>
+                    </a>
+                    <ul class="dropdown-menu hdropdown notification animated flipInX">
+                        <li>
+                            <a>
+                                <span class="label label-success">NEW</span>
+                                芮廷超管系统v.1
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="login.html">
+                        <i class="pe-7s-upload pe-rotate-90"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</div>
+
+<!-- Navigation -->
+<aside id="menu">
+    <div id="navigation">
+        <div class="profile-picture">
+            <a href="index.html">
+                <img src="images/profile.jpg" class="img-circle m-b" alt="logo">
+            </a>
+
+            <div class="stats-label text-color">
+                <span class="font-extra-bold font-uppercase">超管</span>
+            </div>
+        </div>
+
+        <ul class="nav" id="side-menu">
+            <li>
+                <a href="index.html"> <span class="nav-label">首页</span></a>
+            </li>
+            <li class="active">
+                <a href="inform.html"> <span class="nav-label">企业信息统计</span></a>
+            </li>
+            <li>
+                <a href="bug.html">
+                    <span class="nav-label">Bug问题反馈</span>
+                </a>
+            </li>
+            <li>
+                <a href="work_order.html">
+                    <span class="nav-label">
+                        工单管理
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="order.html">
+                    <span class="nav-label">
+                        订单管理
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="device.html">
+                    <span class="nav-label">
+                        设备管理
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="statistics.html">
+                    <span class="nav-label">
+                        统计分析
+                    </span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</aside>
+
+<!-- Main Wrapper -->
+<div id="wrapper">
+
+    <div class="normalheader transition animated fadeIn">
+        <div class="hpanel">
+            <div class="panel-body">
+                <a class="small-header-action" href="">
+                    <div class="clip-header">
+                        <i class="fa fa-arrow-up"></i>
+                    </div>
+                </a>
+
+                <h2 class="font-light m-b-xs">
+                             企业信息统计
+                </h2>
+                <small>企业信息统计详情</small>
+            </div>
+        </div>
+    </div>
+
+<!--下部分内容-->
+<div class="content animate-panel" data-child="hpanel" data-effect="fadeInDown">
+<div class="row">
+	<!--整体部分-->
+    <div class="col-lg-12">
+        <div class="hpanel">
+        	<!--最外层-->
+            <div class="panel-body" style="text-align:left;line-height:30px;white-space:nowrap">
+            	<!--选择部分-->
+               <h3 class="col-md-4">注册日期段查询</h3>
+            	<div class="col-md-4" style="height:30px;margin-bottom: 20px;float:right;position:relative;">
+            		<div class="input-daterange input-group" id="datepicker" style="position:absolute;right:68px;">
+                        <input id="datapicker01" type="text" class="input-sm form-control" name="start" placeholder="请选择起始日期"/>
+                        <span class="input-group-addon">至</span>
+                        <input id="datapicker02" type="text" class="input-sm form-control" name="end" placeholder="请选择截止日期"/>
+            		</div>
+            		<span class="input-group-btn" style="position:absolute;right:63px;">
+						<button class="btn btn-default closeBtn"  style="height:29px" type="submit">
+                            <span class="fa fa-close" style="position: absolute;top:6px;left:5px;"></span>
+                        </button>
+				    </span>
+				    <span class="input-group-btn" style="position:absolute;right:35px;">
+						<button class="btn btn-default searchBtn"  style="height:29px" type="submit">
+                            <span class="fa fa-search" style="position: absolute;top:6px;left:5px;"></span>
+                        </button>
+				    </span>
+            	</div>
+    <!--表格-->
+    <div class="col-lg-12">
+                <table id="example1" class="footable table table-bordered toggle-arrow-tiny" data-page-size="8" data-filter="#filter">
+                    <thead>
+                    <tr>
+                        <th>企业名称</th>
+                        <th>创建者</th>
+                        <th>注册日期</th>
+                        <th>注册员工数</th>
+                        <th>注册会议室数</th>
+                        <th>活跃度</th>
+                        <th>操作</th>
+                    </tr>
+                    </thead>
+                    <tbody style="white-space:normal;">
+                    </tbody>
+                    
+                </table>
+                <div class="btn-group btnNum pull-right">
+                                <button type="button" class="btn btn-default btnleft"><i class="fa fa-chevron-left"></i></button>
+                                <button class="btn btns btn-default active">1</button>
+                                <button type="button" class="btn btn-default btnright" style="float: right;"><i class="fa fa-chevron-right"></i></button>
+                            </div>
+    </div>
+    
+    
+    
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+    
+
+<!-- Footer-->
+    <footer class="footer">
+        <span class="pull-right">
+            By 杭州研发部
+        </span>
+        Company 浙江芮廷信息科技有限公司
+    </footer>
+
+</div>
+
+
+<div id="wraps">
+	<span id="showNames">浙江芮廷科技有限公司</span>
+    <span class="fa fa-close" id="closeShowBtn"></span>
+    <div class="content animate-panel">
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="hpanel stats">
+                    <div class="panel-body">
+                        <div class="stats-title">
+                            <h4>剩余短信数（总量<span class="total_N"></span>条）</h4>
+                        </div>
+                        <div class="pull-left">
+                            <div id="message" style="width: 180px;height: 180px"></div>
+                        </div>
+                        <div style="margin-top: 40px;margin-left: 60px">
+                            <h3><span class="total_N1"></span>条</h3>
+                            <small>已使用<span class="total_N2"></span>条</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="hpanel stats">
+                    <div class="panel-body">
+                        <div class="stats-title">
+                            <h4>剩余存储空间（总量<span class="total_T"></span>GB）</h4>
+                        </div>
+                        <div class="pull-left">
+                            <div id="storage" style="width: 180px;height: 180px"></div>
+                        </div>
+                        <div style="margin-top: 40px;margin-left: 60px">
+                            <h3><span class="total_T1"></span>GB</h3>
+                            <small>已使用<span class="total_T2"></span>GB</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="hpanel stats">
+                    <div class="panel-body">
+                        <div class="stats-title">
+                            <h4>剩余带宽数量（总量<span class="total_M"></span>MB）</h4>
+                        </div>
+                        <div class="pull-left">
+                            <div id="bandwidth" style="width: 180px;height: 180px;"></div>
+                        </div>
+                        <div style="margin-top: 40px;margin-left: 60px">
+                            <h3><span class="total_M1"></span>MB</h3>
+                            <small>已使用<span class="total_M2"></span>MB</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="hpanel stats">
+                    <div class="panel-body h-400">
+                        <div class="stats-title">
+                                                   企业活跃度统计
+                        </div>
+                        <div class="input-daterange input-group" style="width:200px;position:absolute;left:115px;top:14px">
+                               <input id="datapicker1" type="text" class="input-sm form-control" name="start" placeholder="请选择年份" value="2017"/>
+                               <input id="datapicker2" type="text" class="input-sm form-control" name="start" placeholder="请选择年份和月份"/>
+                               <input id="datapicker3" type="text" class="input-sm form-control" name="start" placeholder="请选择年份,月份和日期"/>
+            		    </div>
+            		    <div class="chossType">
+            		    	<span class="monthType">月</span>
+            		    	<span class="weekType">周</span>
+            		    	<span class="dayType">日</span>
+            		    </div>
+                        <div id="bar_table" style="width: 450px;height: 318px;"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="hpanel h-600">
+                    <div class="panel-body h-400">
+                        <div class="panel-top" style="border-bottom: 1px solid #eaeaea;overflow: hidden;padding-bottom: 20px">
+                            <div class="stats-title pull-left">
+                                <h4>当前套餐</h4>
+                            </div>
+                            <div class="pull-right">
+                                <button class="btn btn-default">套餐详情</button>
+                            </div>
+                        </div>
+                        <div class="panel-center">
+                            <div class="actver" style="width: 100px;height: 100px;border: 1px solid #eaeaea;background-color: #FFFFFF;margin: 30px auto;border-radius: 50%;overflow: hidden;">
+                                <img style="width: 100%;height: 100%;" src="images/a5.jpg" alt="">
+                            </div>
+                           <div style="text-align: center">
+                               <h3>芮廷云会务-基础版</h3>
+                               <p style="margin-top: 30px">储存: <span>10GB</span> 带宽: <span>300MB</span> 短信: <span>1000条</span></p>
+                           </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+</div>
+</div>
+
+
+
+<!-- Vendor scripts -->
+<script src="vendor/jquery/dist/jquery.min.js" ></script>
+<script src="vendor/jquery-ui/jquery-ui.min.js" ></script>
+<script src="vendor/slimScroll/jquery.slimscroll.min.js" ></script>
+<script src="vendor/bootstrap/dist/js/bootstrap.min.js" ></script>
+<script src="vendor/metisMenu/dist/metisMenu.min.js" ></script>
+<script src="vendor/iCheck/icheck.min.js" ></script>
+<script src="vendor/sweetalert/lib/sweet-alert.min.js"></script>
+ <script src="vendor/fooTable/dist/footable.min.js"></script>
+<script src="vendor/fooTable/dist/footable.paginate.min.js"></script>
+<script src="vendor/toastr/build/toastr.min.js"></script>
+<script src="vendor/bootstrap-datepicker-master/dist/js/bootstrap-datepicker.min.js"></script>
+
+<!--<script src="vendor/moment/moment.js"></script>
+<script src="vendor/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>-->
+
+
+
+
+<!-- App scripts -->
+<script src="scripts/api.js" ></script>
+<script src="scripts/homer.js"></script>
+<script src="scripts/inform.js"></script>
+<script src="https://cdn.bootcss.com/echarts/3.5.2/echarts.js"></script>
+<script src="scripts/statistics.js"></script>
+
+
+<script>
+
+    $(function () {
+        // Initialize Example 1
+        $('#example1').footable();
+    });
+    $('#datapicker01').datepicker({
+    	autoclose: true,
+    	endDate:new Date()
+    }).on('changeDate',function(){  
+       var startTime = $('#datapicker01').val();  
+       $('#datapicker02').datepicker('setStartDate',startTime);  
+    });
+    
+    $('#datapicker02').datepicker({
+    	autoclose: true,
+    	endDate:new Date()
+    });
+    
+//$('#datetimepicker1').datetimepicker();
+//$('#datetimepicker2').datetimepicker();
+
+
+</script>
+
+</body>
+</html>

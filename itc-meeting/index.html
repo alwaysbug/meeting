@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<meta name="Description" content="芮廷科技，会议管理"/>
+		<meta name="Keywords" content="芮廷科技，会议管理系统，会议管理，MiniCC"/>
+		<title>芮廷科技</title>
+		<link rel="icon" href="img/logo5.ico" type="image/x-icon"/>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+		<link href="http://cdn.bootcss.com/Swiper/2.7.6/idangerous.swiper.min.css" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="css/common.css"/>
+		<link rel="stylesheet" type="text/css" href="css/hamburgers.min.css"/>
+		<!--[if lt IE 9]>
+        <script src="http://cdn.bootcss.com/html5shiv/r29/html5.min.js"></script>
+        <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+        <script>
+
+        </script>
+        <style>
+            .navbar-nav > li > a {
+                padding-top: 0;
+                padding-bottom: 0;
+            }
+
+            .navbar-nav > li > a[href="#homePage"] {
+                margin-left: 0 !important;
+            }
+
+            #homePage .home_left {
+                /*width: 480px;*/
+                top: 25%;
+            }
+
+            #homePage .home_right {
+                /*width: 680px;*/
+                top: 25%;
+            }
+
+            .round_content {
+                display: none;
+            }
+
+            .price {
+                padding-top: 40px;
+            }
+
+            .mask {
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.3);
+                filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#7f000000, endColorstr=#7f000000); /*IE8支持*/
+                position: fixed;
+                display: none;
+                z-index: 10000;
+                top: 0;
+                left: 0;
+            }
+
+            #contact .container > ul > li:first-child {
+                width: 350px;
+                height: 250px;
+                border-left: 1px solid gainsboro;
+                border-right: 1px solid gainsboro;
+            }
+
+            #contact .container > ul > li:first-child .ul_left {
+                width: 50%;
+                height: 100%;
+                float: left;
+                font-size: 15px;
+                line-height: 50px;
+                text-align: center;
+                color: gray;
+            }
+
+            #contact .container > ul > li:first-child .ul_left a {
+                text-decoration: none;
+                color: gray;
+            }
+
+            #contact .container > ul > li:first-child .ul_right {
+                width: 50%;
+                height: 100%;
+                float: right;
+                font-size: 15px;
+                line-height: 50px;
+                text-align: left;
+                color: gray;
+            }
+
+            #contact .container > ul > li:first-child + li {
+                width: 320px;
+                height: 250px;
+                padding-left: 70px;
+            }
+
+            #contact .container > ul > li:first-child + li .ul_phone {
+                width: 300px;
+                height: 100%;
+                font-size: 15px;
+                color: gray;
+                border-right: 1px solid gainsboro;
+                line-height: 50px;
+            }
+
+            #contact .container > ul > li:first-child + li .ul_phone > li:first-child + li {
+                font-size: 35px;
+                font-weight: 100;
+            }
+
+            #contact .container > ul > li:first-child + li + li {
+                width: 300px;
+                height: 250px;
+                text-align: center;
+                margin-left: 30px;
+            }
+
+            #contact .container > ul > li:first-child + li + li .ul_erweima {
+                width: 100%;
+                height: 100%;
+            }
+
+        </style>
+        <![endif]-->
+	</head>
+	<body>
+		<nav class="navbar navbar-default navbar-fixed-top" style="background-color: white;">
+			<div class="container-fluid">
+				<div class="navbar-header page-scroll">
+				      <div class="hamburger hamburger--spin" style="position: absolute;right: 0;top: 10px;" data-target="#bs-example-navbar-collapse-1" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+						<div class="hamburger-box">
+						  <div class="hamburger-inner"></div>
+						</div>
+					  </div>
+					<a href="#page-top" class="navbar-brand">
+						<img style="width: 135px;height: 45px;margin-top: 16px;" src="img/logo.png"/>
+					</a>
+				</div>
+
+				<div class="collapse navbar-collapse" aria-expanded="true" id="bs-example-navbar-collapse-1">
+			        <ul class="nav navbar-nav nav-menus-anmition" style="margin-left: 180px;height: 80px;">
+				        <li class="page-scroll"><a href="#homePage">首页</a></li>
+				        <li class="page-scroll"><a href="#intro">介绍</a></li>
+						<li class="page-scroll"><a href="#package">套餐</a></li>
+						<li class="page-scroll"><a href="#download">下载</a></li>
+						<li class="page-scroll"><a href="#contact">联系</a></li>
+						<div class="activeA"></div>
+			        </ul>
+				    <div class="navbar-right">
+						<a href="register.html" class="company_register_link">企业注册</a>
+						<a href="register.html?login" class="company_login_link">企业登录</a>
+					</div>
+				</div>
+			</div>
+		</nav>
+
+			<div data-spy="scroll" data-target="#navbar-example" class="scrollspy-example container" style="margin-top: 71px;width: 100%;padding: 0;">
+				<div id="page-top"></div>
+				<div id="homePage">
+					<div class="homePage">
+						<div class="home_left">
+                            <img src="img/first_p.png">
+                        </div>
+						<div class="home_right">
+							<div class="back_img">
+                                <img src="img/Minicc.png">
+                            </div>
+							<div class="minicc_title">
+                                <img src="img/minicc_title.png">
+                            </div>
+							<p class="minicc_intro">芮廷自主研发基于SaaS架构模型的云会务管理系统，借助信息化手段和先进的</p>
+							<p class="minicc_intro">管理理念对企业的会前、会中、会后整个会务流程进行</p>
+							<p class="minicc_intro">规范化、实时化管理，实现参会人员高效率地沟通，提高企业资源利用率与员工</p>
+							<p class="minicc_intro">的工作效率，大中型企业急需解决的问题提供高效的云解决方案。</p>
+							<div class="page-scroll" style="display: inline-block;"><a href="#intro" class="btn btn-primary btn-lg again_know">进一步了解</a></div>
+							<div class="page-scroll" style="display: inline-block;"><a href="#package" style="color: cornflowerblue;border: 1px solid cornflowerblue;"  class="btn btn-default btn-lg bug_it_moment">立即购买</a></div>
+						</div>
+					</div>
+					<div class="mobile_homePage">
+						<div class="m_home_left">
+							<img src="img/mobile/first_page.png"/>
+						</div>
+						<div class="m_home_right">
+							<img src="img/mobile/MiniCC.png"/>
+							<p class="m_home_title">场景设置，一键，完成</p>
+							<div class="m_konw page-scroll">
+								<a href="#intro" class="m_again_know">了解详情</a>
+								<a href="#intro" class="m_again_know"><div class="m_play"></div></a>
+							</div>
+							<p class="m_home_text">芮廷自主研发基于 SaaS 架构模型的云会务
+							管理系统，借助信息化手段和先进的管理理
+							念对企业的会前、会中、会后整个会务流程
+							进行规范化、实时化管理，实现参会人员高
+							效率地沟通，提高企业资源利用率与员工的
+							工作效率，为大中型企业急需解决的问题提
+							供高效的云解决方案。</p>
+						</div>
+					</div>
+				</div>
+				<div id="intro">
+					<div class="container">
+						<div class="intro_left">
+							<div class="header">
+								<img src="img/product_intro.png"/>
+							</div>
+							<p class="intro_p1" style="margin-top: 102px;font-size: 14px;letter-spacing: 2px;line-height: 30px;font-weight: 500;color: #333333;">
+								芮廷自主研发基于SaaS架构模型的云会务管理系统，借助信息化手段和先进的管理理念对企业的会前、会中、会后整个会务流程进行规范化、实时化管理。<br />实现参会人员高效率地沟通，提高企业资源利用率与员工的工作效率，为大中型企业急需解决的问题提供高效的云解决方案。
+							</p>
+							<p class="intro_p2" style="margin-top: 25px;font-size: 14px;line-height: 22px;font-weight: 500;width: 110%;color: #777777;">
+								Rui Ting self-developed cloud conference management system based on SaaS architecture model, with the help of information technology and advanced management concept of the enterprise before and after the meeting, the business process standardization, real-time management.<br /> to achieve efficient communication participants, improve the rate and efficiency of the staff of enterprise resource, provide efficient cloud for large and medium-sized enterprises to solve the problem in need of solution.
+							</p>
+							<div class="learn_more page-scroll" style="margin-top: 55px;">
+								<a href="#features" style="text-decoration: none;font-size: 16px;">了解更多</a>
+								<div class="line" style="width: 100px;height: 4px;display: inline-block;position: relative;top: -3px;left: 5px;">
+									<div class="line_left" style="background-color:cornflowerblue;width: 95px;height: 3px;margin-top: 1px;"></div>
+									<div class="line_right" style="width: 0;height: 0;border:5px solid transparent;border-left:5px solid cornflowerblue;;position: absolute;right: -1px;top: -2px;"></div>
+								</div>
+							</div>
+						</div>
+						<div class="intro_right">
+							<div class="intro_line" style="left: -40px;top: 70px;width: 100px;"></div>
+							<div class="intro_line" style="right: -30px;bottom: 20px;width: 40px;"></div>
+							<div class="swiper-container" style="width: 100%;height: 100%;">
+							    <div class="swiper-wrapper">
+							        <div class="swiper-slide">
+							        	<img src="img/slide2.png"/>
+							        </div>
+							        <div class="swiper-slide">
+							        	<img src="img/slide2.png"/>
+							        </div>
+							        <div class="swiper-slide">
+							        	<img src="img/slide2.png"/>
+							        </div>
+							    </div>
+							    <!-- 如果需要分页器 -->
+							    <div class="swiper-pagination"></div>
+							</div>
+						</div>
+					</div>
+
+					<div class="m_feature">
+						<div class="m_f_header">
+							<img src="img/mobile/featrue.png"/>
+						</div>
+						<div class="m_f_center">
+							<div class="m_f_c_left">
+								<li><img src="img/mobile/tongyi.png"/></li>
+								<li><img src="img/mobile/ziliao.png"/></li>
+								<li><img src="img/mobile/duozhongduan.png"/></li>
+							</div>
+							<div class="m_f_c_right"><img src="img/mobile/two_page.png"/></div>
+						</div>
+						<div class="m_f_bottom">
+							<div class="m_f_b_left"><img src="img/mobile/two_page_two.png"/></div>
+							<div class="m_f_b_right">
+								<li><img src="img/mobile/huiyi.png"/></li>
+								<li><img src="img/mobile/duohuiyishi.png"/></li>
+								<li><img src="img/mobile/ruanying.png"/></li>
+							</div>
+						</div>
+					</div>
+
+
+
+				</div>
+
+
+
+				<div id="features">
+					<div class="container">
+						<div class="header">
+							<img src="img/featrues.png"/>
+						</div>
+							<div class="features_img">
+								<img src="img/feature_p.png"/>
+							</div>
+						<div class="fluid">
+							<ul class="fluid_left">
+								<li class="fluid_left_li">
+									<h4>统一管理</h4>
+									<img src="img/1.png" alt="" />
+									<p>会议预定、通知、审核、议程、统计<br />会前、会中、会后一站式管理</p>
+								</li>
+								<li class="fluid_left_li">
+									<h4>资料云储存</h4>
+									<img src="img/2.png" alt="" />
+									<p>会前、会中、会后产生的所有文档资料<br />可在会务云中做集中储存、分享</p>
+								</li>
+								<li class="fluid_left_li">
+									<h4>多终端支持</h4>
+									<img src="img/3.png" alt="" />
+									<p>支持安卓、IOS、Web钉钉、微信等<br />多端会务操作管理</p>
+								</li>
+							</ul>
+							<ul class="fluid_right">
+								<li class="fluid_left_li">
+									<h4>会议环境控制</h4>
+									<img src="img/4.png" alt="" />
+									<p>依据特定的会议场景要求，一键布置场景，<br />远程实现会议室环境控制</p>
+								</li>
+								<li class="fluid_left_li">
+									<h4>多会议室联动</h4>
+									<img src="img/5.png" alt="" />
+									<p>各会议室、分会场之间依赖硬件终端<br />实现多方面视频会议功能</p>
+								</li>
+								<li class="fluid_left_li">
+									<h4>软硬件一体化</h4>
+									<img src="img/6.png" alt="" />
+									<p>通过软硬件对接支撑各种类型会议需求，<br />如本地数字会议、远程视频会议、无纸<br />化会议等</p>
+								</li>
+							</ul>
+						</div>
+					</div>
+
+
+
+
+
+
+
+				</div>
+
+
+
+				<div id="package">
+					<div class="container">
+						<div class="header">
+							<img src="img/package.png"/>
+						</div>
+
+						<div class="package-container">
+							<div class="packages">
+								<div class="package">
+									<div class="round_content">
+										<div class="round_big"></div>
+										<div class="round_small"></div>
+									</div>
+									<p class="price"><span>¥</span>999</p>
+									<p class="price_mei">/月/间</p>
+									<div class="package_line"></div>
+									<div class="base">基础版</div>
+									<p>基本会务功能</p>
+									<p>300G无线流量</p>
+									<p>10G云盘储存空间</p>
+									<p>购Mini CC送每间一年服务</p>
+									<div class="buy_btn">购买</div>
+								</div>
+
+								<div class="package">
+									<div class="round_content">
+										<div class="round_big"></div>
+										<div class="round_small"></div>
+									</div>
+									<p class="price"><span>¥</span>999</p>
+									<p class="price_mei">/月/间</p>
+									<div class="package_line"></div>
+									<div class="base">基础版</div>
+									<p>基本会务功能</p>
+									<p>300G无线流量</p>
+									<p>10G云盘储存空间</p>
+									<p>购Mini CC送每间一年服务</p>
+									<div class="buy_btn">购买</div>
+								</div>
+
+								<div class="package active">
+									<div class="round_content">
+										<div class="round_big"></div>
+										<div class="round_small"></div>
+									</div>
+									<p class="price"><span>¥</span>1999</p>
+									<p class="price_mei">/月/间</p>
+									<div class="package_line"></div>
+									<div class="base">专业版</div>
+									<p>基本会务功能</p>
+									<p>300G无线流量</p>
+									<p>10G云盘储存空间</p>
+									<p>购Mini CC送每间一年服务</p>
+									<div class="buy_btn">购买</div>
+								</div>
+
+								<div class="package">
+									<div class="round_content">
+										<div class="round_big"></div>
+										<div class="round_small"></div>
+									</div>
+									<p class="price"><span>¥</span>2999</p>
+									<p  class="price_mei">/月/间</p>
+									<div class="package_line"></div>
+									<div class="base">企业版</div>
+									<p>基本会务功能</p>
+									<p>800G无线流量</p>
+									<p>10T云盘储存空间</p>
+									<p>购Mini CC送每间一年服务</p>
+									<div class="buy_btn">购买</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="m_pack">
+						<div class="m_p_header">
+							<img src="img/mobile/package.png"/>
+						</div>
+						<div class="m_p_wrap">
+							<div class="m-swiper-container">
+							    <div class="swiper-wrapper">
+							        <div class="swiper-slide">
+										<div class="m_p_top">
+											<div class="m_p_round_content">
+												<div class="m_p_round_big"></div>
+												<div class="m_p_round_small"></div>
+											</div>
+											<p class="m_p_price"><span>¥</span>999</p>
+											<p class="m_p_price_mei">/月/间</p>
+											<div class="m_p_base">基础版</div>
+										</div>
+
+										<div class="m_p_bottom">
+											<p>基本会务功能</p>
+											<p>300G无线流量</p>
+											<p>10G云盘储存空间</p>
+											<p>购Mini CC送每间一年服务</p>
+											<div class="m_p_buy_btn">购买</div>
+										</div>
+							        </div>
+							        <div class="swiper-slide">
+							        	<div class="m_p_top">
+											<div class="m_p_round_content">
+												<div class="m_p_round_big"></div>
+												<div class="m_p_round_small"></div>
+											</div>
+											<p class="m_p_price"><span>¥</span>999</p>
+											<p class="m_p_price_mei">/月/间</p>
+											<div class="m_p_base">基础版</div>
+										</div>
+
+										<div class="m_p_bottom">
+											<p>基本会务功能</p>
+											<p>300G无线流量</p>
+											<p>10G云盘储存空间</p>
+											<p>购Mini CC送每间一年服务</p>
+											<div class="m_p_buy_btn">购买</div>
+										</div>
+							        </div>
+							        <div class="swiper-slide">
+							        	<div class="m_p_top">
+											<div class="m_p_round_content">
+												<div class="m_p_round_big"></div>
+												<div class="m_p_round_small"></div>
+											</div>
+											<p class="m_p_price"><span>¥</span>999</p>
+											<p class="m_p_price_mei">/月/间</p>
+											<div class="m_p_base">基础版</div>
+										</div>
+
+										<div class="m_p_bottom">
+											<p>基本会务功能</p>
+											<p>300G无线流量</p>
+											<p>10G云盘储存空间</p>
+											<p>购Mini CC送每间一年服务</p>
+											<div class="m_p_buy_btn">购买</div>
+										</div>
+							        </div>
+							    </div>
+							</div>
+						</div>
+					</div>
+
+
+
+
+
+
+
+
+				</div>
+
+
+				<div id="download">
+					<div class="container">
+						<div class="header">
+							<img src="img/app_download.png"/>
+						</div>
+						<div class="content">
+							<div class="background_img">
+								<img src="img/down_p.png"/>
+							</div>
+							<div class="select_download">
+								<p>选择对应的手机系统进行APP下载</p>
+								<div class="download_btn apple">
+									<p>Apple iOS</p>
+								</div>
+								<div class="download_btn android">
+									<p>Android</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="m_appdown">
+						<div class="m_app_header">
+							<img src="img/mobile/appdown.png"/>
+						</div>
+						<div class="m_app_content">
+							<div class="m_app_left">
+								<li><a href="javascript:;">iOS版下载</a><img src="img/mobile/plau.png"/></li>
+								<li><a href="javascript:;">安卓版下载</a><img src="img/mobile/plau.png"/></li>
+							</div>
+							<div class="m_app_right">
+								<img src="img/mobile/appdowend.png"/>
+							</div>
+						</div>
+					</div>
+
+
+
+				</div>
+
+				<div id="contact">
+					<div class="container" style="padding: 0;width: 1090px;position: absolute;bottom: 35px;left: 50%;margin-left:-545px;">
+						<div class="contact_top">
+							<div class="contact_logo"></div>
+							<div class="nav_title">导航</div>
+							<div class="contact_phone">联系方式</div>
+						</div>
+						<ul>
+							<!--<li></li>-->
+							<li>
+								<ul class="ul_left">
+									<li class="page-scroll"><a href="#homePage">首页</a></li>
+									<li class="page-scroll"><a href="#intro">介绍</a></li>
+									<li class="page-scroll"><a href="#package">套餐</a></li>
+									<li class="page-scroll"><a href="#download">下载</a></li>
+									<li class="page-scroll"><a href="#contact">联系</a></li>
+								</ul>
+								<ul class="ul_right">
+									<li>企业注册</li>
+									<li>个人注册</li>
+									<li>登录</li>
+									<li>忘记密码</li>
+									<li>二维码登录</li>
+								</ul>
+							</li>
+							<li>
+								<ul class="ul_phone">
+									<li>联系电话：</li>
+									<li>400-678-1234</li>
+									<li>邮箱：contact@ruiting.com</li>
+									<li>地址：中国·浙江·杭州·西湖区</li>
+									<li>邮编：310000</li>
+								</ul>
+							</li>
+							<li>
+								<div class="ul_erweima">
+									<!--<img src="img/andown.png"/>-->
+								</div>
+							</li>
+						</ul>
+					</div>
+
+
+					<div class="m_contact">
+					<div class="m_c_top">
+						<li><img src="img/mobile/littelogo.png"/></li>
+						<li>丨导航</li>
+						<li>丨联系方式</li>
+					</div>
+					<div class="m_c_bottom">
+						<ul>
+							<li class="page-scroll"><a href="#page-top">首页</a></li>
+							<li class="page-scroll"><a href="#intro">介绍</a></li>
+							<li class="page-scroll"><a href="#package">套餐</a></li>
+							<li class="page-scroll"><a href="#download">下载</a></li>
+							<li class="page-scroll"><a href="#contact">信息</a></li>
+						</ul>
+						<ul>
+							<li>联系电话</li>
+							<li>400-678-1234</li>
+							<li>邮箱：contact@ruiting.com</li>
+							<li>地址：中国·浙江·杭州·西湖区</li>
+							<li>邮编：310000</li>
+						</ul>
+					</div>
+					<div class="m_footer">
+						<p>浙ICP备案号 99988777625215</p>
+						<p>@芮廷信息科技有限公司</p>
+					</div>
+				</div>
+
+
+
+				</div>
+
+
+
+
+
+
+
+			</div>
+
+			<div class="mask"></div>
+			<div class="erwima">
+				<div class="ma">
+					<p>请扫描二维码进行下载</p>
+					<img src="img/andro.png"/>
+				</div>
+			</div>
+		<footer style="text-align: center;height: 80px;background-color: gainsboro;line-height: 80px;color: gray;">
+			<div class="container">
+				<span>浙ICP备案号 99988777625215</span>
+				<span style="margin-left: 40px;">@芮廷信息科技有限公司</span>
+			</div>
+		</footer>
+	</body>
+	<script src="http://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+	<script src="http://cdn.bootcss.com/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+	<script src="js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="http://cdn.bootcss.com/Swiper/2.7.6/idangerous.swiper.min.js"></script>
+	<script type="text/javascript">
+		$(function() {
+		    $('body').on('click', '.page-scroll a', function(event) {
+		        var $anchor = $(this);
+		        $('html, body').stop().animate({
+		            scrollTop: $($anchor.attr('href')).offset().top - 71
+		        }, 1500, 'easeOutExpo');
+		        event.preventDefault();
+		    });
+		    var $packages = $('.packages');
+		    $packages.on('mouseenter','.package',function  () {
+		    	$packages.children('.package').removeClass('active');
+		    	$(this).addClass('active');
+		    });
+
+		    var $nav_anmi = $('.nav-menus-anmition');
+		    var $activeA = $('.activeA');
+		    $nav_anmi.on('click','li a',function  () {
+
+		    	var arr = $nav_anmi.children('li');
+		    	arr.children('a').css('color',"gray")
+		    	var index = 0;
+		    	for (var i = 0;i < arr.length;i++) {
+		    		if ($(this).parent().index() == i) {
+		    			index = i;
+		    		}
+		    	}
+		    	$activeA.animate({
+		    		left: index * 102
+		    	},500)
+
+		    	$(this).css("color","cornflowerblue");
+		    });
+
+		    $('.apple').on('click',function  () {
+		        $(".erwima").find($("img")).attr("src","img/ios.png");
+                $(".erwima").find($("p")).html("IOS请扫描二维码进行下载");
+		    	$('.erwima').css("display","block");
+		    	$('.mask').css("display","block");
+		    });
+            $('.android').on('click',function  () {
+                $(".erwima").find($("img")).attr("src","img/andro.png");
+                $(".erwima").find($("p")).html("安卓请扫描二维码进行下载");
+                $('.erwima').css("display","block");
+                $('.mask').css("display","block");
+            });
+
+
+		    $(document).on('click',".mask",function  () {
+		        $('.erwima').css('display',"none");
+		    	$('.mask').css("display","none");
+
+		    })
+
+            $('.home_left').animate({
+                left:"-30px"
+            },1500,"easeOutExpo");
+            $('.home_right').animate({
+                right:"0"
+            },1500,"easeOutExpo")
+            var proAnisDo = true;
+            var feaAnisDo = true;
+            var packisDo = true;
+            var downisDo = true;
+            var conisDo = true;
+            $(window).scroll(function  () {
+                var y = document.documentElement.scrollTop || window.pageYOffset || document.body.scrollTop;
+                if (y >= 670 && y < 1570) {//产品介绍
+                    if (proAnisDo) {
+                        productAnmiate();
+                    }
+                }else if(y >= 1570 && y < 2560){//特色介绍
+                    if (feaAnisDo) {
+                        featuresAnmiate();
+                    }
+                }else if(y >= 2560 && y < 3563){//套餐介绍
+                    //					if (packisDo) {
+                    //					}
+                }else if(y >= 3563 && y < 4300){//应用下载
+                    if (downisDo) {
+                        downloadAnmiate();
+                    }
+                }else if(y >= 4300){
+                    //					if (conisDo) {
+                    //						contactAnmiate();
+                    //					}
+                }
+            })
+
+            function productAnmiate() {
+                $('.intro_p1').animate({
+                    left:"0",
+                    opacity:"1"
+                },500,"easeInOutElastic");
+                $('.intro_p2').animate({
+                    left:"0",
+                    opacity:"1"
+                },1000,"easeInOutElastic");
+                $('.learn_more').animate({
+                    left:"0",
+                    opacity:"1"
+                },2000,"easeInOutElastic");
+                proAnisDo = false;
+            }
+
+            function featuresAnmiate () {
+                $('.features_img').animate({
+                    top:"200px"
+                },1500,"easeOutExpo");
+                $('.fluid_left li:nth-child(1)').animate({
+                    left:'0',
+                    opacity:'1'
+                },800,"easeOutExpo");
+                $('.fluid_left li:nth-child(2)').animate({
+                    left:'0',
+                    opacity:'1'
+                },1500,"easeOutExpo");
+                $('.fluid_left li:nth-child(3)').animate({
+                    left:'0',
+                    opacity:'1'
+                },1900,"easeOutExpo");
+                $('.fluid_right li:nth-child(1)').animate({
+                    left:'0',
+                    opacity:'1'
+                },800,"easeOutExpo");
+                $('.fluid_right li:nth-child(2)').animate({
+                    left:'0',
+                    opacity:'1'
+                },1500,"easeOutExpo");
+                $('.fluid_right li:nth-child(3)').animate({
+                    left:'0',
+                    opacity:'1'
+                },1900,"easeOutExpo")
+                feaAnisDo = false;
+            }
+
+
+            function downloadAnmiate () {
+                $('.select_download').animate({
+                    right:"100px"
+                },1000,"easeOutExpo");
+                $('.background_img').animate({
+                    left:"0"
+                },1000,"easeOutExpo")
+                downisDo = false;
+            }
+
+            $('.company_register_link').on('click',function  () {
+                window.location.href = "register.html";
+                window.event.returnValue = false;
+            });
+            $('.company_login_link').on('click',function  () {
+                window.location.href = "register.html" + "?login";
+                window.event.returnValue = false;
+            });
+
+
+            $(".hamburger").on("click",function  () {
+                $(this).toggleClass("is-active");
+            });
+
+            var mySwiper = new Swiper ('.intro_right .swiper-container', {
+                direction: 'horizontal',
+                loop: true,
+                autoplay:1500,
+                pagination : '.intro_right .swiper-pagination',
+            })
+        });
+
+
+
+
+	</script>
+</html>

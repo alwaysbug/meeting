@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>芮廷科技</title>
+
+    <link rel="shortcut icon" type="image/ico" href="images/logo.ico" />
+
+    <!-- Vendor styles -->
+    <link rel="stylesheet" href="vendor/fontawesome/css/font-awesome.css"  />
+    <link rel="stylesheet" href="vendor/metisMenu/dist/metisMenu.css"  />
+    <link rel="stylesheet" href="vendor/animate.css/animate.css"  />
+    <link rel="stylesheet" href="vendor/bootstrap/dist/css/bootstrap.css"  />
+    <link rel="stylesheet" href="vendor/fooTable/css/footable.core.min.css">
+    <link rel="stylesheet" href="vendor/sweetalert/lib/sweet-alert.css">
+    <link rel="stylesheet" href="vendor/toastr/build/toastr.min.css">
+    <link rel="stylesheet" href="vendor/select2-3.5.2/select2.css">
+    <link rel="stylesheet" href="vendor/select2-bootstrap/select2-bootstrap.css">
+    <!-- App styles -->
+    <link rel="stylesheet" href="fonts/pe-icon-7-stroke/css/pe-icon-7-stroke.css"  />
+    <link rel="stylesheet" href="fonts/pe-icon-7-stroke/css/helper.css"  />
+    <link rel="stylesheet" href="styles/style.css" >
+
+    <!-- Add styles -->
+    <link rel="stylesheet" href="styles/user_manage.css" >
+    <link rel="stylesheet" href="styles/zTreeStyle.css">
+
+ </head>
+<!--[if lt IE 9]>
+<script src="http://cdn.bootcss.com/html5shiv/r29/html5.min.js"></script>
+<script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+ <body class="fixed-navbar sidebar-scroll">
+
+ <!-- Simple splash screen-->
+ <div class="splash" style="display: block;">
+     <div class="color-line"></div>
+     <div class="splash-title"><h1>芮廷云会务</h1><p>The Best Meeting Butler </p> <div class="spinner"> <div class="rect1"></div> <div class="rect2"></div> <div class="rect3"></div> <div class="rect4"></div> <div class="rect5"></div> </div> </div> </div>
+ <!-- Header -->
+<div id="header">
+    <div class="color-line">
+    </div>
+    <div id="logo" class="light-version">
+        <span>
+            芮廷科技
+        </span>
+    </div>
+    <nav role="navigation">
+        <!--<div class="header-link hide-menu"><i class="fa fa-bars"></i></div>-->
+        <div class="small-logo">
+            <span class="text-primary">芮廷科技</span>
+        </div>
+        <!--<form role="search" class="navbar-form-custom" method="post" action="#">-->
+            <!--<div class="form-group">-->
+                <!--<input type="text" style="padding-left: 10px" placeholder="在此输入文字搜索内容" class="form-control" name="search">-->
+            <!--</div>-->
+        <!--</form>-->
+        <div class="mobile-menu">
+            <button type="button" class="navbar-toggle mobile-menu-toggle" data-toggle="collapse" data-target="#mobile-collapse">
+                <i class="fa fa-chevron-down"></i>
+            </button>
+            <div class="collapse mobile-navbar" id="mobile-collapse">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a class="" href="register.html?login" >登出</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="navbar-right">
+            <ul class="nav navbar-nav no-borders">
+                <li class="dropdown">
+                    <a id="company_name" class="dropdown-toggle label-menu-corner" href="javascript:;" data-toggle="dropdown" style="font-size: 13px;">
+                    </a>
+                </li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle label-menu-corner" href="#" data-toggle="dropdown">
+                        <i class="pe-7s-speaker"></i>
+                    </a>
+                    <ul class="dropdown-menu hdropdown notification animated flipInX">
+                        <li>
+                            <a>
+                                <span class="label label-success">NEW</span> 芮廷会务新版上线啦
+                            </a>
+                        </li>
+                        <li class="summary"><a href="javascript:;">查询全部消息</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="javascript:;" id="login_out_btn" >
+                        <i class="pe-7s-upload pe-rotate-90"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</div>
+
+<!-- Navigation -->
+<aside id="menu">
+    <div id="navigation">
+        <div class="profile-picture">
+            <a href="user_index.html" >
+                <img id="avtar" style="width: 76px;height: 76px;" src="images/logo.png"  class="img-circle m-b" alt="logo">
+            </a>
+
+            <div class="stats-label text-color">
+                <span id="nick_name" class="font-extra-bold font-uppercase">
+                </span>
+            </div>
+        </div>
+
+        <ul class="nav" id="side-menu">
+            <li>
+                <a href="first_page.html"><span class="nav-label">首页</span></a>
+            </li>
+            <li class="active">
+                <a href="javascript:;"><span class="nav-label">管理中心</span><span class="fa arrow"></span> </a>
+                <ul class="nav nav-second-level">
+                    <li class="active"><a href="user_manage.html" >用户管理</a></li>
+                    <li><a href="asset.html" >资产管理</a></li>
+                    <li><a href="add_manage.html" >地点管理</a></li>
+                    <li><a href="device.html" >设备管理</a></li>
+                    <li><a href="scenes_panel.html" >场景/面板管理</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#"><span class="nav-label">账户中心</span><span class="fa arrow"></span> </a>
+                <ul class="nav nav-second-level">
+                    <li><a href="commerce.html">商务选择</a></li>
+                    <li><a href="order_managerment.html" >订单管理</a></li>
+                    <li><a href="account.html" >账户管理</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#"><span class="nav-label">其他</span><span class="fa arrow"></span> </a>
+                <ul class="nav nav-second-level">
+                    <li><a href="work_order.html" >工单管理</a></li>
+                    <li><a href="business.html" >统计分析</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</aside>
+
+<!-- Main Wrapper -->
+<div id="wrapper">
+    <div class="normalheader transition animated fadeIn">
+        <div class="hpanel">
+            <div class="panel-body">
+                <a class="small-header-action" href="">
+                    <div class="clip-header">
+                        <i class="fa fa-arrow-up"></i>
+                    </div>
+                </a>
+
+                <h2 class="font-light m-b-xs">
+                    用户管理
+                </h2>
+                <small>人员及部门管理</small>
+            </div>
+        </div>
+    </div>
+    <div class="content animate-panel">
+        <div class="row">
+            <div class="col-lg-4">
+
+                <div class="hpanel">
+
+                    <div class="panel-body">
+                            <div class="input-group">
+                                <input type="text" class="form-control searchIt" placeholder="搜索部门">
+                                <span class="input-group-btn">
+									<button class="btn btn-default" type="submit">
+                                        <span class="fa fa-search"></span>
+                                    </button>
+								</span>
+                            </div>
+                        <div id="zTree" class="ztree"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-8 moveShow" id="">
+
+                <div class="hpanel">
+                    <div class="panel-body">
+                        <h2 class="font-light m-b-xs" id="group_name">
+                        </h2>
+                        <p>
+                            <button type="button" class="btn btn-info marginRightBtn" data-target="#myModal8" data-toggle="modal">
+                                <i class="fa fa-paste"></i>
+                                添加成员
+                            </button>
+                            <button type="button" class="btn btn-info btn-outline marginRightBtn" data-target="#myModal" data-toggle="modal" >
+                                <i class="fa fa-upload"></i>
+                                批量导入
+                            </button>
+                            <button type="button" class="btn btn-outline btn-danger marginRightBtn" id="deleteMembers">
+                                <i class="fa fa-trash-o"></i>
+                                批量删除
+                            </button>
+                        </p>
+                        <table id="group_table" data-page-size="8" class="table footable table-bordered table-hover">
+                            <thead>
+                            <tr>
+                                <th><input type="checkbox" class="checkAll"></th>
+                                <th>姓名</th>
+                                <th>性别</th>
+                                <th>职务</th>
+                                <th>手机号</th>
+                                <th>邮箱</th>
+                                <th>权限</th>
+                                <th>操作</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+
+                            </tbody>
+                        </table>
+                        <ul class="pagination pull-right" id="paginationContent" style="display: none;"></ul>
+                    </div>
+                </div>
+
+
+    </div>
+    <!--添加成员-->
+    <div class="modal fade hmodal-info" id="myModal8" tabindex="-1" role="dialog" aria-hidden="true" style="display: none;">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="color-line"></div>
+                <div class="modal-header">
+                    <h4 class="modal-title">新增成员</h4>
+                    <small class="font-bold">新成员接受邀请后将添加至此分组</small>
+                </div>
+                <div class="modal-body">
+                    <div id="addPerson" class="form-horizontal">
+                        <div class="form-group"><label class="col-sm-2 control-label">姓名</label>
+
+                            <div class="col-sm-10"><input type="text" class="form-control name"></div>
+                        </div>
+                        <div class="hr-line-dashed"></div>
+                        <div class="form-group"><label class="col-sm-2 control-label">性别</label>
+
+                            <div class="col-sm-10"><select class="form-control m-b sex">
+                                <option value="1">男</option>
+                                <option value="2">女</option>
+                            </select>
+                            </div>
+                        </div>
+                        <div class="hr-line-dashed"></div>
+                        <div class="form-group"><label class="col-sm-2 control-label">工号</label>
+
+                            <div class="col-sm-10"><input type="text" class="form-control serial_no"></div>
+                        </div>
+                        <div class="hr-line-dashed"></div>
+                        <div class="form-group"><label class="col-sm-2 control-label">职务</label>
+
+                            <div class="col-sm-10"><input type="text" class="form-control job"></div>
+                        </div>
+                        <div class="hr-line-dashed"></div>
+                        <div class="form-group"><label class="col-sm-2 control-label">手机</label>
+
+                            <div class="col-sm-10"><input type="text" class="form-control phone"></div>
+                        </div>
+                        <div class="hr-line-dashed"></div>
+                        <div class="form-group"><label class="col-sm-2 control-label">角色</label>
+
+                            <div class="col-sm-10"><select class="form-control m-b role">
+                                <option value="1">管理员</option>
+                                <option value="2">普通</option>
+                                <option value="3">后勤</option>
+                            </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default cancel_person_btn" data-dismiss="modal">取消</button>
+                    <button type="button" class="btn btn-primary add_person_btn" data-dismiss="modal">确定</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--批量导入-->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-hidden="true" style="display: none;">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="color-line"></div>
+                <div class="modal-header text-center">
+                    <h4 class="modal-title">批量导入</h4>
+                    <small class="font-bold">未填写部门的成员将分配至默认部门</small>
+                </div>
+                <div class="modal-body">
+                    <div class="text-center m-b-md">
+                        <h3>新建通讯录导入步骤</h3>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a href="javascript:;">
+                                    第一步：下载员工通讯录模板，批量填写员工信息
+                                </a>
+                            </h4>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a href="javascript:;">
+                                    第二步：上传填写好的员工信息表
+                                </a>
+                            </h4>
+                        </div>
+                    </div>
+
+                    <div class="text-center m-b-md">
+                        <h3>修改/导出通讯录导入步骤</h3>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a href="javascript:;">
+                                    第一步：下载员工通讯录模板，批量填写员工信息
+                                </a>
+                            </h4>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a href="javascript:;">
+                                    第二步：上传填写好的员工信息表
+                                </a>
+                            </h4>
+                        </div>
+                    </div>
+                    <form id="myForm" enctype="multipart/form-data" method="post">
+                    <div class="text-center m-b-md">
+                        <a href="http://www.unitsyscloud.com/downloads/users.xls"><button type="button" class="btn w-xs btn-primary">下载模板</button></a>
+                        <button type="button" class="btn btn-outline btn-info">导出</button>
+                        <a href="javascript:;" class="upload_it">
+                            <input type="hidden" id="hiddenIn" name="group_id" value="">
+                            <input id="fileToUpload" type="file" name="file" value="选择文件">
+                            上传
+                        </a>
+                    </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                    <button type="button" class="btn btn-primary export_file" data-dismiss="modal">导入</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--修改成员-->
+    <div class="modal fade hmodal-info" id="myModalEdit" tabindex="-1" role="dialog" aria-hidden="true" style="display: none;">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="color-line"></div>
+                <div class="modal-header">
+                    <h4 class="modal-title">编辑成员</h4>
+                    <small class="font-bold">在这里修改成员的一些信息</small>
+                </div>
+                <div class="modal-body">
+                    <div id="editMembers" class="form-horizontal">
+                        <div class="form-group"><label class="col-sm-2 control-label">姓名</label>
+
+                            <div class="col-sm-10"><input type="text" class="form-control e_name"></div>
+                        </div>
+                        <div class="hr-line-dashed"></div>
+                        <div class="form-group"><label class="col-sm-2 control-label">性别</label>
+
+                            <div class="col-sm-10"><select class="form-control m-b e_sex">
+                                <option value="1">男</option>
+                                <option value="2">女</option>
+                            </select>
+                            </div>
+                        </div>
+                        <div class="hr-line-dashed"></div>
+                        <div class="form-group"><label class="col-sm-2 control-label">手机</label>
+
+                            <div class="col-sm-10"><input type="text" class="form-control e_phone"></div>
+                        </div>
+                        <div class="hr-line-dashed"></div>
+                        <div class="form-group"><label class="col-sm-2 control-label">部门</label>
+
+                            <div class="col-sm-10">
+                                <select class="form-control m-b e_group select2" multiple="multiple" id="group-g">
+                                </select>
+                            </div>
+                        </div>
+                        <div class="hr-line-dashed"></div>
+                        <div class="form-group"><label class="col-sm-2 control-label">职务</label>
+
+                            <div class="col-sm-10"><input type="text" class="form-control e_job"></div>
+                        </div>
+                        <div class="hr-line-dashed"></div>
+                        <div class="form-group"><label class="col-sm-2 control-label">工号</label>
+
+                            <div class="col-sm-10"><input type="text" class="form-control e_serial_no"></div>
+                        </div>
+                        <div class="hr-line-dashed"></div>
+                        <div class="form-group"><label class="col-sm-2 control-label">邮箱</label>
+
+                            <div class="col-sm-10"><input type="text" class="form-control e_email"></div>
+                        </div>
+                        <div class="hr-line-dashed"></div>
+                        <div class="form-group"><label class="col-sm-2 control-label">角色</label>
+
+                            <div class="col-sm-10"><select class="form-control m-b e_role">
+                                <option value="1">管理员</option>
+                                <option value="2">普通</option>
+                                <option value="3">后勤</option>
+                            </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                    <button type="button" class="btn btn-primary edit_person_btn" data-dismiss="modal">确定</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--删除部门-->
+    <div class="modal fade hmodal-danger" id="deleteGroupModal" tabindex="-1" role="dialog" aria-hidden="true" style="display: none;">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="color-line"></div>
+                        <div class="modal-header text-center">
+                            <h4 class="modal-title">删除部门？</h4>
+                            <small class="font-bold">删除的成员将分配到默认部门</small>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                            <button type="button" class="btn btn-primary" id="deleteGroupAndPerson">删除部门跟成员</button>
+                            <button type="button" class="btn btn-primary" id="deleteGroupOnly">仅删除部门</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+    </div>
+</div>
+
+
+
+<!-- Vendor scripts -->
+<script src="vendor/jquery/dist/jquery.min.js" ></script>
+<script src="vendor/jquery-ui/jquery-ui.min.js" ></script>
+<script src="vendor/slimScroll/jquery.slimscroll.min.js" ></script>
+<script src="vendor/bootstrap/dist/js/bootstrap.min.js" ></script>
+<script src="vendor/metisMenu/dist/metisMenu.min.js" ></script>
+<script src="vendor/fooTable/dist/footable.min.js"></script>
+<script src="vendor/fooTable/dist/footable.paginate.min.js"></script>
+<script src="vendor/sweetalert/lib/sweet-alert.min.js"></script>
+<script src="vendor/toastr/build/toastr.min.js"></script>
+<script src="vendor/select2-3.5.2/select2.min.js"></script>
+<script src="scripts/select2tree.js"></script>
+ <!-- App scripts -->
+<script src="scripts/homer.js" ></script>
+
+<!-- Add scripts -->
+<script src="scripts/api.js" ></script>
+<script src="scripts/jquery.ztree.all.js"></script>
+<script src="scripts/jquery.form.js"></script>
+<script src="scripts/commen.js"></script>
+<script src="scripts/user_manage.js" ></script>
+</body>
+</html>

@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="Pragma" content="no-cache">
+		<meta http-equiv="Cache-Control" content="no-cache">
+		<meta http-equiv="Expires" content="0">
+		<title>用户管理</title>
+		<link rel="icon" href="img/logo5.ico" type="image/x-icon"/>
+		<link rel="stylesheet" href="css/nav.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/user_manage.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+		<link rel="stylesheet" href="css/zTreeStyle.css">
+		<style type="text/css">
+			/*姓名*/
+			.pt_title td:nth-child(1){
+				width: 63px !important;
+			}
+			.pt_title td:nth-child(2){
+				width: 150px;
+				margin-left: 30px;
+			}
+			.pt_title td:nth-child(3){
+				width: 130px;
+			}
+			.pt_title td:nth-child(4){
+				width: 150px;
+			}
+			.pt_title td:nth-child(5){
+				width: 100px;
+			}
+			.depart_lists_add  tr td{
+				padding-left: 35px !important;
+			}
+			.ztree{
+				padding: 0;
+			}
+		</style>
+		<!--[if lt IE 9]>
+		<script src="http://cdn.bootcss.com/html5shiv/r29/html5.min.js"></script>
+		<script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+	</head>
+	<body style="overflow-x: hidden">
+		<nav>
+			<div class="container">
+				<div class="header">
+					<img src="img/logo.png"/>
+				</div>
+				<ul class="content">
+					<li><a href="first_page.html">首页</a></li>
+					<li class="active"><a href="user_manage.html">用户管理</a></li>
+					<li><a href="add_manage.html">地点管理</a></li>
+					<li><a href="asset.html">资产管理</a></li>
+					<li><a href="business.html">统计分析</a></li>
+					<li><a href="commerce.html">商务</a></li>
+				</ul>
+				<div class="c_right">
+					<div class="right_top">
+						<p><span>公司：</span><span class="company"></span></p>
+						<div class="right_top_tips">
+							<div class="down_arrow"></div>
+							<ul class="companys">
+								<li>浙江芮廷信息科技有限公司</li>
+								<li>浙江芮廷信息科技有限公司</li>
+							</ul>
+						</div>
+					</div>
+					<div class="right_bottom">
+						<p><span>用户：</span><span class="user"></span></p>
+						<div class="right_bottom_tips">
+							<div class="user_loginOut_icon"></div>
+							<div class="user_news_icon"></div>
+							<div class="user_set_icon"></div>
+						</div>
+					</div>
+					<div class="tips person_tips">
+						<p>您还没有通知</p>
+					</div>
+					<div class="tips person_sets">
+						<li style="text-align: start;"><h4>重新设置密码：</h4></li>
+						<li>原密码：<input type="text"  onfocus="this.type='password'" class="oldpassword"/></li>
+						<li>新密码：<input type="text" onfocus="this.type='password'" class="newpassword"/></li>
+						<li><button class="sureChange">确定更改</button></li>
+					</div>
+				</div>
+			</div>
+		</nav>
+	<div class="wrap" style="width: 100%;height: 100%;border: 1px solid transparent;margin-top: 70px;display: none;">
+		<div class="wrapper">
+			<div class="left-wrapper">
+				<div style="position: relative;">
+					<input type="text" class="search" placeholder="请输入要查找内容的字段信息"/>
+					<span class="glyphicon glyphicon-search" style="margin-left: -30px" aria-hidden="true"></span>
+					<div class="clear_val"><span class="glyphicon glyphicon-remove"></span></div>
+				</div>
+				<div class="treeWrap">
+					<div id="zTree" class="ztree"></div>
+				</div>
+			</div>
+			<div class="right-wrapper">
+				<div class="right-top">
+					<h2 id="company_title"></h2><button class="btn_c edit edit_depart_name">编辑部门</button>
+				</div>
+				<ol class="breadcrumb">
+				</ol>
+					<table class="table_list department" cellspacing="0" cellpadding="0">
+						<tbody class="depart_lists">
+							<tr><td colspan="2" style="border: none;"><h2>下级部门</h2></td></tr>
+							<tr class="btn_lists">
+								<td colspan="2" style="border: none;">
+									<button class="btn_c add add_depart_child">添加子部门</button>
+									<button class="delete delete_more_depart" style="display: none">批量删除</button>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<div class="table_mask" style="width: 100%;max-height:150px;overflow-y: auto;">
+						<table class="table_list add_lists" style="margin-top: 0;" cellspacing="0" cellpadding="0">
+							<tbody class="depart_lists_add">
+							</tbody>
+						</table>
+					</div>
+				<table class="table_list persons" cellspacing="0" cellpadding="0">
+					<tbody class="person_lists" style="border: none;">
+						<tr><td colspan="6"><h2>部门人员</h2></td></tr>
+						<tr>
+							<td colspan="6" style="border: none;">
+								<button class="btn_c add add_usr_child">添加成员</button>
+								<button class="btn_c edit uoload_user_btn">批量导入</button>
+								<button class="delete delete_more_users">批量删除</button>
+							</td>
+						</tr>
+						<tr class="pt_title">
+							<td><input type="checkbox" name="" class="checkAll"/></td>
+							<td>丨姓名</td>
+							<td>丨性别</td>
+							<td>丨职务</td>
+							<td>丨手机号</td>
+							<td></td>
+						</tr>
+					</tbody>
+				</table>
+				<div class="table_mask" style="width: 100%;max-height: 150px;overflow-y: auto;">
+					<table class="new_person_list_table" style="margin-top: 0;" cellspacing="0" cellpadding="0">
+						<tbody class="person_list">
+							
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+
+		<div class="slide-mask"></div>
+			<div class="sidebar add_usr_silde">
+				<h2>新增成员</h2>
+				<div class="msg"><p>个人信息</p></div>
+				<ul class="slide_left_ul">
+					<li>姓名：</li>
+					<li>性别：</li>
+					<li>工号：</li>
+					<li>职务：</li>
+					<li>手机：</li>
+					<li>角色：</li>
+				</ul>
+				<ul class="slide_right_ul">
+					<li><input type="text" class="name" /></li>
+					<li>
+						<select class="select sex">
+							<option value="1">男</option>
+							<option value="2">女</option>
+						</select>
+					</li>
+					<li><input type="text" class="serial_no" /></li>
+					<li><input type="text" class="job" /></li>
+					<li><input type="text" class="phone" /></li>
+					<li>
+						<select class="select role">
+							<option value="1">管理员</option>
+							<option value="2">普通</option>
+							<option value="3">后勤</option>
+						</select>
+					</li>
+				</ul>
+				<div style="clear: both;"></div>
+				<div class="sidebar_footer">
+					<button class="save user_create">保存 </button><button class="delete user_delete_cancel">取消</button>
+				</div>
+			</div>
+		<!--修改用户信息-->
+		<div class="sidebar edit_usr_silde">
+			<h2>修改成员</h2>
+			<div class="msg"><p>个人信息</p></div>
+			<ul class="slide_left_ul">
+				<li>姓名：</li>
+				<li>性别：</li>
+				<li>手机：</li>
+				<li>职务：</li>
+				<li>部门：</li>
+				<li>工号：</li>
+				<li>角色：</li>
+			</ul>
+			<ul class="slide_right_ul">
+				<li><input type="text" class="e_name" /></li>
+				<li>
+					<select class="select e_sex">
+						<option value="1">男</option>
+						<option value="2">女</option>
+					</select>
+				</li>
+				<li><input type="text" class="e_phone" /></li>
+				<li><input type="text" class="e_job" /></li>
+				<li>
+					<select class="select e_group">
+					</select>
+				</li>
+				<li><input type="text" class="e_serial_no" /></li>
+				<li>
+					<select class="select e_role">
+						<option value="1">管理员</option>
+						<option value="2">普通</option>
+						<option value="3">后勤</option>
+					</select>
+				</li>
+			</ul>
+			<div style="clear: both;"></div>
+			<div class="sidebar_footer">
+				<button class="save e_user_create">保存 </button><button class="delete e_user_delete_cancel">取消</button>
+			</div>
+		</div>
+
+
+			<div class="sidebar add_departs_silde">
+				<h2>新增部门</h2>
+				<div class="msg"><p>部门信息</p></div>
+				<ul class="slide_left_ul">
+					<li>名称：</li>
+					<li>部门描述：</li>
+				</ul>
+				<ul class="slide_right_ul">
+					<li><input type="text" class="depart_name" /></li>
+					<li><input type="text" class="description" /></li>
+				</ul>
+				<div style="clear: both;"></div>
+				<div class="sidebar_footer">
+					<button class="save add_departs_save">保存 </button><button class="delete add_departs_cancel">取消</button>
+				</div>
+			</div>
+		
+			<div class="sidebar change_departs_silde">
+				<h2>编辑部门</h2>
+				<div class="msg"><p>部门信息</p></div>
+				<ul class="slide_left_ul">
+					<li>名称：</li>
+					<li>部门描述：</li>
+					<!--<li>权限：</li>-->
+				</ul>
+				<ul class="slide_right_ul">
+					<li><input type="text" class="depart_change_name" /></li>
+					<li><input type="text" class="description_change" /></li>
+					<!--<li><input type="text" class="power" /></li>-->
+				</ul>
+				<div style="clear: both;"></div>
+				<div class="sidebar_footer">
+					<button class="save change_departs_save">保存 </button><button class="delete departs_delete">删除</button><button class="delete change_departs_delete">取消</button>
+				</div>
+			</div>
+
+		<form id="myForm" enctype="multipart/form-data" method="post">
+			<div class="sidebar upload_users">
+				<h2>批量导入</h2>
+				<div class="msg"><p>新建通讯录导入步骤</p></div>
+				<ul class="upload_build">
+					<li>第一步：下载员工通讯录模板，批量填写员工信息</li>
+					<li>第二步：上传填写好的员工信息表</li>
+				</ul>
+				<div class="msg"><p>修改/导出通讯录导入步骤</p></div>
+				<ul class="upload_build">
+					<li>第一步：下载员工通讯录模板，批量填写员工信息</li>
+					<li>第二步：上传填写好的员工信息表</li>
+				</ul>
+				<div style="clear: both;"></div>
+				<div class="sidebar_footer upload_btns">
+					<a class="download_mould" href="http://www.unitsyscloud.com/downloads/users.xls">下载模板 </a>
+					<button class="export" disabled="disabled">导出 </button>
+						<a href="javascript:;" class="upload_it">
+							<input type="hidden" id="hiddenIn" name="group_id" value="">
+							<input id="fileToUpload" type="file" name="file" onchange="upLoad()"  value="选择文件">
+							上传
+						</a>
+				</div>
+			</div>
+		</form>
+	</div>
+			<div class="modal fade no_groups" id="no_groups" tabindex="-1" role="dialog">
+			  <div class="modal-dialog modal-sm" style="margin-top: 160px;">
+			    <div class="modal-content">
+			     	<div class="modal-header">
+			     		<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			     		  <h4 class="modal-title" id="myModalLabel">提示</h4>
+			     	</div>
+			     	<div class="modal-body" style="text-align: center;">
+			     		<h4 class="tips_text"></h4>
+			     	</div>
+			    </div>
+			  </div>
+			</div>
+
+			<div class="modal fade delete_groups" id="delete_groups" tabindex="-1" role="dialog">
+			  <div class="modal-dialog modal-sm" style="margin-top: 160px;">
+			    <div class="modal-content">
+			     	<div class="modal-header">
+			     		<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			     		  <h4 class="modal-title" id="myModalLabel">警告</h4>
+			     	</div>
+			     	<div class="modal-body" style="text-align: center;">
+			     		<h4 class="tips_text_delete_groups">确定删除部门吗？</h4>
+			     	</div>
+			     	<div class="modal-footer">
+				        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+				        <button type="button" class="btn btn-danger delete_this_group">确定</button>
+				    </div>
+			    </div>
+			  </div>
+			</div>
+			
+			<div class="modal fade delete_groups_checked" id="delete_groups_checked" tabindex="-1" role="dialog">
+			  <div class="modal-dialog modal-sm" style="margin-top: 160px;">
+			    <div class="modal-content">
+			     	<div class="modal-header">
+			     		<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			     		  <h4 class="modal-title" id="myModalLabel">警告</h4>
+			     	</div>
+			     	<div class="modal-body" style="text-align: center;">
+			     		<h4 class="tips_text_delete_groups">确定删除部门吗？</h4>
+			     	</div>
+			     	<div class="modal-footer">
+				        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+				        <button type="button" class="btn btn-danger delete_these_group">确定</button>
+				    </div>
+			    </div>
+			  </div>
+			</div>
+			
+			<div class="modal fade delete_users_checked" id="delete_users_checked" tabindex="-1" role="dialog">
+			  <div class="modal-dialog modal-sm" style="margin-top: 160px;">
+			    <div class="modal-content">
+			     	<div class="modal-header">
+			     		<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			     		  <h4 class="modal-title" id="myModalLabel">警告</h4>
+			     	</div>
+			     	<div class="modal-body" style="text-align: center;">
+			     		<h4 class="tips_text_delete_groups">确定删除成员吗？</h4>
+			     	</div>
+			     	<div class="modal-footer">
+				        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+				        <button type="button" class="btn btn-danger delete_these_users">确定</button>
+				    </div>
+			    </div>
+			  </div>
+			</div>
+			
+			<div class="modal fade login_out" id="login_out" tabindex="-1" role="dialog">
+			  <div class="modal-dialog modal-sm" style="margin-top: 160px;">
+			    <div class="modal-content">
+			     	<div class="modal-header">
+			     		<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			     		  <h4 class="modal-title" id="myModalLabel">警告</h4>
+			     	</div>
+			     	<div class="modal-body" style="text-align: center;">
+			     		<h4 class="tips_text_delete_groups">确定退出登录？</h4>
+			     	</div>
+			     	<div class="modal-footer">
+				        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+				        <button type="button" class="btn btn-danger login_out_btn">确定</button>
+				    </div>
+			    </div>
+			  </div>
+			</div>
+
+		<!--加载动画-->
+		<div class="spinner">
+			<div class="spinner-container container1">
+				<div class="circle1"></div>
+				<div class="circle2"></div>
+				<div class="circle3"></div>
+				<div class="circle4"></div>
+			</div>
+			<div class="spinner-container container2">
+				<div class="circle1"></div>
+				<div class="circle2"></div>
+				<div class="circle3"></div>
+				<div class="circle4"></div>
+			</div>
+			<div class="spinner-container container3">
+				<div class="circle1"></div>
+				<div class="circle2"></div>
+				<div class="circle3"></div>
+				<div class="circle4"></div>
+			</div>
+		</div>
+	</body>
+	<script src="http://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/api.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/jquery.ztree.all.js"></script>
+	<script src="js/jquery.form.js"></script>
+	<script src="js/user_manage.js"></script>
+	<script type="text/javascript">
+        $(function () {
+            $(".spinner").hide();
+            $(".wrap").show();
+        })
+	</script>
+</html>

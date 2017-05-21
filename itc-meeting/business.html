@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>统计分析</title>
+		<link rel="icon" href="img/logo5.ico" type="image/x-icon"/>
+		<link rel="stylesheet" type="text/css" href="css/business.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/nav.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+	</head>
+	<body>
+		<nav>
+			<div class="container">
+				<div class="header">
+					<img src="img/logo.png"/>
+				</div>
+				<ul class="content">
+					<li><a href="first_page.html">首页</a></li>
+					<li><a href="user_manage.html">用户管理</a></li>
+					<li><a href="add_manage.html">地点管理</a></li>
+					<li><a href="asset.html">资产管理</a></li>
+					<li class="active"><a href="business.html">统计分析</a></li>
+					<li><a href="commerce.html">商务</a></li>
+				</ul>
+				<div class="c_right">
+					<div class="right_top">
+						<p><span>公司：</span><span class="company"></span></p>
+						<div class="right_top_tips">
+							<div class="down_arrow"></div>
+							<ul class="companys">
+								<!--<li>浙江芮廷信息科技有限公司</li>-->
+								<!--<li>浙江芮廷信息科技有限公司</li>-->
+							</ul>
+						</div>
+					</div>
+					<div class="right_bottom">
+						<p><span>用户：</span><span class="user"></span></p>
+						<div class="right_bottom_tips">
+							<div class="user_loginOut_icon"></div>
+							<div class="user_news_icon"></div>
+							<div class="user_set_icon"></div>
+						</div>
+					</div>
+					<div class="tips person_tips">
+						<p>您还没有通知</p>
+					</div>
+					<div class="tips person_sets">
+						<li style="text-align: start;"><h4>重新设置密码：</h4></li>
+						<li>原密码：<input type="password" class="oldpassword"/></li>
+						<li>新密码：<input type="password" class="newpassword"/></li>
+						<li><button class="sureChange">确定更改</button></li>
+					</div>
+					
+				</div>
+			</div>
+		</nav>
+		
+		<div class="wrapper" style="display: none;">
+		<!--内容-->
+		<div class="wrap">
+			<!--左边-->
+			<div class="left">
+				<div class="leftDiv1">
+					<p>丨 当前月份</p>
+					<span class="leftSpan1">
+						<span id="hour_time" style="font-size:36px;">2017-03</span>
+						<ul id="leftSpan1ul">
+							<li>2017-01</li>
+							<li>2017-02</li>
+							<li>2017-03</li>
+							<li>2017-04</li>
+							<li>2017-05</li>
+							<li>2017-06</li>
+							<li>2017-07</li>
+							<li>2017-08</li>
+							<li>2017-09</li>
+							<li>2017-10</li>
+							<li>2017-11</li>
+							<li>2017-12</li>
+						</ul>
+					</span>
+				</div>
+				<div class="leftDiv2">
+					<p>丨 会议时长</p>
+					<span class="leftSpan2" id="meetHours"></span>
+				</div>
+				<div class="leftDiv3">
+					<p>丨 参会人次</p>
+					<span class="leftSpan3" id="meetAttends"></span>
+				</div>
+				<div class="leftDiv4">
+					<p>丨 预定会议数</p>
+					<span class="leftSpan4" id="meetApp"></span>
+				</div>
+				<div class="leftDiv5">
+					<p>丨 会议取消</p>
+					<span class="leftSpan5" id="meetCancel"></span>
+				</div>
+			</div>
+			<!--右边-->
+			<div class="right">
+				<!--上边-->
+				<div class="top">
+					<div class="topRight">
+						<p class="topRightP" style="font-size: 18px;margin-top: 10px;">会议室预定频率</p>
+						<div id="bar_table" style="width: 985px;height: 355px;"></div>
+					</div>
+				</div>
+				<!--下边-->
+				<div class="bottom">
+					<div class="botomRight">
+					    <p class="topRightP" style="font-size: 18px;margin-top: 10px;">会议室预定走势图</p>
+						<div id="roundTable" style="width: 985px;height:400px;position: absolute;bottom: 10px;"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		</div>
+		
+		<div class="modal fade login_out" id="login_out" tabindex="-1" role="dialog">
+		  <div class="modal-dialog modal-sm" style="margin-top: 160px;">
+		    <div class="modal-content">
+		     	<div class="modal-header">
+		     		<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		     		  <h4 class="modal-title" id="myModalLabel">警告</h4>
+		     	</div>
+		     	<div class="modal-body" style="text-align: center;">
+		     		<h4 class="tips_text_delete_groups">确定退出登录？</h4>
+		     	</div>
+		     	<div class="modal-footer">
+			        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+			        <button type="button" class="btn btn-danger login_out_btn">确定</button>
+			    </div>
+		    </div>
+		  </div>
+		</div>
+		<!--加载动画-->
+		<div class="spinner">
+			<div class="spinner-container container1">
+				<div class="circle1"></div>
+				<div class="circle2"></div>
+				<div class="circle3"></div>
+				<div class="circle4"></div>
+			</div>
+			<div class="spinner-container container2">
+				<div class="circle1"></div>
+				<div class="circle2"></div>
+				<div class="circle3"></div>
+				<div class="circle4"></div>
+			</div>
+			<div class="spinner-container container3">
+				<div class="circle1"></div>
+				<div class="circle2"></div>
+				<div class="circle3"></div>
+				<div class="circle4"></div>
+			</div>
+		</div>
+	</body>
+	<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+	<script src="http://cdn.bootcss.com/echarts/3.4.0/echarts.js"></script>
+	<script src="js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/countUp.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/api.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/business.min.js"></script>
+	<script type="text/javascript">
+		$(function () {
+            $(".spinner").hide();
+            $(".wrapper").show();
+        })
+	</script>
+</html>

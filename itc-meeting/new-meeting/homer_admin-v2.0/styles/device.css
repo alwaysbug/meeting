@@ -1,0 +1,138 @@
+.treeMenu{
+
+}
+li{
+    list-style: none;
+}
+.treeMenu li{
+    padding:1px 3px 0 40px;
+    margin: 5px 0;
+    width: 94%;
+    height: 42px;
+    border: 1px dashed #e4e5e7;
+    background-color: #f7f9fa;
+    text-decoration: none;
+    color: #6a6c6f;
+    cursor: pointer;
+}
+.treeMenu li span{
+    line-height: 40px;
+}
+.clickActive{
+    background-color: #3498db !important;
+    color: #FFFFFF !important;
+    border: 1px solid transparent !important;
+}
+.clickActive>span{
+    color: #FFFFFF !important;
+}
+.ico_open:before{
+    content: "\f115";
+    font-family: FontAwesome;
+}
+.mini_set{
+    float: right;
+    font-size:18px;
+    margin-top: 10px;
+    margin-right: 15px;
+    cursor: pointer;
+}
+.mini_name{
+}
+.mini_set1{
+    float: right;
+    font-size:18px;
+    margin-top: 10px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+.checkbox{
+    padding-left: 0;
+}
+.mini_status_online{
+    color: #3498db;
+}
+.mini_status_outline{
+    color: grey;
+}
+.mini_status_bad{
+    color: #e74c3c;
+}
+.sets_control{
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+.sets_control li{
+    padding: 5px;
+    width: 33.3%;
+    height:100px;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    cursor: pointer;
+}
+.sets_control li i{
+    font-size:35px;
+}
+.sets_control li span{
+    font-size:20px;
+}
+.flexVolume{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+.flexVolume>div{
+    width: 33%;
+    height: 130px;
+    font-size:25px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    cursor: pointer;
+}
+.flexVolume>div i{
+    font-size:45px;
+}
+.flexVolume>div>.flex-a>i{
+    font-size:20px;
+}
+.flex-a{
+    width: 100%;
+    position: relative;
+    color: white;
+}
+.flex-a i:nth-child(1){
+    position: absolute;
+    right: 3px;
+    top:0;
+}
+.flex-a i:nth-child(2){
+    position: absolute;
+    right: 3px;
+    top:30px;
+}
+ul.lanren{width:300px;}
+.scale_panel{color:#999;width:200px;position:absolute;line-height:18px;left:0px;top:0px;}
+.scale_panel .r{float:right;}
+.scale span{background:url(../images/scroll.gif) no-repeat;width:8px;height:16px;position:absolute;left:-2px;top:-5px;cursor:pointer;}
+.scale{ background-repeat: repeat-x; background-position: 0 100%; background-color: #E4E4E4; border-left: 1px #5b8eff solid;  width: 200px; height: 4px; position: relative; font-size: 0px; border-radius: 3px; }
+.scale div{ background-repeat: repeat-x; background-color: #5b8eff; width: 0px; position: absolute; height: 4px; width: 0; left: 0; bottom: 0; }
+.lanren li{font-size:12px;line-height:50px;position:relative;height:50px;list-style:none;}
+.editMinicc{
+    cursor: pointer;
+}
+.clickLi{
+    background-color: #5b8eff !important;
+    color: #FFFFFF !important;
+}
+#ex1Slider .slider-selection {
+    background: #3498db;
+}

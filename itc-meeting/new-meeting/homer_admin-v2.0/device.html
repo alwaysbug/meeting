@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>芮廷科技</title>
+
+    <link rel="shortcut icon" type="image/ico" href="images/logo.ico" />
+
+    <!-- Vendor styles -->
+    <link rel="stylesheet" href="vendor/fontawesome/css/font-awesome.css"  />
+    <link rel="stylesheet" href="vendor/metisMenu/dist/metisMenu.css"  />
+    <link rel="stylesheet" href="vendor/animate.css/animate.css"  />
+    <link rel="stylesheet" href="vendor/bootstrap/dist/css/bootstrap.css"  />
+    <link rel="stylesheet" href="vendor/bootstrap-datepicker-master/dist/css/bootstrap-datepicker3.min.css">
+    <link rel="stylesheet" href="vendor/fooTable/css/footable.core.min.css">
+    <link rel="stylesheet" href="vendor/sweetalert/lib/sweet-alert.css">
+    <link rel="stylesheet" href="vendor/toastr/build/toastr.min.css">
+    <link rel="stylesheet" href="vendor/select2-3.5.2/select2.css">
+    <link rel="stylesheet" href="vendor/select2-bootstrap/select2-bootstrap.css">
+    <link rel="stylesheet" href="vendor/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.css" />
+    <link rel="stylesheet" href="styles/bootstrap-slider.min.css">
+    <!-- App styles -->
+    <link rel="stylesheet" href="fonts/pe-icon-7-stroke/css/pe-icon-7-stroke.css"  />
+    <link rel="stylesheet" href="fonts/pe-icon-7-stroke/css/helper.css"  />
+    <link rel="stylesheet" href="styles/style.css" >
+
+    <!-- Add styles -->
+    <link rel="stylesheet" href="styles/device.css">
+    <!--[if lt IE 9]>
+    <script src="http://cdn.bootcss.com/html5shiv/r29/html5.min.js"></script>
+    <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body class="fixed-navbar sidebar-scroll">
+
+<!-- Simple splash screen-->
+<div class="splash" style="display: block;">
+    <div class="color-line"></div>
+    <div class="splash-title"><h1>芮廷云会务</h1><p>The Best Meeting Butler </p> <div class="spinner"> <div class="rect1"></div> <div class="rect2"></div> <div class="rect3"></div> <div class="rect4"></div> <div class="rect5"></div> </div> </div> </div>
+
+<!-- Header -->
+<div id="header">
+    <div class="color-line">
+    </div>
+    <div id="logo" class="light-version">
+        <span>
+            芮廷科技
+        </span>
+    </div>
+    <nav role="navigation">
+        <!--<div class="header-link hide-menu"><i class="fa fa-bars"></i></div>-->
+        <div class="small-logo">
+            <span class="text-primary">芮廷科技</span>
+        </div>
+        <!--<form role="search" class="navbar-form-custom" method="post" action="#">-->
+            <!--<div class="form-group">-->
+                <!--<input type="text" style="padding-left: 10px" placeholder="在此输入文字搜索内容" class="form-control" name="search">-->
+            <!--</div>-->
+        <!--</form>-->
+        <div class="mobile-menu">
+            <button type="button" class="navbar-toggle mobile-menu-toggle" data-toggle="collapse" data-target="#mobile-collapse">
+                <i class="fa fa-chevron-down"></i>
+            </button>
+            <div class="collapse mobile-navbar" id="mobile-collapse">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a class="" href="register.html?login" >登出</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="navbar-right">
+            <ul class="nav navbar-nav no-borders">
+                <li class="dropdown">
+                    <a id="company_name" class="dropdown-toggle label-menu-corner" href="#" data-toggle="dropdown" style="font-size: 13px;">
+                    </a>
+                </li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle label-menu-corner" href="#" data-toggle="dropdown">
+                        <i class="pe-7s-speaker"></i>
+                    </a>
+                    <ul class="dropdown-menu hdropdown notification animated flipInX">
+                        <li>
+                            <a>
+                                <span class="label label-success">NEW</span> 芮廷会务新版上线
+                            </a>
+                        </li>
+                        <li class="summary"><a href="javascript:;">查询全部消息</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="javascript:;" id="login_out_btn" >
+                        <i class="pe-7s-upload pe-rotate-90"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</div>
+
+<!-- Navigation -->
+<aside id="menu">
+    <div id="navigation">
+        <div class="profile-picture">
+            <a href="user_index.html" >
+                <img id="avtar" style="width: 76px;height: 76px;"  src="images/logo.png"  class="img-circle m-b" alt="logo">
+            </a>
+
+            <div class="stats-label text-color">
+                <span id="nick_name" class="font-extra-bold font-uppercase">
+                </span>
+            </div>
+        </div>
+
+        <ul class="nav" id="side-menu">
+            <li>
+                <a href="first_page.html"><span class="nav-label">首页</span></a>
+            </li>
+            <li class="active">
+                <a href="#"><span class="nav-label">管理中心</span><span class="fa arrow"></span> </a>
+                <ul class="nav nav-second-level">
+                    <li><a href="user_manage.html" >用户管理</a></li>
+                    <li><a href="asset.html" >资产管理</a></li>
+                    <li><a href="add_manage.html" >地点管理</a></li>
+                    <li class="active"><a href="device.html" >设备管理</a></li>
+                    <li><a href="scenes_panel.html" >场景/面板管理</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#"><span class="nav-label">账户中心</span><span class="fa arrow"></span> </a>
+                <ul class="nav nav-second-level">
+                    <li><a href="commerce.html">商务选择</a></li>
+                    <li><a href="order_managerment.html" >订单管理</a></li>
+                    <li><a href="account.html" >账户管理</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#"><span class="nav-label">其他</span><span class="fa arrow"></span> </a>
+                <ul class="nav nav-second-level">
+                    <li><a href="work_order.html" >工单管理</a></li>
+                    <li><a href="business.html" >统计分析</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</aside>
+
+<!-- Main Wrapper -->
+<div id="wrapper">
+    <div class="normalheader transition animated fadeIn">
+        <div class="hpanel">
+            <div class="panel-body">
+                <a class="small-header-action" href="">
+                    <div class="clip-header">
+                        <i class="fa fa-arrow-up"></i>
+                    </div>
+                </a>
+
+                <h2 class="font-light m-b-xs">
+                    设备管理
+                </h2>
+                <small>Mini CC设备管理及控制</small>
+            </div>
+        </div>
+    </div>
+    <div class="content animate-panel">
+        <div class="row">
+
+            <div class="col-lg-4">
+                <div class="hpanel">
+                    <div class="panel-body">
+                        <div style="overflow: hidden;">
+                            <div class="pull-left">
+                                <h2 class="font-light m-b-xs">
+                                    Mini CC
+                                </h2>
+                            </div>
+                            <div class="pull-right" style="padding-right: 20px;margin-top: 15px">
+                                <button class="btn btn-info btn-sm" id="add_minicc" data-target="#addMiniccModal" data-toggle="modal">添加Mini CC</button>
+                                <button class="btn btn-info btn-sm" id="version_update">版本更新</button>
+                            </div>
+                        </div>
+                        <div class="treeMenu">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-8">
+
+                <div class="hpanel">
+                    <div class="panel-body">
+                            <h2 class="font-light m-b-xs">
+                                关联设备
+                            </h2>
+                            <p>
+                                <button type="button" class="btn btn-info marginRightBtn" id="relateDeviceBtn" data-target="#myModal8" data-toggle="modal">
+                                    <i class="fa fa-paste"></i>
+                                    关联设备
+                                </button>
+                                <button type="button" class="btn btn-outline btn-danger marginRightBtn" id="deleteMembers">
+                                    <i class="fa fa-trash-o"></i>
+                                    批量删除
+                                </button>
+                            </p>
+                        <table id="device_table" data-page-size="6" class="table footable table-bordered table-hover">
+                            <thead>
+                            <tr>
+                                <th><input type="checkbox" class="checkAll"></th>
+                                <th>名称</th>
+                                <th>设备类型</th>
+                                <th>物理接口</th>
+                                <th>当前状态</th>
+                                <th>操作</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+
+                            </tbody>
+                        </table>
+                        <ul class="pagination pull-right"></ul>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+    <!--添加Mini CC-->
+    <div class="modal fade hmodal-info" id="addMiniccModal" tabindex="-1" role="dialog" aria-hidden="true" style="display: none;">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="color-line"></div>
+                <div class="modal-header">
+                    <h4 class="modal-title">添加Mini CC</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="form-horizontal">
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">Mini CC序列号</label>
+
+                            <div class="col-sm-9">
+                                <input class="form-control m-b" type="text" id="device_seq">
+                            </div>
+                        </div>
+                        <div class="hr-line-dashed"></div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">MiniCC类型</label>
+
+                            <div class="col-sm-9">
+                                <select class="form-control m-b" id="device_type">
+                                    <option value="">选择类型</option>
+                                    <option value="1">一代</option>
+                                    <option value="2">二代</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="hr-line-dashed"></div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">Mini CC设备名</label>
+
+                            <div class="col-sm-9">
+                                <input class="form-control m-b" type="text" id="device_name">
+                            </div>
+                        </div>
+                        <div class="hr-line-dashed"></div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">Mini CC版本号</label>
+
+                            <div class="col-sm-9">
+                                <input class="form-control m-b" type="text" id="device_version">
+                            </div>
+                        </div>
+                        <div class="hr-line-dashed"></div>
+                        <div class="form-group" style="display: none;">
+                            <label class="col-sm-3 control-label">登录用户名</label>
+
+                            <div class="col-sm-9">
+                                <input class="form-control m-b" type="text" id="auth_user">
+                            </div>
+                        </div>
+                        <div class="hr-line-dashed" style="display: none;"></div>
+                        <div class="form-group" style="display: none;">
+                            <label class="col-sm-3 control-label">登录密码</label>
+
+                            <div class="col-sm-9">
+                                <input class="form-control m-b" type="text" id="auth_passwd">
+                            </div>
+                        </div>
+                        <div class="hr-line-dashed" style="display: none"></div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                    <button type="button" class="btn btn-primary" id="addMiniccSure">确定</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--矩阵控制-->
+    <div class="modal fade hmodal-info" id="matrixControl" tabindex="-1" role="dialog" aria-hidden="true" style="display: none;">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="color-line"></div>
+                <div class="modal-header">
+                    <h4 class="modal-title">矩阵控制</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="form-horizontal">
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">输入</label>
+
+                            <div class="col-sm-9">
+                                <select class="form-control m-b" id="matrixSignal">
+                                    <option value="">选择输入信号源</option>
+                                    <option value="17">HDBast桌插1中的端口1信号源</option>
+                                    <option value="18">HDBast桌插1中的端口2信号源</option>
+                                    <option value="33">HDBast桌插2中的端口1信号源</option>
+                                    <option value="34">	HDBast桌插2中的端口2信号源</option>
+                                    <option value="48">本地HDMI信号源</option>
+                                    <option value="64">录播过来的信号源</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="hr-line-dashed"></div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">输出</label>
+
+                            <div class="col-sm-9">
+                                <select class="form-control m-b" id="matrixOutput">
+                                    <option value="">选择输出项</option>
+                                    <option value="0">关闭输出</option>
+                                    <option value="7">HDBast OUT + HDMI OUT + 输出为录播</option>
+
+                                </select>
+                            </div>
+                        </div>
+                        <div class="hr-line-dashed"></div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">优先级</label>
+
+                            <div class="col-sm-9">
+                                <select class="form-control m-b" id="matrixUndelay">
+                                    <option value="">选择优先级</option>
+                                    <option value="1">优先级从高到低：本地HDMI、录播、HDbaseT OUT</option>
+                                    <option value="2">优先级从高到低：本地HDMI、HDbaseT OUT、录播</option>
+                                    <option value="3">优先级从高到低：录播、本地HDMI、HDbaseT OUT</option>
+                                    <option value="4">优先级从高到低：录播、HDbaseT OUT、本地HDMI</option>
+                                    <option value="5">优先级从高到低：HDbaseT OUT、本地HDMI、录播</option>
+                                    <option value="6">优先级从高到低：HDbaseT OUT、录播、本地HDMI</option>
+                                    <option value="7">默认分辨率</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="hr-line-dashed"></div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                    <button type="button" class="btn btn-primary" id="matrixSureControl">确定</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--音量控制-->
+    <div class="modal fade hmodal-info" id="volumeControl" tabindex="-1" role="dialog" aria-hidden="true" style="display: none;">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="color-line"></div>
+                <div class="modal-header">
+                    <h4 class="modal-title">音量控制</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="form-horizontal">
+                        <div class="flexVolume" style="justify-content: center">
+                            <div is_mute="1">
+                                <i class="pe-7s-mute"></i>
+                                <span>静音</span>
+                            </div>
+                            <div is_mute="0">
+                                <i class="pe-7s-volume"></i>
+                                <span>非静音</span>
+                            </div>
+                        </div>
+                        <div class="hr-line-dashed"></div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">音量</label>
+
+                            <div class="col-sm-9">
+                                <input id="ex1" data-slider-id='ex1Slider' type="text" data-slider-min="0" data-slider-max="100" data-slider-step="1" data-slider-value="50"/>
+                                <span id="ex6CurrentSliderValLabel">
+		当前音量: <span id="ex6SliderVal">0</span>
+		</span>
+                            </div>
+                        </div>
+                        <div class="hr-line-dashed"></div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                    <button type="button" class="btn btn-primary" id="volumeSureControl">确定</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--音频控制-->
+    <div class="modal fade hmodal-info" id="audioControl" tabindex="-1" role="dialog" aria-hidden="true" style="display: none;">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="color-line"></div>
+                <div class="modal-header">
+                    <h4 class="modal-title">音频控制</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="form-horizontal">
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">音频</label>
+
+                            <div class="col-sm-9">
+                                <select class="form-control m-b" id="audio-select">
+                                    <option value="">选择输入方式</option>
+                                    <option value="0">切换为 LINE IN 线性输入方式</option>
+                                    <option value="1">切换为 MIC 话筒输入方式</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="hr-line-dashed"></div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                    <button type="button" class="btn btn-primary" id="audioSureControl">确定</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--其他控制-->
+    <div class="modal fade hmodal-info" id="otherControl" tabindex="-1" role="dialog" aria-hidden="true" style="display: none;">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="color-line"></div>
+                <div class="modal-header">
+                    <h4 class="modal-title">自定义控制项</h4>
+                </div>
+                <div class="modal-body">
+                    <div id="control-set-c">
+                        <div class="init-model-c">
+                            <small>缺省模块</small>
+                            <div class="flexVolume">
+                                <div>
+                                    <i class="pe-7s-volume"></i>
+                                    <span>睡眠</span>
+                                </div>
+                                <div>
+                                    <i class="pe-7s-volume"></i>
+                                    <span>其他</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="custom-model-c">
+                            <small>自定义模块</small>
+                            <div class="flexVolume">
+                                <div>
+                                    <i class="pe-7s-mute"></i>
+                                    <span>温度</span>
+                                </div>
+                                <div>
+                                    <i class="pe-7s-volume"></i>
+                                    <span>风速</span>
+                                </div>
+                                <div>
+                                    <i class="pe-7s-mute"></i>
+                                    <span>制冷</span>
+                                </div>
+                                <div>
+                                    <i class="pe-7s-volume"></i>
+                                    <span>制热</span>
+                                </div>
+                                <div>
+                                    <i class="pe-7s-mute"></i>
+                                    <span>定时</span>
+                                </div>
+                                <div>
+                                    <i class="pe-7s-volume"></i>
+                                    <span>睡眠</span>
+                                </div>
+                                <div>
+                                    <i class="pe-7s-volume"></i>
+                                    <span>其他</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="control-cs" style="display: none;">
+                        <div class="flexVolume">
+                            <div>
+                                <span>上调</span>
+                                <small>45679</small>
+                            </div>
+                            <div>
+                                <span>下调</span>
+                                <small>45679</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-info go-back-set">返回上一级</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">返回</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--关联设备-->
+    <div class="modal fade hmodal-info" id="myModal8" tabindex="-1" role="dialog" aria-hidden="true" style="display: none;">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="color-line"></div>
+                <div class="modal-header">
+                    <h4 class="modal-title">关联设备</h4>
+                    <small class="font-bold">录入设备相关信息</small>
+                </div>
+                <div class="modal-body">
+                    <div class="form-horizontal">
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">选择设备</label>
+
+                            <div class="col-sm-9">
+                                <select class="form-control m-b selectDevice" id="selectDevice">
+                                    <option value="-1">请选择设备</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="hr-line-dashed"></div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">选择物理接口</label>
+
+                            <div class="col-sm-9">
+                                <select class="form-control m-b" id="phy_port" >
+                                    <option value="">选择合适的物理接口</option>
+                                    <option value="1">物理接口一</option>
+                                    <option value="2">物理接口二</option>
+                                    <option value="3">物理接口三</option>
+                                    <option value="4">物理接口四</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="hr-line-dashed"></div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                    <button type="button" class="btn btn-primary contact_device_btn">确定</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--物理接口绑定-->
+    <div class="modal fade hmodal-info" id="myModal9" tabindex="-1" role="dialog" aria-hidden="true" style="display: none;">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="color-line"></div>
+                <div class="modal-header" id="configure_header">
+                    <h4 class="modal-title">物理接口绑定</h4>
+                    <small class="font-bold">绑定物理接口并且初始化，手动配置或者导入原有配置</small>
+                </div>
+                <div class="modal-body" id="configure_body">
+                    <h3 style="margin-left: 30px">
+                        手动配置
+                    </h3>
+                    <div class="form-horizontal">
+                        <div class="form-group port1">
+                            <label class="col-sm-3 control-label">
+                                物理接口组一
+                            </label>
+
+                            <div class="col-sm-7">
+                                <select class="form-control m-b" id="firstPhy">
+                                    <option value="">请选择物理接口组一配置</option>
+                                    <option value="5">红外发射IR口</option>
+                                    <option value="4">RS-485</option>
+                                    <option value="3">RS-232</option>
+                                    <option value="2">弱继电器</option>
+                                    <option value="1">普通IO口</option>
+                                </select>
+                            </div>
+                            <div class="col-sm-2 pull-right">
+                                <button class="btn btn-success btn-sm" id="setFirstConfigBtn">配置参数</button>
+                            </div>
+                        </div>
+
+                        <div class="form-group port2">
+                            <label class="col-sm-3 control-label">
+                                物理接口组二
+                            </label>
+
+                            <div class="col-sm-7">
+                                <select class="form-control m-b" id="secondPhy">
+                                    <option value="">请选择物理接口组二配置</option>
+                                    <option value="5">红外发射IR口</option>
+                                    <option value="2">弱继电器</option>
+                                    <option value="1">普通IO口</option>
+                                </select>
+                            </div>
+
+                            <div class="col-sm-2 pull-right">
+                                <button class="btn btn-success btn-sm" id="setSecondConfigBtn">配置参数</button>
+                            </div>
+                        </div>
+
+                        <div class="form-group port3">
+                            <label class="col-sm-3 control-label">
+                                物理接口组三
+                            </label>
+
+                            <div class="col-sm-7">
+                                <select class="form-control m-b" id="thirdPhy">
+                                    <option value="">请选择物理接口组三配置</option>
+                                    <option value="5">红外发射IR口</option>
+                                    <option value="4">RS-485</option>
+                                    <option value="3">RS-232</option>
+                                    <option value="1">普通IO口</option>
+                                </select>
+                            </div>
+
+                            <div class="col-sm-2 pull-right">
+                                <button class="btn btn-success btn-sm" id="setThirdConfigBtn">配置参数</button>
+                            </div>
+                        </div>
+
+                        <div class="form-group port4">
+                            <label class="col-sm-3 control-label">
+                                物理接口组四
+                            </label>
+
+                            <div class="col-sm-7">
+                                <select class="form-control m-b" id="fourPhy">
+                                    <option value="">请选择物理接口组四配置</option>
+                                    <option value="5">红外发射IR口</option>
+                                    <option value="1">普通IO口</option>
+                                </select>
+                            </div>
+
+                            <div class="col-sm-2 pull-right">
+                                <button class="btn btn-success btn-sm" id="setFourthConfigBtn">配置参数</button>
+                            </div>
+                        </div>
+
+                        <div class="hr-line-dashed"></div>
+                        <h3 style="margin-left: 30px">
+                            导入配置
+                        </h3>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">
+                                选择配置文件
+                            </label>
+
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--初始化接口配置-->
+                <div class="modal-body" id="init_body" style="display: none">
+
+                </div>
+                <div class="modal-footer" id="init_footer">
+                    <button type="button" class="btn btn-default config_cancel">取消</button>
+                    <button type="button" class="ladda-button ladda-button-demo btn btn-primary config_sure" data-style="zoom-in">确定</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--初始化配置-->
+    <div class="modal fade hmodal-info" id="myModalEdit" tabindex="-1" role="dialog" aria-hidden="true" style="display: none;">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="color-line"></div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default backModal" data-dismiss="modal">取消</button>
+                        <button type="button" class="btn btn-primary toModal" data-dismiss="modal">确定</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <!--配置控制项-->
+    <div class="modal fade hmodal-info" id="myModalControl" tabindex="-1" role="dialog" aria-hidden="true" style="display: none;">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="color-line"></div>
+                <div class="modal-header">
+                    <h4 class="modal-title">配置控制项</h4>
+                    <small class="font-bold">填写控制项信息</small>
+                </div>
+                <div class="modal-body">
+                    <div class="form-horizontal">
+                        <div id="model-set">
+                            <div class="init-model">
+                                <small>缺省模块</small>
+                                <div class="flexVolume">
+                                    <div>
+                                        <i class="pe-7s-volume"></i>
+                                        <span>睡眠</span>
+                                    </div>
+                                    <div>
+                                        <i class="pe-7s-volume"></i>
+                                        <span>其他</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="custom-model">
+                                <small>自定义模块</small>
+                                <div class="flexVolume">
+                                    <div>
+                                        <div class="flex-a">
+                                            <i class="fa fa-times-circle-o delete-model"></i>
+                                            <i class="fa fa-pencil-square-o edit-model"></i>
+                                        </div>
+                                        <i class="pe-7s-mute"></i>
+                                        <span>温度</span>
+                                    </div>
+                                    <div>
+                                        <i class="pe-7s-volume"></i>
+                                        <span>风速</span>
+                                    </div>
+                                    <div>
+                                        <i class="pe-7s-mute"></i>
+                                        <span>制冷</span>
+                                    </div>
+                                    <div>
+                                        <i class="pe-7s-volume"></i>
+                                        <span>制热</span>
+                                    </div>
+                                    <div>
+                                        <i class="pe-7s-mute"></i>
+                                        <span>定时</span>
+                                    </div>
+                                    <div>
+                                        <i class="pe-7s-volume"></i>
+                                        <span>睡眠</span>
+                                    </div>
+                                    <div>
+                                        <i class="pe-7s-volume"></i>
+                                        <span>其他</span>
+                                    </div>
+                                    <div style="font-size: 13px;">
+                                        <i class="fa fa-plus-circle"></i>
+                                        <span>没找到需要的模式？点击添加</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="controlSetPanel" style="display: none;">
+                            <div class="control-exits-set">
+                                <samll>已有控制项</samll>
+                            </div>
+                            <div class="control-add-set">
+                                <small>新增控制项</small>
+                                <div class="form-group">
+                                    <div class="col-sm-3">
+                                        <input type="text" class="form-control control-name" placeholder="请输入名称">
+                                    </div>
+
+                                    <div class="col-sm-5">
+                                        <input type="text" class="form-control control-value" placeholder="请输入对应数据">
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <button type="button" class="btn btn-sm btn-info control-add-sure-btn">保存</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-info go-back" style="display: none;">返回上一级</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">返回</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--MiniCC更多设置-->
+    <div class="modal fade hmodal-info" id="myModalMore" tabindex="-1" role="dialog" aria-hidden="true" style="display: none;">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="color-line"></div>
+                <div class="modal-header">
+                    <h4 class="modal-title">更多Mini CC控制</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="sets_control">
+                        <li>
+                            <i class="pe-7s-repeat"></i>
+                            <span>同步时间</span>
+                        </li>
+                        <li>
+                            <i class="pe-7s-clock"></i>
+                            <span>时间显示</span>
+                        </li>
+                        <li>
+                            <i class="pe-7s-power"></i>
+                            <span>系统重启</span>
+                        </li>
+                        <li>
+                            <i class="pe-7s-cloud"></i>
+                            <span>云台控制</span>
+                        </li>
+                        <li>
+                            <i class="pe-7s-loop"></i>
+                            <span>双向心跳</span>
+                        </li>
+                        <li>
+                            <i class="pe-7s-lock"></i>
+                            <span>服务器注册</span>
+                        </li>
+                        <li>
+                            <i class="pe-7s-drop"></i>
+                            <span>设置logo</span>
+                        </li>
+                        <li>
+                            <i class="pe-7s-credit"></i>
+                            <span>字幕显示</span>
+                        </li>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default backModal" data-dismiss="modal">返回</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Vendor scripts -->
+<script src="vendor/jquery/dist/jquery.min.js" ></script>
+<script src="vendor/jquery-ui/jquery-ui.min.js" ></script>
+<script src="vendor/slimScroll/jquery.slimscroll.min.js" ></script>
+<script src="vendor/bootstrap/dist/js/bootstrap.min.js" ></script>
+<script src="vendor/metisMenu/dist/metisMenu.min.js" ></script>
+<script src="vendor/fooTable/dist/footable.min.js"></script>
+<script src="vendor/fooTable/dist/footable.paginate.min.js"></script>
+<script src="vendor/select2-3.5.2/select2.min.js"></script>
+<script src="vendor/sweetalert/lib/sweet-alert.min.js"></script>
+<script src="vendor/toastr/build/toastr.min.js"></script>
+<script src="scripts/bootstrap-slider.min.js"></script>
+<!-- App scripts -->
+<script src="scripts/homer.js" ></script>
+<script src="scripts/api.js" ></script>
+<script src="scripts/jquery.form.js"></script>
+<script src="scripts/commen.js"></script>
+<!--<script src="scripts/device.js" ></script>-->
+<script src="scripts/device_change.js"></script>
+<script>
+</script>
+</body>
+</html>

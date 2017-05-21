@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Page title -->
+    <title>工单管理</title>
+
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!--<link rel="shortcut icon" type="image/ico" href="favicon.ico" />-->
+    <link rel="shortcut icon" type="image/ico" href="images/logo.ico" />
+
+    <!-- Vendor styles -->
+    <link rel="stylesheet" href="vendor/fontawesome/css/font-awesome.css"  />
+    <link rel="stylesheet" href="vendor/metisMenu/dist/metisMenu.css"  />
+    <link rel="stylesheet" href="vendor/animate.css/animate.css"  />
+    <link rel="stylesheet" href="vendor/bootstrap/dist/css/bootstrap.css"  />
+    <link rel="stylesheet" href="vendor/sweetalert/lib/sweet-alert.css">
+    <link rel="stylesheet" href="vendor/toastr/build/toastr.min.css">
+    <link rel="stylesheet" href="vendor/fooTable/css/footable.core.min.css"/>
+    <!-- App styles -->
+    <link rel="stylesheet" href="fonts/pe-icon-7-stroke/css/pe-icon-7-stroke.css"  />
+    <link rel="stylesheet" href="fonts/pe-icon-7-stroke/css/helper.css"  />
+    <link rel="stylesheet" href="styles/style.css" >
+    
+		<!--<link rel="stylesheet" href="styles/add_manage.css" >-->
+        <link rel="stylesheet" href="styles/zTreeStyle.css">
+		<style type="text/css">
+			.gongsi{
+				font-size: 13px;
+				position: absolute;
+				right: 200px;
+				top: 25px;
+			}
+			.btn1,.btn2,.btn3{
+				cursor: pointer;
+				font-size: 15px;
+			}
+			.table tr td{
+				/*color: #BBBBBB;*/
+			}
+			.table tr td:nth-child(1){
+				color: #9DBEF5;
+				white-space: normal;
+			}
+			#example2 tr td:nth-child(1){
+				color: #777777;
+			}
+			.buttons,.buttonc,.buttond{
+				margin-left: 10px;
+			}
+			/*追问弹出框样式*/
+			.orderTexts,.orderNum{
+				color:#BBBBBB;
+			}
+		</style>
+    <!--[if lt IE 9]>
+    <script src="http://cdn.bootcss.com/html5shiv/r29/html5.min.js"></script>
+    <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body class="fixed-navbar sidebar-scroll">
+
+<!-- Simple splash screen-->
+<div class="splash"> <div class="color-line"></div><div class="splash-title"><h1>Homer - Responsive Admin Theme</h1><p>Special Admin Theme for small and medium webapp with very clean and aesthetic style and feel. </p><div class="spinner"> <div class="rect1"></div> <div class="rect2"></div> <div class="rect3"></div> <div class="rect4"></div> <div class="rect5"></div> </div> </div> </div>
+<div id="header">
+    <div class="color-line">
+    </div>
+    <div id="logo" class="light-version">
+        <span>
+            芮廷科技
+        </span>
+    </div>
+    <nav role="navigation">
+        <!--<div class="header-link hide-menu"><i class="fa fa-bars"></i></div>-->
+        <div class="small-logo">
+            <span class="text-primary">芮廷科技</span>
+        </div>
+        <form role="search" class="navbar-form-custom" method="post" action="#">
+            <div class="form-group">
+                <!--<input type="text" placeholder="在此输入文字搜索内容" class="form-control" name="search">-->
+            </div>
+        </form>
+        <div class="mobile-menu">
+            <button type="button" class="navbar-toggle mobile-menu-toggle" data-toggle="collapse" data-target="#mobile-collapse">
+                <i class="fa fa-chevron-down"></i>
+            </button>
+            <div class="collapse mobile-navbar" id="mobile-collapse">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a class="" href="register.html?login" >登出</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="navbar-right">
+            <ul class="nav navbar-nav no-borders">
+                <li class="dropdown">
+                    <a id="company_name" class="dropdown-toggle label-menu-corner" href="#" data-toggle="dropdown" style="font-size: 13px;">
+                    </a>
+                </li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle label-menu-corner" href="#" data-toggle="dropdown">
+                        <i class="pe-7s-speaker"></i>
+                    </a>
+                    <ul class="dropdown-menu hdropdown notification animated flipInX">
+                        <li>
+                            <a>
+                                <span class="label label-success">NEW</span> 芮廷会务新版上线啦
+                            </a>
+                        </li>
+                        <li class="summary"><a href="javascript:;">查询全部消息</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="javascript:;" id="login_out_btn" >
+                        <i class="pe-7s-upload pe-rotate-90"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</div>
+
+<!-- Navigation -->
+<aside id="menu">
+    <div id="navigation">
+        <div class="profile-picture">
+            <a href="user_index.html" >
+                <img id="avtar" style="width: 76px;height: 76px;" src="images/logo.png"  class="img-circle m-b" alt="logo">
+            </a>
+
+            <div class="stats-label text-color">
+                <span id="nick_name" class="font-extra-bold font-uppercase">
+                </span>
+            </div>
+        </div>
+
+        <ul class="nav" id="side-menu">
+            <li>
+                <a href="first_page.html"><span class="nav-label">首页</span></a>
+            </li>
+            <li>
+                <a href="javascript:;"><span class="nav-label">管理中心</span><span class="fa arrow"></span> </a>
+                <ul class="nav nav-second-level">
+                    <li><a href="user_manage.html" >用户管理</a></li>
+                    <li><a href="asset.html" >资产管理</a></li>
+                    <li><a href="add_manage.html" >地点管理</a></li>
+                    <li><a href="device.html" >设备管理</a></li>
+                    <li><a href="scenes_panel.html" >场景/面板管理</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#"><span class="nav-label">账户中心</span><span class="fa arrow"></span> </a>
+                <ul class="nav nav-second-level">
+                    <li><a href="commerce.html">商务选择</a></li>
+                    <li><a href="order_managerment.html" >订单管理</a></li>
+                    <li><a href="account.html" >账户管理</a></li>
+                </ul>
+            </li>
+            <li class="active">
+                <a href="#"><span class="nav-label">其他</span><span class="fa arrow"></span> </a>
+                <ul class="nav nav-second-level">
+                    <li class="active"><a href="work_order.html" >工单管理</a></li>
+                    <li><a href="business.html" >统计分析</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</aside>
+
+<!-- 主要内容部分 -->
+<div id="wrapper">
+<!--最上部头部部分-->	
+<div class="normalheader ">
+    <div class="hpanel">
+        <div class="panel-body">
+            <a class="small-header-action" href="">
+                <div class="clip-header">
+                    <i class="fa fa-arrow-up"></i>
+                </div>
+            </a>
+            <h2 class="font-light m-b-xs">工单管理</h2>
+            <small>工单管理详情</small>
+        </div>
+    </div>
+</div>
+<!--下部分内容-->
+<div class="content animate-panel" data-child="hpanel" data-effect="fadeInDown">
+<div class="row">
+	<!--整体部分-->
+    <div class="col-lg-12">
+        <div class="hpanel">
+        	<!--最外层-->
+            <div class="panel-body" style="text-align:left;line-height:30px;white-space:nowrap">
+            	<!--选择部分-->
+                <button type="button" class="btn w-xs btn-info" style="margin-left: 15px;margin-top:0px;" data-target="#myModal8" data-toggle="modal">提交工单</button>
+                <button type="button" class="btn btn-success btnsu0">全部工单</button>
+                <button type="button" class="btn btn-success btnsu1">待受理</button>
+                <button type="button" class="btn btn-success btnsu2">已经受理</button>
+                <button type="button" class="btn btn-success btnsu3">待确认</button>
+                <button type="button" class="btn btn-success btnsu4">已结束</button>
+            	<div class="col-md-4" style="height:30px;margin-bottom: 20px;float: right;">
+            		<div class="input-group">
+                    <input type="text" class="form-control searchIt" placeholder="工单编号搜素框">
+                    <span class="input-group-btn">
+						<button class="btn btn-default" type="submit">
+                            <span class="fa fa-search"></span>
+                        </button>
+				    </span>
+                    </div>
+            	</div>
+    <!--表格-->
+    <div class="col-lg-12">
+        <!--<div class="hpanel">
+            <div class="panel-body">-->
+                <table id="example1" class="footable table table-bordered toggle-arrow-tiny" data-page-size="8" data-filter=#filter>
+                    <thead>
+                    <tr>
+                        <th>工单编号</th>
+                        <th>问题分类</th>
+                        <th>提交时间</th>
+                        <th>提交人</th>
+                        <th>状态</th>
+                        <th>操作</th>
+                        <th data-hide="all">问题描述</th>
+                    </tr>
+                    </thead>
+                    <tbody style="white-space:nowrap">
+                    </tbody>
+                </table>
+                <div class="btn-group btnNum pull-right">
+                                <button type="button" class="btn btn-default btnleft"><i class="fa fa-chevron-left"></i></button>
+                                <button class="btn btns btn-default active">1</button>
+                                <button type="button" class="btn btn-default btnright" style="float: right;"><i class="fa fa-chevron-right"></i></button>
+                            </div>
+            </div>
+        </div>
+    </div>
+            </div>
+        </div>
+    </div>
+    
+<!--问题类型-->
+<!--下部分内容-->
+<div class="content animate-panel" data-child="hpanel">
+<div class="row">
+	<!--左边树状图部分-->
+    <div class="col-lg-4" >
+        <div class="hpanel">
+            <div class="panel-body">
+            	<h3>工单分类</h3>
+            	<small>选择分类,查看常见问题</small>
+				<div style="">
+					<div id="zTree" class="ztree"></div>
+				</div>
+            </div>
+        </div>
+    </div>
+    <!--会议室部分-->
+    <div class="col-lg-8">
+    	<div class="hpanel">
+                    <div class="panel-body">
+                    	<h3 class="font-light m-b-xs">
+                                            工单常见问题 
+                        </h3>
+                        <small>常见问题列表</small>
+    <!--工单常见问题部分-->
+    <table id="example2" class="footable table table-bordered toggle-arrow-tiny" data-page-size="8" data-filter=#filter>
+        <thead>
+            <tr> 
+                <th>问题标题</th>
+                <th data-hide="all">问题答案</th>
+            </tr>
+        </thead>
+        <tbody style="white-space:normal;">
+        	
+        </tbody>
+    </table>
+                    <div class="btn-group btnNum1 pull-right">
+                        <button type="button" class="btn btn-default btnleft1"><i class="fa fa-chevron-left"></i></button>
+                        <button class="btn btns1 btn-default active">1</button>
+                        <button type="button" class="btn btn-default btnright1" style="float: right;"><i class="fa fa-chevron-right"></i></button>
+                    </div>
+    </div>
+    </div>
+    </div>
+</div>
+</div>
+    
+    
+    
+    
+    
+    
+</div>
+</div>
+
+<!--添加工单-->
+<div class="modal fade hmodal-info" id="myModal8" tabindex="-1" role="dialog" aria-hidden="true" style="display: none;">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="color-line"></div>
+                <div class="modal-header">
+                    <h4 class="modal-title">提交工单</h4>
+                    <!--<small class="font-bold">新成员接受邀请后将添加至此分组</small>-->
+                </div>
+                <div class="modal-body">
+                    <div id="addPerson" class="form-horizontal">
+                        <div class="hr-line-dashed"></div>
+                        <div class="form-group"><label class="col-sm-2 control-label">问题分类</label>
+                            
+                            <div class="col-sm-10 selectItem" id="selectItem">
+                                <select class="province promType form-control"></select>
+                                <select class="city promType form-control" style="display:none;margin-top: 8px;"></select>
+                                <select class="county promType form-control" style="display:none;margin-top: 8px;;"></select>
+                            </div>
+                            <!--<div class="col-sm-10">
+                            	<select class="form-control m-b promType">
+                                <option value="0">请选择问题分类</option>
+                                <option value="1">软件问题</option>
+                                <option value="2">订单问题</option>
+                            </select>
+                            </div>-->
+                        </div>
+                        <div class="hr-line-dashed"></div>
+                        <div class="form-group"><label class="col-sm-2 control-label">问题描述</label>
+
+                            <div class="col-sm-10">
+                            	<!--<input type="text" class="form-control serial_no" placeholder="选填项">-->
+                            	<textarea name="text" class="promText form-control" rows="5" cols="60" placeholder="最多255个字符"></textarea>
+                            </div>
+                        </div>
+                        <div class="hr-line-dashed"></div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default cancel_prom_btn" data-dismiss="modal">取消</button>
+                    <button type="button" class="btn btn-primary add_prom_btn" data-dismiss="modal">确定</button>
+                </div>
+            </div>
+        </div>
+    </div>
+<!--详情和追问-->
+<div class="modal fade hmodal-info" id="myModals" tabindex="-1" role="dialog" aria-hidden="true" style="display: none;">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="color-line"></div>
+                <div class="modal-header">
+                    <h4 class="modal-title">详情及追问</h4>
+                    <small class="font-bold">查看详情及追问</small>
+                </div>
+                <div class="modal-body">
+                    <p>订单编号:<span class="orderNum"></span></p>
+                    <div class="hr-line-dashed"></div>
+                    <p>问题描述:<span class="orderTexts"></p>
+                    <div id="addPerson" class="form-horizontal">
+                    	<div class="hr-line-dashed"></div>
+                            <div class="chat-discussion showAsk" style="height:200px;">
+
+                                <!--<div class="chat-message left">
+                                    <img class="message-avatar" src="images/a2.jpg" alt="" >
+                                    <div class="message">
+                                        <span class="message-author"> Michael Smith</span>
+                                        <span class="message-date">  Fri Jan 25 2015 - 11:12:36 </span>
+                                            <span class="message-content">
+											There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration.
+                                            </span>
+                                    </div>
+                                </div>
+                                <div class="chat-message right">
+                                    <img class="message-avatar" src="images/logo.png" alt="" >
+                                    <div class="message">
+                                        <a class="message-author" href="#"> Michael Smith </a>
+                                        <span class="message-date">  Fri Jan 25 2015 - 11:12:36 </span>
+                                            <span class="message-content">
+											There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration.
+                                            </span>
+                                    </div>
+                                </div>-->
+                                
+                            </div>
+                            
+                            
+                            
+                        <div class="hr-line-dashed"></div>
+                        <div class="form-group"><label class="col-sm-2 control-label">问题追问</label>
+                            <div class="col-sm-10">
+                            	<textarea name="text" class="askText form-control" rows="5" cols="60" placeholder="最多255个字符"></textarea>
+                            </div>
+                        </div>
+                        <div class="hr-line-dashed"></div>   
+                        </div>
+                        
+                </div>
+                <div class="modal-footer">
+                	<button type="button" class="btn btn-default cancel_ask_btn" data-dismiss="modal">取消</button>
+                	<button type="button" class="btn btn-success add_ask_btn" data-dismiss="modal">提交</button>
+                </div>
+            </div>
+        </div>
+    </div>   
+    
+    
+</div>
+
+
+
+<!-- Vendor scripts -->
+<script src="vendor/jquery/dist/jquery.min.js" ></script>
+<script src="vendor/jquery-ui/jquery-ui.min.js" ></script>
+<script src="vendor/slimScroll/jquery.slimscroll.min.js" ></script>
+<script src="vendor/bootstrap/dist/js/bootstrap.min.js" ></script>
+<script src="vendor/metisMenu/dist/metisMenu.min.js" ></script>
+<script src="vendor/iCheck/icheck.min.js" ></script>
+<script src="vendor/sweetalert/lib/sweet-alert.min.js"></script>
+ <script src="vendor/fooTable/dist/footable.min.js"></script>
+<script src="vendor/fooTable/dist/footable.paginate.min.js"></script>
+<script src="vendor/toastr/build/toastr.min.js"></script>
+ <!-- App scripts -->
+<script src="scripts/homer.js" ></script>
+
+
+<script src="scripts/api.js" ></script>
+<script src="scripts/jquery.form.js"></script>
+<script src="scripts/commen.js"></script>
+<script type="text/javascript" src="scripts/jquery.ztree.core.js"></script>
+<script type="text/javascript" src="scripts/jquery.ztree.excheck.js"></script>
+<script type="text/javascript" src="scripts/jquery.ztree.exedit.js"></script>
+<script src="scripts/work_order.js"></script>
+<script src="scripts/work_order1.js"></script>
+<script type="text/javascript">
+	$(function () {
+    // Initialize Example 1
+    $('#example2').footable();
+});
+</script>
+</body>
+</html>
+
+

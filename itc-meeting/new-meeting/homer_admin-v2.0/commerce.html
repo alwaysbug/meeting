@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Page title -->
+    <title>商务</title>
+
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!--<link rel="shortcut icon" type="image/ico" href="favicon.ico" />-->
+    <link rel="shortcut icon" type="image/ico" href="images/logo.ico" />
+
+    <!-- Vendor styles -->
+    <link rel="stylesheet" href="vendor/fontawesome/css/font-awesome.css"  />
+    <link rel="stylesheet" href="vendor/metisMenu/dist/metisMenu.css"/>
+    <link rel="stylesheet" href="vendor/animate.css/animate.css"  />
+    <link rel="stylesheet" href="vendor/bootstrap/dist/css/bootstrap.css" />
+
+    <!-- App styles -->
+    <link rel="stylesheet" href="fonts/pe-icon-7-stroke/css/pe-icon-7-stroke.css" />
+    <link rel="stylesheet" href="fonts/pe-icon-7-stroke/css/helper.css"  />
+    <link rel="stylesheet" href="styles/style.css" >
+    <link rel="stylesheet" href="styles/commerce.css" >
+    <style type="text/css">
+        .gongsi{
+            font-size: 13px;
+            position: absolute;
+            right: 200px;
+            top: 25px;
+        }
+    </style>
+    <!--[if lt IE 9]>
+    <script src="http://cdn.bootcss.com/html5shiv/r29/html5.min.js"></script>
+    <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body class="fixed-navbar sidebar-scroll">
+
+<!-- Simple splash screen-->
+<div class="splash"> <div class="color-line"></div><div class="splash-title"><h1>Homer - Responsive Admin Theme</h1><p>Special Admin Theme for small and medium webapp with very clean and aesthetic style and feel. </p><div class="spinner"> <div class="rect1"></div> <div class="rect2"></div> <div class="rect3"></div> <div class="rect4"></div> <div class="rect5"></div> </div> </div> </div>
+<div id="header">
+    <div class="color-line">
+    </div>
+    <div id="logo" class="light-version">
+        <span>
+            芮廷科技
+        </span>
+    </div>
+    <nav role="navigation">
+        <!--<div class="header-link hide-menu"><i class="fa fa-bars"></i></div>-->
+        <div class="small-logo">
+            <span class="text-primary">芮廷科技</span>
+        </div>
+        <form role="search" class="navbar-form-custom" method="post" action="#">
+            <div class="form-group">
+                <!--<input type="text" placeholder="在此输入文字搜索内容" class="form-control" name="search">-->
+            </div>
+        </form>
+        <div class="mobile-menu">
+            <button type="button" class="navbar-toggle mobile-menu-toggle" data-toggle="collapse" data-target="#mobile-collapse">
+                <i class="fa fa-chevron-down"></i>
+            </button>
+            <div class="collapse mobile-navbar" id="mobile-collapse">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a class="" href="register.html?login" >登出</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="navbar-right">
+            <ul class="nav navbar-nav no-borders">
+                <li class="dropdown">
+                    <a id="company_name" class="dropdown-toggle label-menu-corner" href="#" data-toggle="dropdown" style="font-size: 13px;">
+                    </a>
+                </li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle label-menu-corner" href="#" data-toggle="dropdown">
+                        <i class="pe-7s-speaker"></i>
+                    </a>
+                    <ul class="dropdown-menu hdropdown notification animated flipInX">
+                        <li>
+                            <a>
+                                <span class="label label-success">NEW</span> 芮廷会务新版上线啦
+                            </a>
+                        </li>
+                        <li class="summary"><a href="javascript:;">查询全部消息</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="javascript:;" id="login_out_btn" >
+                        <i class="pe-7s-upload pe-rotate-90"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</div>
+
+<!-- Navigation -->
+<aside id="menu">
+    <div id="navigation">
+        <div class="profile-picture">
+            <a href="user_index.html" >
+                <img id="avtar" style="width: 76px;height: 76px;" src="images/logo.png"  class="img-circle m-b" alt="logo">
+            </a>
+
+            <div class="stats-label text-color">
+                <span id="nick_name" class="font-extra-bold font-uppercase">
+                </span>
+            </div>
+        </div>
+
+        <ul class="nav" id="side-menu">
+            <li>
+                <a href="first_page.html"><span class="nav-label">首页</span></a>
+            </li>
+            <li>
+                <a href="javascript:;"><span class="nav-label">管理中心</span><span class="fa arrow"></span> </a>
+                <ul class="nav nav-second-level">
+                    <li><a href="user_manage.html" >用户管理</a></li>
+                    <li><a href="asset.html" >资产管理</a></li>
+                    <li><a href="add_manage.html" >地点管理</a></li>
+                    <li><a href="device.html" >设备管理</a></li>
+                    <li><a href="scenes_panel.html" >场景/面板管理</a></li>
+                </ul>
+            </li>
+            <li class="active">
+                <a href="#"><span class="nav-label">账户中心</span><span class="fa arrow"></span> </a>
+                <ul class="nav nav-second-level">
+                    <li class="active"><a href="commerce.html">商务选择</a></li>
+                    <li><a href="order_managerment.html" >订单管理</a></li>
+                    <li><a href="account.html" >账户管理</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#"><span class="nav-label">其他</span><span class="fa arrow"></span> </a>
+                <ul class="nav nav-second-level">
+                    <li><a href="work_order.html" >工单管理</a></li>
+                    <li><a href="business.html" >统计分析</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</aside>
+
+
+<!-- 主要內容 -->
+<div id="wrapper">
+<!--最上部头部部分-->	
+<div class="normalheader ">
+    <div class="hpanel">
+        <div class="panel-body">
+            <a class="small-header-action" href="">
+                <div class="clip-header">
+                    <i class="fa fa-arrow-up"></i>
+                </div>
+            </a>
+            <h2 class="font-light m-b-xs">套餐选择</h2>
+            <small>选择商务套餐</small>
+        </div>
+    </div>
+</div>
+<!--下部分內容-->
+<div class="content animate-panel">
+<div class="row">
+<div class="col-lg-12">
+<div class="hpanel">
+    <div class="panel-body" style="height: 570px;">
+    	<div class="show">
+		<!--页面布局-->
+		<div class="wrap">
+			<!--上部分-->
+			<div class="top">
+				<!--上部分-->
+				<div class="tTop">
+					<!--左边-->
+					<div class="tTleft">
+						<span style="font-size: 20px;color: rgb(85,131,232);">选择套餐</span>
+						<img style="margin-bottom: 4px;" src="img/left.png"/>
+					</div>
+					<!--右边-->
+					<div class="tTright">
+						<div class="tTrightDiv tTrightDiv1"><span>基础版</span><img class="imgs img1" src="img/small.png"/></div>
+						<div class="tTrightDiv tTrightDiv2"><span>专业版</span><img class="imgs img2" src="img/small.png"/></div>
+						<div class="tTrightDiv tTrightDiv3"><span>企业版</span><img class="imgs img3" src="img/small.png"/></div>
+					</div>
+				</div>
+				<!--下部分-->
+				<div class="Tbottom">
+					<!--左边-->
+					<div class="tBleft">
+						<ul>
+							<li>会务功能：</li>
+							<li>无线流量：</li>
+							<li>云盘储存空间：</li>
+							<li>Mini CC服务：</li>
+						</ul>
+					</div>
+					<!--右边-->
+					<div class="tBright">
+						<ul>
+							<li><span class="tBright1">基础</span>会务功能</li>
+							<li><span>300</span>MB</li>
+							<li><span>10</span>GB</li>
+							<li>购Mini CC<span>送每间一年服务</span></li>
+							<li><span>套餐详情 ></span></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!--中间部分-->
+			<div class="center">
+				<!--左边-->
+				<div class="cleft">
+					<ul>
+						<li>购买时长:</li>
+						<li>购买间数:</li>
+						<li>购Mini CC数量:</li>
+					</ul>
+				</div>
+				<!--右边-->
+				<div class="cright">
+					<div class="cright1">
+						<span class="cright1Span" style="color: white;">1年</span>
+						<span class="cright1Span">2年</span>
+						<span class="cright1Span">3年</span>
+						<span class="cright1Span">4年</span>
+						<span class="cright1Span">5年</span>
+					</div>
+					<div class="cright1Small"></div>
+					<div class="cright2" style="overflow: hidden;">
+						<span class="cright2down">-</span>
+						<div contenteditable="true" class="cright2num" style="display:inline-block;width:55px;outline:none;">1</div>
+						<span class="cright2up">+</span>
+					</div>
+					<div class="cright3" style="overflow: hidden;">
+						<span class="cright3down">-</span>
+						<div contenteditable="true" class="cright3num" style="display:inline-block;width:55px;outline:none;">1</div>
+						<span class="cright3up">+</span>
+					</div>
+				</div>
+			</div>
+			<!--下部分-->
+			<div class="bottom">
+				<span>已选择：</span>
+				<span class="bottom1">芮廷云会务·<span class="bSpan bspan1">基础版</span>/<span class="bSpan bspan2">1</span>年/<span class="bSpan bspan3">1</span>间，购Mini CC数量<span class="bSpan bspan4">1</span>台</span>
+				<span class="bottom2">价格：</span>
+				<span class="bottom3">¥<span class="bSpan bspan5" style="font-size: 20px;">199</span></span>
+			    <button class="button">下一步</button>
+			</div>
+		</div>
+		
+		<!--点击下一步页面-->
+		<div class="wrap2">
+		  <div class="bottom bottomT">
+		    <span class="span1T">已选择：</span>
+			<span class="bottom1 bottom1T">芮廷云会务·<span class="bSpan bspan1">基础版</span>/<span class="bSpan bspan2">1</span>年/<span class="bSpan bspan3">1</span>间，购Mini CC数量<span class="bSpan bspan4">1</span>台</span>
+            <span class="span2T">重新选择</span>
+		  </div>
+		  <div class="tTopT">
+			<!--左边-->
+			<div class="tTleftT">
+				<span style="font-size: 20px;color: rgb(85,131,232);">支付方式</span>
+				<img style="margin-bottom: 4px;" src="img/left.png"/>
+			</div>
+			<!--右边-->
+			<div class="tTrightT">
+				<div class="tTrightDivT tTrightDiv1T"><span>支付宝支付</span><img class="imgs1 img1" src="img/small.png"/></div>
+				<div class="tTrightDivT tTrightDiv2T"><span>网银支付</span><img class="imgs1 img2" src="img/small.png"/></div>
+				<div class="tTrightDivT tTrightDiv3T"><span>微信支付</span><img class="imgs1 img3" src="img/small.png"/></div>
+			</div>				
+		  </div>
+		  <div class="T">
+		  	 <span class="bottom2">价格：</span>
+		     <span class="bottom3">¥<span class="bSpan bspan5" style="font-size: 20px;">199</span></span>
+		     <button class="buttonT">立即支付</button>
+		  </div>
+		</div>
+		
+		
+        </div>  
+    	
+    </div>
+</div>
+</div>
+</div>
+</div>
+
+
+
+<!-- Vendor scripts -->
+<script src="vendor/jquery/dist/jquery.min.js"></script>
+<script src="vendor/jquery-ui/jquery-ui.min.js" ></script>
+<script src="vendor/slimScroll/jquery.slimscroll.min.js" ></script>
+<script src="vendor/bootstrap/dist/js/bootstrap.min.js" ></script>
+<script src="vendor/metisMenu/dist/metisMenu.min.js" ></script>
+<script src="vendor/iCheck/icheck.min.js"></script>
+<script src="vendor/sparkline/index.js" ></script>
+
+<!-- App scripts -->
+<script src="scripts/homer.js" ></script>
+
+
+
+<script src="scripts/api.js" ></script>
+<script src="scripts/commen.js"></script>
+<script src="scripts/commerce.js" ></script>
+	<script type="text/javascript">
+		$(function () {
+            $(".spinner").hide();
+            $(".wrapper").show();
+        })
+		
+	</script>
+</body>
+</html>
+
